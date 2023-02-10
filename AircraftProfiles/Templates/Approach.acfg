@@ -1,0 +1,151 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"Touchdown Info",
+         "Events":[
+            {
+               "Name":"Normal",
+               "Condition":"1",
+               "Type":0,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"Centerline deviation",
+			   "Condition":"Abs([C:OnRwyCTE;double]) > [C:OnRwyWidth;double] / 4",
+               "Type": 1,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"Centerline deviation",
+			   "Condition":"Abs([C:OnRwyCTE;double]) > [C:OnRwyWidth;double] / 2.5",
+               "Type": 2,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"Centerline deviation",
+			   "Condition":"Abs([C:OnRwyCTE;double]) > [C:OnRwyWidth;double] / 2",
+               "Type": 3,
+               "Tolerance":500,
+               "Description":""
+            },			
+			{
+               "Name":"TDZ: Too short",
+               "Condition":"[C:OnRwyATD;double] < [C:OnRwyDispThreshold;double] - 10",
+               "Type":2,
+               "Tolerance":0,
+               "Description":""
+            },
+			{
+               "Name":"TDZ: Too short",
+               "Condition":"[C:OnRwyATD;double] < 0",
+               "Type":3,
+               "Tolerance":0,
+               "Description":""
+            },
+			{
+               "Name":"TDZ: Long landing",
+               "Condition":"[C:OnRwyATD;double] > [C:OnRwyDispThreshold;double] + ([C:OnRwyTdzLength;double] * 1.1)",
+               "Type":2,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"TDZ: Long landing",
+               "Condition":"[C:OnRwyATD;double] > [C:OnRwyDispThreshold;double] + ([C:OnRwyTdzLength;double])",
+               "Type":1,
+               "Tolerance":500,
+               "Description":""
+            }
+         ],
+         "EventParameters":[
+            {
+               "Name":"Pitch",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE PITCH DEGREES;degree]"
+            },
+			{
+               "Name":"Bank",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE BANK DEGREES;degree]"
+            },
+			{
+               "Name":"Crab",
+               "Type":"instant",
+               "Parameter":"[#S:INCIDENCE BETA;degree]"
+            },
+            {
+               "Name":"KIAS",
+               "Type":"instant",
+               "Parameter":"[#S:AIRSPEED INDICATED;knots]"
+            },
+            {
+               "Name":"VS",
+               "Type":"instant",
+               "Parameter":"[#S:VERTICAL SPEED;ft/min]"
+            },
+            {
+               "Name":"G-Force",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround;double]"
+            },
+			{
+               "Name":"Delta G-Force",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround;double] - [C:LastGForceInFlight;double]"
+            },
+            {
+               "Name":"Flaps (Index)",
+               "Type":"instant",
+               "Parameter":"[S:FLAPS HANDLE INDEX:1;number]"
+            },
+            {
+               "Name":"Runway detected",
+               "Type":"str",
+               "Parameter":"[C:OnRwyDetected;double]"
+            },
+            {
+               "Name":"Airport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent;string]"
+            },
+            {
+               "Name":"Runway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName;string]"
+            },
+            {
+               "Name":"AlongTrackDistance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD;double]"
+            },
+            {
+               "Name":"CrossTrackError",
+               "Type":"max",
+               "Parameter":"[C:OnRwyCTE;double]"
+            },
+            {
+               "Name":"Runway remaining",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyTotalLength;double] - [C:OnRwyATD;double]"
+            },
+			{
+               "Name":"Threshold distance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD;double] - [C:OnRwyDispThreshold;double]"
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[#C:DURATION AIRBORNE;double] > 1 && [S:SIM ON GROUND;Bool] == 1",
+            "MONITOR_END":"[C:DURATION ON GROUND;double] > 2 || [C:DURATION AIRBORNE;double] > 1",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "Description":"Touchdown detected",
+         "InstantEvents":false
+      }
+   ]
+}

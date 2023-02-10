@@ -1,0 +1,7 @@
+{
+	"Name": "PMDG 737",
+	"Enabled": true,
+	"Templates": [
+		"Templates/PMDG/737NG.acfg"
+	]
+}

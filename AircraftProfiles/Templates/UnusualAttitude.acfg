@@ -1,0 +1,73 @@
+{
+    "FlightEventDefinitionGroups":[
+        {
+            "Name":"Unusual Attitude",
+            "Events":[
+                {
+                    "Name":"Nose high",
+                    "Condition":"-1*[S:PLANE PITCH DEGREES;degree] > [C:PitchUpLimitWarning;double]",
+                    "Type":3,
+                    "Tolerance":2000,
+                    "Description":""
+                },
+                {
+                    "Name":"Nose high",
+                    "Condition":"-1*[S:PLANE PITCH DEGREES;degree] > [C:PitchUpLimitCaution;double]",
+                    "Type":2,
+                    "Tolerance":2000,
+                    "Description":""
+                },
+                {
+                    "Name":"Nose low",
+                    "Condition":"-1*[S:PLANE PITCH DEGREES;degree] < [C:PitchDnLimitWarning;double]",
+                    "Type":3,
+                    "Tolerance":2000,
+                    "Description":""
+                },
+                {
+                    "Name":"Nose low",
+                    "Condition":"-1*[S:PLANE PITCH DEGREES;degree] < [C:PitchDnLimitCaution;double]",
+                    "Type":2,
+                    "Tolerance":2000,
+                    "Description":""
+                },
+				{
+                    "Name":"Bank angle",
+                    "Condition":"Abs([S:PLANE BANK DEGREES;degree]) > [C:BankLimitWarning;double]",
+                    "Type":3,
+                    "Tolerance":2000,
+                    "Description":""
+                },
+                {
+                    "Name":"Bank angle",
+                    "Condition":"Abs([S:PLANE BANK DEGREES;degree]) > [C:BankLimitCaution;double]",
+                    "Type":2,
+                    "Tolerance":2000,
+                    "Description":""
+                }
+            ],
+            "EventParameters":[
+                {
+                    "Name":"BANK",
+                    "Type": "MAX",
+                    "Parameter":"Abs([S:PLANE BANK DEGREES;degree])"
+                },
+				{
+                    "Name":"PITCH",
+                    "Type": "MINMAX",
+                    "Parameter":"-1*[S:PLANE PITCH DEGREES;degree]"
+                }
+            ],
+            "Description":"Unusual attitude",
+            "InstantEvents":false
+        }
+    ],
+    "CustomParameters":{
+        "C:PitchUpLimitCaution;double":"22",
+        "C:PitchUpLimitWarning;double":"25",
+        "C:PitchDnLimitCaution;double":"-10",
+        "C:PitchDnLimitWarning;double":"-13",
+        "C:BankLimitCaution;double":"40",
+        "C:BankLimitWarning;double":"45"
+    }
+}

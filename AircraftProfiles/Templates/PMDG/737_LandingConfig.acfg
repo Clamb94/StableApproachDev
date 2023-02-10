@@ -1,0 +1,61 @@
+{
+	"FlightEventDefinitionGroups": [
+		{
+			"Name": "Speedbrake (app)",
+			"Events": [{
+					"Name": "Not armed",
+					"Condition": "[L:switch_343_73X;double] != 0 && [L:switch_447_73X;double] == 0",
+					"Type": 2,
+					"Tolerance": 5000,
+					"Description": ""
+				},
+				{
+					"Name": "Not armed",
+					"Condition": "[L:switch_343_73X;double] != 0 && [L:switch_447_73X;double] == 0",
+					"Type": 1,
+					"Tolerance": 1000,
+					"Description": ""
+				}
+			],
+			"MonitoringConditions": {
+				"MONITOR_BEGIN": "[C:BelowCheckHeight;double] != 0 && [C:Phase_FApp;double] != 0",
+				"MONITOR_END": "[C:Phase_FApp;double] == 0",
+				"SECONDARY": "1",
+				"MARKER_SECONDARY": "1",
+				"APP_MONITOR": "1"
+			},
+			"EventParameters": [{
+				"Name": "Alt above runway",
+				"Type": "MINMAX",
+				"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
+			}],
+			"Description": "",
+			"InstantEvents": false
+		},
+		{
+			"Name": "ENG start switch",
+			"Events": [{
+					"Name": "Not CONT",
+					"Condition": "[L:switch_119_73X;double] != 20 || [L:switch_121_73X;double] != 20",
+					"Type": 2,
+					"Tolerance": 5000,
+					"Description": ""
+				}
+			],
+			"MonitoringConditions": {
+				"MONITOR_BEGIN": "[C:BelowCheckHeight;double] != 0 && [C:Phase_FApp;double] != 0 && [L:AutoIgnitionOption;double] == 0",
+				"MONITOR_END": "[C:Phase_FApp;double] == 0 || [L:AutoIgnitionOption;double] == 1",
+				"SECONDARY": "1",
+				"MARKER_SECONDARY": "1",
+				"APP_MONITOR": "1"
+			},
+			"EventParameters": [{
+				"Name": "Alt above runway",
+				"Type": "MINMAX",
+				"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
+			}],
+			"Description": "",
+			"InstantEvents": false
+		}
+	]
+}
