@@ -30,56 +30,56 @@
 				},
 				{
 					"Name": "Flaps [C:Flaps2PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 2  && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 2  && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
 					"Name": "Flaps [C:Flaps3PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 3 && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 3 && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
 					"Name": "Flaps [C:Flaps4PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 4 && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 4 && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
 					"Name": "Flaps [C:Flaps5PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 5 && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 5 && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
 					"Name": "Flaps [C:Flaps6PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 6 && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 6 && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
 					"Name": "Flaps [C:Flaps7PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 7 && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 7 && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
 					"Name": "Flaps [C:Flaps8PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 8 && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 8 && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
 					"Name": "Flaps [C:Flaps9PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 9 && [L:FlapMovement;double] == 1",
+					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 9 && [L:FlapMovement;double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
