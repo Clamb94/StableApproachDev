@@ -4,14 +4,14 @@
 			"Name": "Speedbrake (app)",
 			"Events": [{
 					"Name": "Not armed",
-					"Condition": "[L:switch_343_73X;double] != 0",
+					"Condition": "[L:switch_343_73X;double] == 0",
 					"Type": 2,
 					"Tolerance": 5000,
 					"Description": ""
 				},
 				{
 					"Name": "Not armed",
-					"Condition": "[L:switch_343_73X;double] != 0",
+					"Condition": "[L:switch_343_73X;double] == 0",
 					"Type": 1,
 					"Tolerance": 1000,
 					"Description": ""
