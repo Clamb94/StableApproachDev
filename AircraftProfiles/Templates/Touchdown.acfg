@@ -173,7 +173,8 @@
             "APP_MONITOR":"1"
          },
          "Description":"Touchdown detected",
-         "InstantEvents":false
+         "InstantEvents":false,
+		 "CombineTolerance" : 500
       }
    ]
 }

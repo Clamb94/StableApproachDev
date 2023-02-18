@@ -60,8 +60,7 @@
             ],
             "Description":"Unusual attitude",
             "InstantEvents":false,
-	    "CombineTolerance" : 5000,
-	    "InvalidItem" : 1
+			"CombineTolerance" : 5000
         }
     ],
     "CustomParameters":{

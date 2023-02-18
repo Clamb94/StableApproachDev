@@ -49,7 +49,8 @@
 			"Parameter": "[S:NAV IDENT:1;string]"
 		}],
 		"Description": "",
-		"InstantEvents": false
+		"InstantEvents": false,
+		"CombineTolerance" : 2000
 	},
 	{
 		"Name": "LOC",
@@ -95,7 +96,8 @@
 		}
 		],
 		"Description": "",
-		"InstantEvents": false
+		"InstantEvents": false,
+		"CombineTolerance" : 2000
 	}
 	]
 }

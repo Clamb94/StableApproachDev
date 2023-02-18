@@ -89,7 +89,8 @@
             "APP_MONITOR":"1"
          },
          "Description":"",
-         "InstantEvents":false
+         "InstantEvents":false,
+		 "CombineTolerance" : 1000
       }
    ],
 	"CustomParameters": {

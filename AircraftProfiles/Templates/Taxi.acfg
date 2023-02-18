@@ -40,7 +40,8 @@
                 }
             ],
             "Description":"Limit speed in turns to 10kn",
-            "InstantEvents":false
+            "InstantEvents":false,
+			"CombineTolerance" : 2000
         },
 		{
             "Name":"Taxi - Speed",
@@ -82,7 +83,8 @@
                 }
             ],
             "Description":"Max taxi speed in straight line is [C:TaxiSpeed;double]kn GS",
-            "InstantEvents":false
+            "InstantEvents":false,
+			"CombineTolerance" : 5000
         },
 		{
             "Name":"Taxi on runway - Speed",
@@ -124,7 +126,8 @@
                 }
             ],
             "Description":"Max taxi speed in straight line on runway is [C:TaxiSpeedRunway;double]kn GS",
-            "InstantEvents":false
+            "InstantEvents":false,
+			"CombineTolerance" : 5000
         }
     ],
     "CustomParameters":{

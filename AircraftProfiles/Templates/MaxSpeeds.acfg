@@ -45,7 +45,8 @@
                 }
             ],
             "Description":"Excessive airspeed",
-            "InstantEvents":false
+            "InstantEvents":false,
+			"CombineTolerance" : 5000
         }
     ],
     "CustomParameters":{

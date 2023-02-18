@@ -30,7 +30,8 @@
 				"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
 			}],
 			"Description": "",
-			"InstantEvents": false
+			"InstantEvents": false,
+			"CombineTolerance" : 5000
 		},
 		{
 			"Name": "ENG start switch",
@@ -55,7 +56,8 @@
 				"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
 			}],
 			"Description": "",
-			"InstantEvents": false
+			"InstantEvents": false,
+			"CombineTolerance" : 5000
 		}
 	]
 }

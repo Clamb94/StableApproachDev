@@ -110,6 +110,7 @@
             }
          ],
 		"Description": "EGPWS",
-		"InstantEvents": false
+		"InstantEvents": false,
+		"CombineTolerance" : 30000
 	}]
 }
