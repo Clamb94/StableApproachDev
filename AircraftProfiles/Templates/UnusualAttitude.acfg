@@ -59,7 +59,9 @@
                 }
             ],
             "Description":"Unusual attitude",
-            "InstantEvents":false
+            "InstantEvents":false,
+	    "CombineTolerance" : 5000,
+	    "InvalidItem" : 1
         }
     ],
     "CustomParameters":{
