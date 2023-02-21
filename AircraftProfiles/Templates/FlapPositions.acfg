@@ -3,70 +3,70 @@
         {
             "Events":[
                 {
-                    "Name":"Flaps [C:Flaps0PositionName;string]",
+                    "Name":"[C:Flaps0PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 0",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps1PositionName;string]",
+                    "Name":"[C:Flaps1PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 1",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps2PositionName;string]",
+                    "Name":"[C:Flaps2PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 2",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps3PositionName;string]",
+                    "Name":"[C:Flaps3PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 3",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps4PositionName;string]",
+                    "Name":"[C:Flaps4PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 4",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps5PositionName;string]",
+                    "Name":"[C:Flaps5PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 5",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps6PositionName;string]",
+                    "Name":"[C:Flaps6PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 6",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps7PositionName;string]",
+                    "Name":"[C:Flaps7PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 7",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps8PositionName;string]",
+                    "Name":"[C:Flaps8PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 8",
                     "Tolerance":1000,
                     "Type":0,
                     "Description":""
                 },
                 {
-                    "Name":"Flaps [C:Flaps9PositionName;string]",
+                    "Name":"[C:Flaps9PositionName;string]",
                     "Condition":"[S:FLAPS HANDLE INDEX:1;number] == 9",
                     "Tolerance":1000,
                     "Type":0,

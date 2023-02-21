@@ -1,7 +1,7 @@
 {
 	"FlightEventDefinitionGroups": [
 	{
-		"Name": "Gear",
+		"Name": "Gear (app)",
 		"Events": [
 		{
 				"Name": "Not down",
@@ -21,7 +21,7 @@
 		"MonitoringConditions": {
 			"MONITOR_BEGIN": "[C:DURATION DESCENDING;double] > 2 && [C:BelowCheckHeight;double] != 0 && [C:Phase_FApp;double] != 0",
 			"MONITOR_END": "[C:DURATION DESCENDING;double] < 1",
-			"SECONDARY": "1",
+			"SECONDARY": "[S:IS GEAR RETRACTABLE;Bool] != 0",
 			"MARKER_SECONDARY": "1",
 			"APP_MONITOR": "1"
 		},
@@ -34,7 +34,7 @@
 		"InstantEvents": false
 	},
 	{
-		"Name": "Flaps",
+		"Name": "Flaps (app)",
 		"Events": [
 		{
 				"Name": "Not in landing position",

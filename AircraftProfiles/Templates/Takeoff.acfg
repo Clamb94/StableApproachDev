@@ -1,0 +1,84 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"Takeoff",
+         "Events":[
+            {
+               "Name":"Info",
+               "Condition":"1",
+               "Type":0,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"Centerline deviation",
+			   "Condition":"Abs([C:OnRwyCTE;double]) > [C:OnRwyWidth;double] / 4",
+               "Type": 1,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"Centerline deviation",
+			   "Condition":"Abs([C:OnRwyCTE;double]) > [C:OnRwyWidth;double] / 2.5",
+               "Type": 2,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"Centerline deviation",
+			   "Condition":"Abs([C:OnRwyCTE;double]) > [C:OnRwyWidth;double] / 2",
+               "Type": 3,
+               "Tolerance":500,
+               "Description":""
+            }
+         ],
+         "EventParameters":[           
+            {
+               "Name":"Flaps (Index)",
+               "Type":"instant",
+               "Parameter":"[S:FLAPS HANDLE INDEX:1;number]"
+            },
+            {
+               "Name":"Runway detected",
+               "Type":"str",
+               "Parameter":"[C:OnRwyDetected;double]"
+            },
+            {
+               "Name":"Airport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent;string]"
+            },
+            {
+               "Name":"Runway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName;string]"
+            },
+            {
+               "Name":"AlongTrackDistance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD;double]"
+            },
+            {
+               "Name":"CrossTrackError",
+               "Type":"max",
+               "Parameter":"[C:OnRwyCTE;double]"
+            },
+            {
+               "Name":"Runway remaining",
+               "Type":"min",
+               "Parameter":"[C:OnRwyTotalLength;double] - [C:OnRwyATD;double]"
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[C:Phase_Takeoff0;double] != 0",
+            "MONITOR_END":"[C:Phase_Takeoff0;double] == 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "Description":"Takeoff",
+         "InstantEvents":false,
+		 "CombineTolerance" : 5000
+      }
+   ]
+}

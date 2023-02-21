@@ -1,0 +1,40 @@
+{
+	"FlightEventDefinitionGroups": [{
+		"Events": [{
+				"Name": "UP",
+				"Condition": "[S:GEAR TOTAL PCT EXTENDED;percent] < 0.1",
+				"Tolerance": 1000,
+				"Type": 0,
+				"Description": ""
+			},
+			{
+				"Name": "DOWN",
+				"Condition": "[S:GEAR TOTAL PCT EXTENDED;percent] > 0.9",
+				"Tolerance": 1000,
+				"Type": 0,
+				"Description": ""
+			}
+		],
+		"Name": "Gear position",
+		"Description": "",
+		"InstantEvents": true,
+		"EventParameters": [{
+				"Name": "KIAS",
+				"Type": "instant",
+				"Parameter": "[S:AIRSPEED INDICATED;knots]"
+			},
+			{
+				"Name": "ALT AGL",
+				"Type": "instant",
+				"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG;feet]"
+			}
+		],
+		"MonitoringConditions": {
+			"MONITOR_BEGIN": "1",
+			"MONITOR_END": "0",
+			"SECONDARY": "1",
+			"MARKER_SECONDARY": "1",
+			"APP_MONITOR": "1"
+		}
+	}]
+}
