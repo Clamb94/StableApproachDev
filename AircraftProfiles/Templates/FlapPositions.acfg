@@ -83,9 +83,39 @@
                     "Parameter":"[S:AIRSPEED INDICATED;knots]"
                 },
                 {
-                    "Name":"ALT AGL",
-                    "Type":"instant",
-                    "Parameter":"[S:PLANE ALT ABOVE GROUND MINUS CG;feet]"
+                    "Name":"ALT ABOVE RWY",
+                    "Type":"MINMAX",
+                    "Parameter":"[C:OnAppHeightAboveRwyThrElev;double]"
+                },
+                {
+                    "Name":"APP APT",
+                    "Type":"str",
+                    "Parameter":"[C:OnAppAptIdent;string]"
+                },
+                {
+                    "Name":"APP RWY",
+                    "Type":"str",
+                    "Parameter":"[C:OnAppRwyName;string]"
+                },
+                {
+                    "Name":"APP RWY ELEV",
+                    "Type":"MINMAX",
+                    "Parameter":"[C:OnAppRwyElevation;double]"
+                },
+                {
+                    "Name":"APP DETECTED",
+                    "Type":"MINMAX",
+                    "Parameter":"[C:OnAppHeightAboveRwyThrElev;double]"
+                },
+                {
+                    "Name":"PLANE ALTITUDE",
+                    "Type":"MINMAX",
+                    "Parameter":"[S:PLANE ALTITUDE;feet]"
+                },
+                {
+                    "Name":"INDICATED ALTITUDE",
+                    "Type":"MINMAX",
+                    "Parameter":"[S:INDICATED ALTITUDE;feet]"
                 }
             ]
         },
@@ -162,13 +192,13 @@
                     "Description":""
                 }
             ],
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:SIM ON GROUND;Bool] == 0",
-				"MONITOR_END": "[S:SIM ON GROUND;Bool] != 0",
-				"SECONDARY": "1",
-				"MARKER_SECONDARY": "1",
-				"APP_MONITOR": "1"
-			},
+            "MonitoringConditions":{
+                "MONITOR_BEGIN":"[S:SIM ON GROUND;Bool] == 0",
+                "MONITOR_END":"[S:SIM ON GROUND;Bool] != 0",
+                "SECONDARY":"1",
+                "MARKER_SECONDARY":"1",
+                "APP_MONITOR":"1"
+            },
             "Name":"Flaps overspeed",
             "Description":"",
             "InstantEvents":false,

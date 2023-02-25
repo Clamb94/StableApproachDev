@@ -13,7 +13,8 @@
 		"Templates/LandingConfiguration.acfg",
 		"Templates/Rollout.acfg",
 		"Templates/PMDG/PMDG_EGPWS.acfg",
-		"Templates/PMDG/737_LandingConfig.acfg"	
+		"Templates/PMDG/737_LandingConfig.acfg",
+		"Templates/Phases.acfg"
 	],
 	"FlightEventDefinitionGroups": [{
 			"Events": [{

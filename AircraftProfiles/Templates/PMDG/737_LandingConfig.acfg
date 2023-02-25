@@ -3,14 +3,14 @@
 		{
 			"Name": "Speedbrake (app)",
 			"Events": [{
-					"Name": "Not armed",
+					"Name": "Not armed (> 5000ms)",
 					"Condition": "[L:switch_343_73X;double] == 0",
 					"Type": 2,
 					"Tolerance": 5000,
 					"Description": ""
 				},
 				{
-					"Name": "Not armed",
+					"Name": "Not armed  (> 1000ms)",
 					"Condition": "[L:switch_343_73X;double] == 0",
 					"Type": 1,
 					"Tolerance": 1000,
@@ -24,11 +24,18 @@
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
 			},
-			"EventParameters": [{
+			"EventParameters": [
+			{
 				"Name": "Alt above runway",
 				"Type": "MINMAX",
 				"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
-			}],
+			},
+			{
+				"Name": "Speedbrake ARMED light",
+				"Type": "MINMAX",
+				"Parameter": "[L:switch_343_73X;double]"
+			}			
+			],
 			"Description": "",
 			"InstantEvents": false,
 			"CombineTolerance" : 5000
@@ -50,11 +57,18 @@
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
 			},
-			"EventParameters": [{
-				"Name": "Alt above runway",
+			"EventParameters": [
+			{
+				"Name": "L IGN",
 				"Type": "MINMAX",
-				"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
-			}],
+				"Parameter": "[L:switch_119_73X;double]"
+			},
+			{
+				"Name": "R IGN",
+				"Type": "MINMAX",
+				"Parameter": "[L:switch_121_73X;double]"
+			}
+			],
 			"Description": "",
 			"InstantEvents": false,
 			"CombineTolerance" : 5000

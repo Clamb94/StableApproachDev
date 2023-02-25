@@ -5,14 +5,14 @@
 		"Events": [
 		{
 				"Name": "Not down",
-				"Condition": "[S:GEAR TOTAL PCT EXTENDED;percent] < 0.01 && [S:PLANE ALT ABOVE GROUND MINUS CG;feet] < 200",
+				"Condition": "[S:GEAR TOTAL PCT EXTENDED;percent] < 0.95 && [S:PLANE ALT ABOVE GROUND MINUS CG;feet] < 200",
 				"Type": 3,
 				"Tolerance": 0,
 				"Description": ""
 		},
 		{
 				"Name": "Not down",
-				"Condition": "[S:GEAR TOTAL PCT EXTENDED;percent] < 0.01",
+				"Condition": "[S:GEAR TOTAL PCT EXTENDED;percent] < 0.95",
 				"Type": 2,
 				"Tolerance": 0,
 				"Description": ""
@@ -20,16 +20,54 @@
 		],
 		"MonitoringConditions": {
 			"MONITOR_BEGIN": "[C:DURATION DESCENDING;double] > 2 && [C:BelowCheckHeight;double] != 0 && [C:Phase_FApp;double] != 0",
-			"MONITOR_END": "[C:DURATION DESCENDING;double] < 1",
+			"MONITOR_END": "[C:DURATION DESCENDING;double] < 1 || [C:Phase_FApp;double] == 0",
 			"SECONDARY": "[S:IS GEAR RETRACTABLE;Bool] != 0",
 			"MARKER_SECONDARY": "1",
 			"APP_MONITOR": "1"
 		},
-		"EventParameters": [{
-			"Name": "Alt above runway",
+		"EventParameters": [
+		{
+			"Name": "ALT ABOVE RWY",
 			"Type": "MINMAX",
 			"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
-		}],
+		},
+		{
+			"Name": "APP APT",
+			"Type": "str",
+			"Parameter": "[C:OnAppAptIdent;string]"
+		},
+		{
+			"Name": "APP RWY",
+			"Type": "str",
+			"Parameter": "[C:OnAppRwyName;string]"
+		},
+		{
+			"Name": "APP RWY ELEV",
+			"Type": "MINMAX",
+			"Parameter": "[C:OnAppRwyElevation;double]"
+		},
+		{
+			"Name": "APP DETECTED",
+			"Type": "MINMAX",
+			"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
+		},
+		{
+			"Name": "PLANE ALTITUDE",
+			"Type": "MINMAX",
+			"Parameter": "[S:PLANE ALTITUDE;feet]"
+		},
+		{
+			"Name": "INDICATED ALTITUDE",
+			"Type": "MINMAX",
+			"Parameter": "[S:INDICATED ALTITUDE;feet]"
+		},
+		{
+			"Name": "GEAR",
+			"Type": "MINMAX",
+			"Parameter": "[S:GEAR TOTAL PCT EXTENDED;percent]"
+		}
+	
+		],
 		"Description": "",
 		"InstantEvents": false
 	},
@@ -53,16 +91,53 @@
 		],
 		"MonitoringConditions": {
 			"MONITOR_BEGIN": "[C:DURATION DESCENDING;double] > 2 && [C:BelowCheckHeight;double] != 0 && [C:Phase_FApp;double] != 0",
-			"MONITOR_END": "[C:DURATION DESCENDING;double] < 1",
+			"MONITOR_END": "[C:DURATION DESCENDING;double] < 1 || [C:Phase_FApp;double] == 0",
 			"SECONDARY": "1",
 			"MARKER_SECONDARY": "1",
 			"APP_MONITOR": "1"
 		},
-		"EventParameters": [{
-			"Name": "Alt above runway",
+		"EventParameters": [
+		{
+			"Name": "ALT ABOVE RWY",
 			"Type": "MINMAX",
 			"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
-		}],
+		},
+		{
+			"Name": "APP APT",
+			"Type": "str",
+			"Parameter": "[C:OnAppAptIdent;string]"
+		},
+		{
+			"Name": "APP RWY",
+			"Type": "str",
+			"Parameter": "[C:OnAppRwyName;string]"
+		},
+		{
+			"Name": "APP RWY ELEV",
+			"Type": "MINMAX",
+			"Parameter": "[C:OnAppRwyElevation;double]"
+		},
+		{
+			"Name": "APP DETECTED",
+			"Type": "MINMAX",
+			"Parameter": "[C:OnAppHeightAboveRwyThrElev;double]"
+		},
+		{
+			"Name": "PLANE ALTITUDE",
+			"Type": "MINMAX",
+			"Parameter": "[S:PLANE ALTITUDE;feet]"
+		},
+		{
+			"Name": "INDICATED ALTITUDE",
+			"Type": "MINMAX",
+			"Parameter": "[S:INDICATED ALTITUDE;feet]"
+		},
+		{
+			"Name": "FLAPS INDEX",
+			"Type": "MINMAX",
+			"Parameter": "[S:FLAPS HANDLE INDEX:1;number]"
+		}
+		],
 		"Description": "",
 		"InstantEvents": false
 	}	
