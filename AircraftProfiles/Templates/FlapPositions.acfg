@@ -105,7 +105,7 @@
                 {
                     "Name":"APP DETECTED",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppHeightAboveRwyThrElev;double]"
+                    "Parameter":"[C:OnAppDetected;double]"
                 },
                 {
                     "Name":"PLANE ALTITUDE",
