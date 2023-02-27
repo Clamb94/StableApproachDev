@@ -112,7 +112,7 @@
 					"Description": ""
 				}
 			],
-			"Name": "Flaps position",
+			"Name": "Flaps###position",
 			"Description": "Changes in flaps",
 			"InstantEvents": true,
 			"EventParameters": [{
