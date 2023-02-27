@@ -17,7 +17,7 @@
                     "Description":""
                 }
             ],
-            "Name":"Gear position",
+            "Name":"Gear###position",
             "Description":"",
             "InstantEvents":true,
             "EventParameters":[
@@ -50,6 +50,11 @@
                     "Name":"APP DETECTED",
                     "Type":"MINMAX",
                     "Parameter":"[C:OnAppDetected;double]"
+                },
+                {
+                    "Name":"CHECK ALT",
+                    "Type":"MINMAX",
+                    "Parameter":"[C:OnAppRwyCheckAlt;double]"
                 },
                 {
                     "Name":"PLANE ALTITUDE",

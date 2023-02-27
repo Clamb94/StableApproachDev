@@ -12,21 +12,21 @@
             },
             {
                "Name":"Centerline deviation",
-               "Condition":"(Abs([C:OnRwyCTE;double]) > ([C:OnRwyWidth;double] / 2) - 2) && [S:GROUND VELOCITY;knots] > [C:RolloutHighspeedLimit;double]",
+               "Condition":"(Abs([C:OnRwyCTE;double]) > ([C:OnRwyWidth;double] / 2)) && [S:GROUND VELOCITY;knots] > [C:RolloutHighspeedLimit;double]",
                "Type":3,
                "Tolerance":500,
                "Description":""
             },
 			{
                "Name":"Centerline deviation",
-               "Condition":"(Abs([C:OnRwyCTE;double]) > ([C:OnRwyWidth;double] / 4)) && [S:GROUND VELOCITY;knots] > [C:RolloutHighspeedLimit;double]",
+               "Condition":"(Abs([C:OnRwyCTE;double]) > ([C:OnRwyWidth;double] / 3)) && [S:GROUND VELOCITY;knots] > [C:RolloutHighspeedLimit;double]",
                "Type":2,
                "Tolerance":500,
                "Description":""
             },
 			{
                "Name":"Centerline deviation",
-               "Condition":"(Abs([C:OnRwyCTE;double]) > ([C:OnRwyWidth;double] / 5)) && [S:GROUND VELOCITY;knots] > [C:RolloutHighspeedLimit;double]",
+               "Condition":"(Abs([C:OnRwyCTE;double]) > ([C:OnRwyWidth;double] / 4)) && [S:GROUND VELOCITY;knots] > [C:RolloutHighspeedLimit;double]",
                "Type":1,
                "Tolerance":500,
                "Description":""
@@ -60,6 +60,16 @@
                "Type":"str",
                "Parameter":"[C:OnRwyName;string]"
             },
+            {
+               "Name":"R:ArrAirport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent;string]"
+            },
+            {
+               "Name":"R:ArrRunway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName;string]"
+            },			
             {
                "Name":"AlongTrackDistance",
                "Type":"MINMAX",

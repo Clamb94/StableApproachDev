@@ -145,6 +145,16 @@
                "Parameter":"[C:OnRwyName;string]"
             },
             {
+               "Name":"R:ArrAirport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent;string]"
+            },
+            {
+               "Name":"R:ArrRunway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName;string]"
+            },			
+            {
                "Name":"AlongTrackDistance",
                "Type":"instant",
                "Parameter":"[C:OnRwyATD;double]"

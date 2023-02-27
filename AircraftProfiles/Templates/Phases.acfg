@@ -35,6 +35,11 @@
                     "Parameter":"[C:OnAppRwyElevation;double]"
                 },
                 {
+                    "Name":"CHECK ALT",
+                    "Type":"MINMAX",
+                    "Parameter":"[C:OnAppRwyCheckAlt;double]"
+                },
+                {
                     "Name":"APP DETECTED",
                     "Type":"MINMAX",
                     "Parameter":"[C:OnAppDetected;double]"
@@ -97,6 +102,11 @@
                     "Type":"MINMAX",
                     "Parameter":"[C:OnAppDetected;double]"
                 },
+                {
+                    "Name":"CHECK ALT",
+                    "Type":"MINMAX",
+                    "Parameter":"[C:OnAppRwyCheckAlt;double]"
+                },				
                 {
                     "Name":"PLANE ALTITUDE",
                     "Type":"MINMAX",

@@ -1,16 +1,16 @@
 {
 	"FlightEventDefinitionGroups": [
 		{
-			"Name": "Speedbrake (app)",
+			"Name": "Speedbrake###app",
 			"Events": [{
-					"Name": "Not armed (> 5000ms)",
+					"Name": "Not armed",
 					"Condition": "[L:switch_343_73X;double] == 0",
 					"Type": 2,
 					"Tolerance": 5000,
 					"Description": ""
 				},
 				{
-					"Name": "Not armed  (> 1000ms)",
+					"Name": "Not armed",
 					"Condition": "[L:switch_343_73X;double] == 0",
 					"Type": 1,
 					"Tolerance": 1000,

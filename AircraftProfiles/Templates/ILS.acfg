@@ -4,21 +4,21 @@
 		"Name": "GS",
 		"Events": [{
 				"Name": "Deviation",
-				"Condition": "[S:NAV GLIDE SLOPE ERROR:1;degree] < -0.4",
+				"Condition": "[S:NAV GSI:1;number]/50 < -2",
 				"Type": 3,
 				"Tolerance": 0,
 				"Description": ""
 			},
 			{
 				"Name": "Deviation",
-				"Condition": "Abs([S:NAV GLIDE SLOPE ERROR:1;degree]) > 0.26",
+				"Condition": "Abs([S:NAV GSI:1;number])/50 > 1.5",
 				"Type": 2,
 				"Tolerance": 0,
 				"Description": ""
 			},
 			{
 				"Name": "Deviation",
-				"Condition": "Abs([S:NAV GLIDE SLOPE ERROR:1;degree]) > 0.2",
+				"Condition": "Abs([S:NAV GSI:1;number])/50 > 1",
 				"Type": 1,
 				"Tolerance": 0,
 				"Description": ""
@@ -41,7 +41,7 @@
 		"EventParameters": [{
 			"Name": "Dots",
 			"Type": "MINMAX",
-			"Parameter": "[S:NAV GLIDE SLOPE ERROR:1;degree] * 5"
+			"Parameter": "[S:NAV GSI:1;number]/50"
 		},
 		{
 			"Name": "Ident",
@@ -57,14 +57,14 @@
 		"Events": [
 			{
 				"Name": "Deviation",
-				"Condition": "Abs([S:NAV RADIAL ERROR:1;degree]) > 0.21",
+				"Condition": "Abs([S:NAV RADIAL ERROR:1;degree])/12*10 > 1",
 				"Type": 2,
 				"Tolerance": 0,
 				"Description": ""
 			},
 			{
 				"Name": "Deviation",
-				"Condition": "Abs([S:NAV RADIAL ERROR:1;degree]) > 0.15",
+				"Condition": "Abs([S:NAV RADIAL ERROR:1;degree])/12*10 > 0.5",
 				"Type": 1,
 				"Tolerance": 0,
 				"Description": ""
@@ -87,7 +87,7 @@
 		"EventParameters": [{
 			"Name": "Dots",
 			"Type": "MINMAX",
-			"Parameter": "[S:NAV RADIAL ERROR:1;degree] * 5"
+			"Parameter": "[S:NAV RADIAL ERROR:1;degree]/12*10"
 		},
 		{
 			"Name": "Ident",

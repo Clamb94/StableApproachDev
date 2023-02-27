@@ -64,10 +64,10 @@
         }
     ],
     "CustomParameters":{
-        "C:PitchUpLimitCaution;double":"22",
-        "C:PitchUpLimitWarning;double":"25",
-        "C:PitchDnLimitCaution;double":"-10",
-        "C:PitchDnLimitWarning;double":"-13",
+        "C:PitchUpLimitCaution;double":"25",
+        "C:PitchUpLimitWarning;double":"27",
+        "C:PitchDnLimitCaution;double":"-12",
+        "C:PitchDnLimitWarning;double":"-15",
         "C:BankLimitCaution;double":"40",
         "C:BankLimitWarning;double":"45"
     }

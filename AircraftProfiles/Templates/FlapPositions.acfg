@@ -73,7 +73,7 @@
                     "Description":""
                 }
             ],
-            "Name":"Flaps position",
+            "Name":"Flaps###position",
             "Description":"Changes in flaps",
             "InstantEvents":true,
             "EventParameters":[
@@ -106,6 +106,11 @@
                     "Name":"APP DETECTED",
                     "Type":"MINMAX",
                     "Parameter":"[C:OnAppDetected;double]"
+                },
+                {
+                    "Name":"CHECK ALT",
+                    "Type":"MINMAX",
+                    "Parameter":"[C:OnAppRwyCheckAlt;double]"
                 },
                 {
                     "Name":"PLANE ALTITUDE",
@@ -199,7 +204,7 @@
                 "MARKER_SECONDARY":"1",
                 "APP_MONITOR":"1"
             },
-            "Name":"Flaps overspeed",
+            "Name":"Flaps###overspeed",
             "Description":"",
             "InstantEvents":false,
             "EventParameters":[

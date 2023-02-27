@@ -14,9 +14,33 @@
 		"Templates/Rollout.acfg",
 		"Templates/PMDG/PMDG_EGPWS.acfg",
 		"Templates/PMDG/737_LandingConfig.acfg",
+		"Templates/PMDG/737_TakeoffConfig.acfg",
+		"Templates/PMDG/737_Fuel.acfg",
 		"Templates/Phases.acfg"
+		
 	],
-	"FlightEventDefinitionGroups": [{
+	"FlightEventDefinitionGroups": [
+		{
+			"Events": [{
+					"Name":"Off",
+					"Condition": "[L:switch_800_73X;double] < 40",
+					"Tolerance": 60000,
+					"Type": 1,
+					"Description": ""
+				}
+			],
+			"Name": "XPDR/TCAS",
+			"Description": "Changes in flaps",
+			"InstantEvents": false,
+			"MonitoringConditions": {
+				"MONITOR_BEGIN": "[S:SIM ON GROUND;Bool] == 0",
+				"MONITOR_END": "[S:SIM ON GROUND;Bool] != 0",
+				"SECONDARY": "1",
+				"MARKER_SECONDARY": "1",
+				"APP_MONITOR": "1"
+			}
+		},
+	{
 			"Events": [{
 					"Name":"[C:Flaps0PositionName;string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 0 && [L:FlapMovement;double] == 0",
@@ -140,10 +164,10 @@
 			"CombineTolerance" : 10000
 		},
 		{
-			"Name": "Speedbrake (Flap limit)",
+			"Name": "Speedbrake###FlapLimit",
 			"Events": [{
 				"Name": "Used with Flaps >15",
-				"Condition": "[S:SPOILERS HANDLE POSITION;percent] > 0.1",
+				"Condition": "[S:SPOILERS HANDLE POSITION;percent] > 0.3",
 				"Type": 1,
 				"Tolerance": 1000,
 				"Description": "Do not use speedbrake when flaps are beyond 15"
@@ -186,7 +210,7 @@
 		{
 			"Name": "Landing lights",
 			"Events": [{
-				"Name": "OFF below 10000ft",
+				"Name": "OFF",
 				"Condition": "[L:switch_113_73X;double] != 100 || [L:switch_114_73X;double] != 100",
 				"Type": 1,
 				"Tolerance": 60000,
