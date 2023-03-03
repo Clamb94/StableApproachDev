@@ -1,28 +1,24 @@
 {
     "FlightEventDefinitionGroups":[
         {
-            "Name":"ENG anti-ice required",
+            "Name":"ENG ANTI-ICE",
             "Events":[
                 {
-                    "Name":"Anti-Ice",
-                    "Condition":"[S:AMBIENT TEMPERATURE|celsius] > -39 && [S:ENG ANTI ICE:1|Bool] == 0",
-                    "Type":2,
-                    "Tolerance":5000,
-                    "Description":""
-                },
-				{
-                    "Name":"Anti-Ice",
-                    "Condition":"[S:AMBIENT TEMPERATURE|celsius] < -39 && [S:ENG ANTI ICE:1|Bool] == 0 && [C:DURATION DESCENDING|double] > 5",
-                    "Type":2,
-                    "Tolerance":5000,
+                    "Name":"ON",
+                    "Condition":"[S:TOTAL AIR TEMPERATURE|celsius] > 12 && ([S:ENG ANTI ICE:1|Bool] != 0 || [S:ENG ANTI ICE:2|Bool] != 0)",
+                    "Type":1,
+                    "Tolerance":30000,
                     "Description":""
                 }
             ],
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:AMBIENT VISIBILITY|meters] < 1000 && [S:TOTAL AIR TEMPERATURE|celsius] < 9",
-				"MONITOR_END": "[S:AMBIENT VISIBILITY|meters] > 1100 && [S:TOTAL AIR TEMPERATURE|celsius] > 10"
-			},
-            "Description":"Engine anti-is is required in icing conditions",
+         "EventParameters":[
+            {
+               "Name":"TAT",
+               "Type":"MAX",
+               "Parameter":"[S:TOTAL AIR TEMPERATURE|celsius]"
+            }
+         ],
+            "Description":"Engine anti-ice should not be ON above +10°C TAT",
             "InstantEvents":false
         }
     ]

@@ -10,12 +10,14 @@
 		"Templates/Takeoff.acfg",
 		"Templates/Taxi.acfg",
 		"Templates/ILS.acfg",
+		"Templates/AntiIce.acfg",
 		"Templates/LandingConfiguration.acfg",
 		"Templates/Rollout.acfg",
 		"Templates/PMDG/PMDG_EGPWS.acfg",
 		"Templates/PMDG/737_LandingConfig.acfg",
 		"Templates/PMDG/737_TakeoffConfig.acfg",
 		"Templates/PMDG/737_Fuel.acfg",
+		"Templates/PMDG/737_LimitationsEngine.acfg",
 		"Templates/Phases.acfg"
 		
 	],
@@ -183,7 +185,7 @@
 			"InstantEvents": false
 		},
 		{
-			"Name": "Speedbrake (RA limit)",
+			"Name": "Speedbrake###RALimit",
 			"Events": [{
 				"Name": "Used below 1000ft RA",
 				"Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.2",
