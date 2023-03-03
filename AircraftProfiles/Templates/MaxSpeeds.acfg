@@ -5,28 +5,28 @@
             "Events":[
                 {
                     "Name":"Overspeed (KIAS)",
-                    "Condition":"[S:AIRSPEED INDICATED;knots] > [C:VMO;string] + 15",
+                    "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VMO|string] + 15",
                     "Type":3,
                     "Tolerance":3000,
                     "Description":""
                 },
                 {
                     "Name":"Overspeed (MACH)",
-                    "Condition":"[S:AIRSPEED MACH;mach] > [C:MMO;string] + 0.05",
+                    "Condition":"[S:AIRSPEED MACH|mach] > [C:MMO|string] + 0.05",
                     "Type":3,
                     "Tolerance":2000,
                     "Description":""
                 },
 				{
                     "Name":"Overspeed (KIAS)",
-                    "Condition":"[S:AIRSPEED INDICATED;knots] > [C:VMO;string]",
+                    "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VMO|string]",
                     "Type":2,
                     "Tolerance":3000,
                     "Description":""
                 },
 				{
                     "Name":"Overspeed (MACH)",
-                    "Condition":"[S:AIRSPEED MACH;mach] > [C:MMO;string]",
+                    "Condition":"[S:AIRSPEED MACH|mach] > [C:MMO|string]",
                     "Type":2,
                     "Tolerance":2000,
                     "Description":""
@@ -36,12 +36,12 @@
                 {
                     "Name":"MACH",
                     "Type": "MAX",
-                    "Parameter":"[S:AIRSPEED MACH;mach]"
+                    "Parameter":"[S:AIRSPEED MACH|mach]"
                 },
 				{
                     "Name":"KIAS",
                     "Type": "MAX",
-                    "Parameter":"[S:AIRSPEED INDICATED;knots]"
+                    "Parameter":"[S:AIRSPEED INDICATED|knots]"
                 }
             ],
             "Description":"Excessive airspeed",
@@ -50,7 +50,7 @@
         }
     ],
     "CustomParameters":{
-        "C:VMO;string":"[S:AIRSPEED BARBER POLE;knots]",
-        "C:MMO;string":"[S:BARBER POLE MACH;mach]"
+        "C:VMO|string":"[S:AIRSPEED BARBER POLE|knots]",
+        "C:MMO|string":"[S:BARBER POLE MACH|mach]"
     }
 }

@@ -23,7 +23,7 @@
 		{
 			"Events": [{
 					"Name":"Off",
-					"Condition": "[L:switch_800_73X;double] < 40",
+					"Condition": "[L:switch_800_73X|double] < 40",
 					"Tolerance": 60000,
 					"Type": 1,
 					"Description": ""
@@ -33,8 +33,8 @@
 			"Description": "Changes in flaps",
 			"InstantEvents": false,
 			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:SIM ON GROUND;Bool] == 0",
-				"MONITOR_END": "[S:SIM ON GROUND;Bool] != 0",
+				"MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
+				"MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
 				"SECONDARY": "1",
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
@@ -42,71 +42,71 @@
 		},
 	{
 			"Events": [{
-					"Name":"[C:Flaps0PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 0 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps0PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps1PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 1 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps1PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps2PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 2  && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps2PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2  && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps3PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 3 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps3PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps4PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 4 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps4PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps5PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 5 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps5PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps6PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 6 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps6PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps7PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 7 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps7PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps8PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 8 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps8PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps9PositionName;string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1;number] == 9 && [L:FlapMovement;double] == 0",
+					"Name":"[C:Flaps9PositionName|string]",
+					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
@@ -118,12 +118,12 @@
 			"EventParameters": [{
 					"Name": "KIAS",
 					"Type": "instant",
-					"Parameter": "[S:AIRSPEED INDICATED;knots]"
+					"Parameter": "[S:AIRSPEED INDICATED|knots]"
 				},
 				{
 					"Name": "ALT AGL",
 					"Type": "instant",
-					"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG;feet]"
+					"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
 				}
 			]
 		},
@@ -131,21 +131,21 @@
 			"Name": "Stick shaker",
 			"Events": [{
 					"Name": "Active",
-					"Condition": "[L:ShakerLeft;double] != 0",
+					"Condition": "[L:ShakerLeft|double] != 0",
 					"Type": 3,
 					"Tolerance": 3000,
 					"Description": ""
 				},
 				{
 					"Name": "Active",
-					"Condition": "[L:ShakerLeft;double] != 0",
+					"Condition": "[L:ShakerLeft|double] != 0",
 					"Type": 2,
 					"Tolerance": 1000,
 					"Description": ""
 				},
 				{
 					"Name": "Active",
-					"Condition": "[L:ShakerLeft;double] != 0",
+					"Condition": "[L:ShakerLeft|double] != 0",
 					"Type": 1,
 					"Tolerance": 0,
 					"Description": ""
@@ -153,8 +153,8 @@
 
 			],
 			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:SIM ON GROUND;Bool] == 0",
-				"MONITOR_END": "[S:SIM ON GROUND;Bool] != 0",
+				"MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
+				"MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
 				"SECONDARY": "1",
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
@@ -167,14 +167,14 @@
 			"Name": "Speedbrake###FlapLimit",
 			"Events": [{
 				"Name": "Used with Flaps >15",
-				"Condition": "[S:SPOILERS HANDLE POSITION;percent] > 0.3",
+				"Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.3",
 				"Type": 1,
 				"Tolerance": 1000,
 				"Description": "Do not use speedbrake when flaps are beyond 15"
 			}],
 			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG;feet] > 5 && [S:FLAPS HANDLE INDEX:1;number] > 5",
-				"MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG;feet] < 5 || [S:FLAPS HANDLE INDEX:1;number] <= 5",
+				"MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 5 && [S:FLAPS HANDLE INDEX:1|number] > 5",
+				"MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 5 || [S:FLAPS HANDLE INDEX:1|number] <= 5",
 				"SECONDARY": "1",
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
@@ -186,14 +186,14 @@
 			"Name": "Speedbrake (RA limit)",
 			"Events": [{
 				"Name": "Used below 1000ft RA",
-				"Condition": "[S:SPOILERS HANDLE POSITION;percent] > 0.2",
+				"Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.2",
 				"Type": 1,
 				"Tolerance": 1000,
 				"Description": "Do not deploy speedbrakes in flight at radio altitude less than 1000ft"
 			}],
 			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG;feet] > 20 && [S:PLANE ALT ABOVE GROUND MINUS CG;feet] < 900",
-				"MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG;feet] < 10 || [S:PLANE ALT ABOVE GROUND MINUS CG;feet] > 950",
+				"MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 20 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 900",
+				"MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 950",
 				"SECONDARY": "1",
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
@@ -201,7 +201,7 @@
 			"EventParameters": [{
 				"Name": "RA",
 				"Type": "MIN",
-				"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG;feet]"
+				"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
 			}],
 			"Description": "",
 			"InstantEvents": false,
@@ -211,14 +211,14 @@
 			"Name": "Landing lights",
 			"Events": [{
 				"Name": "OFF",
-				"Condition": "[L:switch_113_73X;double] != 100 || [L:switch_114_73X;double] != 100",
+				"Condition": "[L:switch_113_73X|double] != 100 || [L:switch_114_73X|double] != 100",
 				"Type": 1,
 				"Tolerance": 60000,
 				"Description": "Turn on landing lights below 10000ft"
 			}],
 			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:INDICATED ALTITUDE;feet] < 9500 && [S:PLANE ALT ABOVE GROUND MINUS CG;feet] > 100",
-				"MONITOR_END": "[S:INDICATED ALTITUDE;feet] > 9600 || [S:PLANE ALT ABOVE GROUND MINUS CG;feet] < 50",
+				"MONITOR_BEGIN": "[S:INDICATED ALTITUDE|feet] < 9500 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 100",
+				"MONITOR_END": "[S:INDICATED ALTITUDE|feet] > 9600 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 50",
 				"SECONDARY": "1",
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
@@ -229,27 +229,27 @@
 		}
 	],
 	"CustomParameters": {
-		"C:NoLandingFlapsCondition;string": "[S:FLAPS HANDLE INDEX:1;number] < 7",
-		"C:Flaps0PositionName;string": "UP",
-		"C:Flaps1PositionName;string": "1",
-		"C:Flaps2PositionName;string": "2",
-		"C:Flaps3PositionName;string": "5",
-		"C:Flaps4PositionName;string": "10",
-		"C:Flaps5PositionName;string": "15",
-		"C:Flaps6PositionName;string": "25",
-		"C:Flaps7PositionName;string": "30",
-		"C:Flaps8PositionName;string": "40",
-		"C:Flaps0MaxKIAS;double": "999",
-		"C:Flaps1MaxKIAS;double": "250",
-		"C:Flaps2MaxKIAS;double": "250",
-		"C:Flaps3MaxKIAS;double": "250",
-		"C:Flaps4MaxKIAS;double": "210",
-		"C:Flaps5MaxKIAS;double": "200",
-		"C:Flaps6MaxKIAS;double": "190",
-		"C:Flaps7MaxKIAS;double": "175",
-		"C:Flaps8MaxKIAS;double": "162",
-		"C:MaxFlapExtensionAlt;double": "20000",
-		"C:VMO;string": "340",
-		"C:MMO;string": "0.82"
+		"C:NoLandingFlapsCondition|string": "[S:FLAPS HANDLE INDEX:1|number] < 7",
+		"C:Flaps0PositionName|string": "UP",
+		"C:Flaps1PositionName|string": "1",
+		"C:Flaps2PositionName|string": "2",
+		"C:Flaps3PositionName|string": "5",
+		"C:Flaps4PositionName|string": "10",
+		"C:Flaps5PositionName|string": "15",
+		"C:Flaps6PositionName|string": "25",
+		"C:Flaps7PositionName|string": "30",
+		"C:Flaps8PositionName|string": "40",
+		"C:Flaps0MaxKIAS|double": "999",
+		"C:Flaps1MaxKIAS|double": "250",
+		"C:Flaps2MaxKIAS|double": "250",
+		"C:Flaps3MaxKIAS|double": "250",
+		"C:Flaps4MaxKIAS|double": "210",
+		"C:Flaps5MaxKIAS|double": "200",
+		"C:Flaps6MaxKIAS|double": "190",
+		"C:Flaps7MaxKIAS|double": "175",
+		"C:Flaps8MaxKIAS|double": "162",
+		"C:MaxFlapExtensionAlt|double": "20000",
+		"C:VMO|string": "340",
+		"C:MMO|string": "0.82"
 	}
 }

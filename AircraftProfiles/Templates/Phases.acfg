@@ -5,7 +5,7 @@
             "Events":[
                 {
                     "Name":"Active",
-                    "Condition":"[C:Phase_FApp;double] != 0",
+                    "Condition":"[C:Phase_FApp|double] != 0",
                     "Tolerance":0,
                     "Type":0,
                     "Description":""
@@ -17,42 +17,42 @@
                 {
                     "Name":"ALT ABOVE RWY",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppHeightAboveRwyThrElev;double]"
+                    "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
                 },
                 {
                     "Name":"APP APT",
                     "Type":"str",
-                    "Parameter":"[C:OnAppAptIdent;string]"
+                    "Parameter":"[C:OnAppAptIdent|string]"
                 },
                 {
                     "Name":"APP RWY",
                     "Type":"str",
-                    "Parameter":"[C:OnAppRwyName;string]"
+                    "Parameter":"[C:OnAppRwyName|string]"
                 },
                 {
                     "Name":"APP RWY ELEV",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyElevation;double]"
+                    "Parameter":"[C:OnAppRwyElevation|double]"
                 },
                 {
                     "Name":"CHECK ALT",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyCheckAlt;double]"
+                    "Parameter":"[C:OnAppRwyCheckAlt|double]"
                 },
                 {
                     "Name":"APP DETECTED",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppDetected;double]"
+                    "Parameter":"[C:OnAppDetected|double]"
                 },
                 {
                     "Name":"PLANE ALTITUDE",
                     "Type":"MINMAX",
-                    "Parameter":"[S:PLANE ALTITUDE;feet]"
+                    "Parameter":"[S:PLANE ALTITUDE|feet]"
                 },
                 {
                     "Name":"INDICATED ALTITUDE",
                     "Type":"MINMAX",
-                    "Parameter":"[S:INDICATED ALTITUDE;feet]"
+                    "Parameter":"[S:INDICATED ALTITUDE|feet]"
                 }
             ],
             "MonitoringConditions":{
@@ -68,7 +68,7 @@
             "Events":[
                 {
                     "Name":"true",
-                    "Condition":"[C:BelowCheckHeight;double] != 0",
+                    "Condition":"[C:BelowCheckHeight|double] != 0",
                     "Tolerance":0,
                     "Type":0,
                     "Description":""
@@ -80,42 +80,42 @@
                 {
                     "Name":"ALT ABOVE RWY",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppHeightAboveRwyThrElev;double]"
+                    "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
                 },
                 {
                     "Name":"APP APT",
                     "Type":"str",
-                    "Parameter":"[C:OnAppAptIdent;string]"
+                    "Parameter":"[C:OnAppAptIdent|string]"
                 },
                 {
                     "Name":"APP RWY",
                     "Type":"str",
-                    "Parameter":"[C:OnAppRwyName;string]"
+                    "Parameter":"[C:OnAppRwyName|string]"
                 },
                 {
                     "Name":"APP RWY ELEV",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyElevation;double]"
+                    "Parameter":"[C:OnAppRwyElevation|double]"
                 },
                 {
                     "Name":"APP DETECTED",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppDetected;double]"
+                    "Parameter":"[C:OnAppDetected|double]"
                 },
                 {
                     "Name":"CHECK ALT",
                     "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyCheckAlt;double]"
+                    "Parameter":"[C:OnAppRwyCheckAlt|double]"
                 },				
                 {
                     "Name":"PLANE ALTITUDE",
                     "Type":"MINMAX",
-                    "Parameter":"[S:PLANE ALTITUDE;feet]"
+                    "Parameter":"[S:PLANE ALTITUDE|feet]"
                 },
                 {
                     "Name":"INDICATED ALTITUDE",
                     "Type":"MINMAX",
-                    "Parameter":"[S:INDICATED ALTITUDE;feet]"
+                    "Parameter":"[S:INDICATED ALTITUDE|feet]"
                 }
             ],
             "MonitoringConditions":{

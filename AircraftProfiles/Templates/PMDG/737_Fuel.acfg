@@ -5,22 +5,22 @@
             "Events":[
                 {
                     "Name":"CTR OFF",
-                    "Condition":"[S:FUEL TANK CENTER QUANTITY;liter]/1.24 > 1300 && ([L:switch_45_73X;double] != 100 || [L:switch_46_73X;double] != 100)",
+                    "Condition":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 1300 && ([L:switch_45_73X|double] != 100 || [L:switch_46_73X|double] != 100)",
                     "Type":1,
                     "Tolerance":60000,
                     "Description":""
                 },
                 {
                     "Name":"CTR OFF",
-                    "Condition":"[S:FUEL TANK CENTER QUANTITY;liter]/1.24 > 200 && ([L:switch_45_73X;double] != 100 || [L:switch_45_73X;double] != 100) && [S:PRESSURE ALTITUDE;feet] > 12000",
+                    "Condition":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 200 && ([L:switch_45_73X|double] != 100 || [L:switch_45_73X|double] != 100) && [S:PRESSURE ALTITUDE|feet] > 12000",
                     "Type":1,
                     "Tolerance":60000,
                     "Description":""
                 }
             ],
             "MonitoringConditions":{
-                "MONITOR_BEGIN":"[C:AllEnginesRunning;double] != 0",
-                "MONITOR_END":"[C:AllEnginesRunning;double] == 0",
+                "MONITOR_BEGIN":"[C:AllEnginesRunning|double] != 0",
+                "MONITOR_END":"[C:AllEnginesRunning|double] == 0",
                 "SECONDARY":"1",
                 "MARKER_SECONDARY":"1",
                 "APP_MONITOR":"1"
@@ -29,7 +29,7 @@
                 {
                     "Name":"CTR FUEL (kg)",
                     "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK CENTER QUANTITY;liter]/1.24"
+                    "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 }
             ],
             "Description":"",
@@ -41,14 +41,14 @@
             "Events":[
 				{
                     "Name":"CTR LOW PRESSURE",
-                    "Condition":"([L:switch_45_73X;double] == 100 && [L:switch_47_73X;double] > 0) || ([L:switch_46_73X;double] == 100 && [L:switch_48_73X;double] > 0)",
+                    "Condition":"([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",
                     "Type":2,
                     "Tolerance":120000,
                     "Description":""
                 },
                 {
                     "Name":"CTR LOW PRESSURE",
-                    "Condition":"([L:switch_45_73X;double] == 100 && [L:switch_47_73X;double] > 0) || ([L:switch_46_73X;double] == 100 && [L:switch_48_73X;double] > 0)",
+                    "Condition":"([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",
                     "Type":1,
                     "Tolerance":60000,
                     "Description":""
@@ -65,7 +65,7 @@
                 {
                     "Name":"CTR FUEL (kg)",
                     "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK CENTER QUANTITY;liter]/1.24"
+                    "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 }
             ],
             "Description":"",
@@ -77,22 +77,22 @@
             "Events":[
 				{
                     "Name":"LEFT OFF",
-                    "Condition":"([L:switch_37_73X;double] == 0 || [L:switch_38_73X;double] == 0) && [L:switch_49_73X;double] == 100",
+                    "Condition":"([L:switch_37_73X|double] == 0 || [L:switch_38_73X|double] == 0) && [L:switch_49_73X|double] == 100",
                     "Type":2,
                     "Tolerance":300000,
                     "Description":""
                 },
                 {
                     "Name":"RIGHT OFF",
-                    "Condition":"([L:switch_39_73X;double] == 0 || [L:switch_40_73X;double] == 0) && [L:switch_49_73X;double] == 100",
+                    "Condition":"([L:switch_39_73X|double] == 0 || [L:switch_40_73X|double] == 0) && [L:switch_49_73X|double] == 100",
                     "Type":1,
                     "Tolerance":30000,
                     "Description":""
                 }
             ],
             "MonitoringConditions":{
-                "MONITOR_BEGIN":"[C:AllEnginesRunning;double] != 0",
-                "MONITOR_END":"[C:AllEnginesRunning;double] == 0",
+                "MONITOR_BEGIN":"[C:AllEnginesRunning|double] != 0",
+                "MONITOR_END":"[C:AllEnginesRunning|double] == 0",
                 "SECONDARY":"1",
                 "MARKER_SECONDARY":"1",
                 "APP_MONITOR":"1"
@@ -106,15 +106,15 @@
             "Events":[
 				{
                     "Name":"L/R IMBALANCE",
-                    "Condition":"Abs([S:FUEL TANK LEFT MAIN QUANTITY;liter]/1.24 - [S:FUEL TANK RIGHT MAIN QUANTITY;liter]/1.24) > 600",
+                    "Condition":"Abs([S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24 - [S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24) > 600",
                     "Type":1,
                     "Tolerance":120000,
                     "Description":""
                 }
             ],
             "MonitoringConditions":{
-                "MONITOR_BEGIN":"[C:AllEnginesRunning;double] != 0",
-                "MONITOR_END":"[C:AllEnginesRunning;double] == 0",
+                "MONITOR_BEGIN":"[C:AllEnginesRunning|double] != 0",
+                "MONITOR_END":"[C:AllEnginesRunning|double] == 0",
                 "SECONDARY":"1",
                 "MARKER_SECONDARY":"1",
                 "APP_MONITOR":"1"
@@ -123,17 +123,17 @@
                 {
                     "Name":"CTR FUEL (kg)",
                     "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK CENTER QUANTITY;liter]/1.24"
+                    "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 },
                 {
                     "Name":"L FUEL (kg)",
                     "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK LEFT MAIN QUANTITY;liter]/1.24"
+                    "Parameter":"[S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24"
                 },
                 {
                     "Name":"R FUEL (kg)",
                     "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK RIGHT MAIN QUANTITY;liter]/1.24"
+                    "Parameter":"[S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24"
                 }			
             ],
             "Description":"",
