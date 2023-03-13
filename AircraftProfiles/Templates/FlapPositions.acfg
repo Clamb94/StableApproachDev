@@ -218,13 +218,13 @@
         {
             "Events":[
                 {
-                    "Name":"Max. Flap extension altitude exceeded",
+                    "Name":"Max altitude exceeded",
                     "Condition":"([S:PRESSURE ALTITUDE|feet] > [C:MaxFlapExtensionAlt|double]) && [S:FLAPS HANDLE INDEX:1|number] != 0",
                     "Tolerance":3000,
                     "Type":3
                 }
             ],
-            "Name":"Max. Flaps altitude",
+            "Name":"Flap###altitude",
             "Description":"Maximum flap exension altitude exceeded"
         }
     ],

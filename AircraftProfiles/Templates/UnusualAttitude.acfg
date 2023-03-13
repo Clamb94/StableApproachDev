@@ -153,10 +153,39 @@
             "MARKER_SECONDARY":"1",
             "APP_MONITOR":"1"
          }
+      },
+      {
+         "Name":"Operating altitude",
+         "Events":[
+            {
+               "Name":"EXCEEDED",
+               "Condition":"[S:PRESSURE ALTITUDE|feet] > ([C:MaxOpAlt|double] + 300)",
+               "Type":2,
+               "Tolerance":1000,
+               "Description":""
+            }
+         ],
+         "EventParameters":[
+            {
+               "Name":"ALT",
+               "Type":"MAX",
+               "Parameter":"[S:PRESSURE ALTITUDE|feet]"
+            }
+         ],
+         "Description":"Operating altitude limit",
+         "InstantEvents":false,
+         "CombineTolerance":5000,
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] == 0",
+            "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         }
       }
    ],
    "CustomParameters":{
-	  "C:PitchUpLimitCaution|double":"25",
+      "C:PitchUpLimitCaution|double":"25",
       "C:PitchUpLimitWarning|double":"27",
       "C:PitchDnLimitCaution|double":"-10",
       "C:PitchDnLimitWarning|double":"-12",
@@ -165,6 +194,7 @@
       "C:GLimitFlapsUpPos|double":"2.5",
       "C:GLimitFlapsUpNeg|double":"-1",
       "C:GLimitFlapsDnPos|double":"2",
-      "C:GLimitFlapsDnNeg|double":"0"
+      "C:GLimitFlapsDnNeg|double":"0",
+      "C:MaxOpAlt|double":"50000"
    }
 }

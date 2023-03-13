@@ -4,7 +4,7 @@
          "Name":"Ignition###antiIce",
          "Events":[
             {
-               "Name":"OFF",
+               "Name":"OFF (Anti-Ice)",
                "Condition":"([L:switch_119_73X|double] != 20 && [S:ENG ANTI ICE:1|Bool] != 0) || ([L:switch_121_73X|double] != 20  && [S:ENG ANTI ICE:2|Bool] != 0)", 
                "Type":1,
                "Tolerance":2000,
@@ -24,15 +24,8 @@
 		 "CombineTolerance" : 1000
       },
       {
-         "Name":"APU",
+         "Name":"APU###AltLimits",
          "Events":[
-            {
-               "Name":"DUAL BLEED",
-               "Condition":"[L:switch_193_73X|double] > 0 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 10", 
-               "Type":1,
-               "Tolerance":2000,
-               "Description":"Avoid engine power above idle"
-            },
             {
                "Name":"BLEED MAX ALT",
                "Condition":"[L:switch_211_73X|double] > 0 && [S:PRESSURE ALTITUDE|feet] > 17500", 
@@ -56,7 +49,30 @@
             "MARKER_SECONDARY":"1",
             "APP_MONITOR":"1"
          },
-         "Description":"Engine ignition must be on for anti-ice operation",
+         "Description":"APU operating limit exceeded",
+         "InstantEvents":false,
+		 "CombineTolerance" : 1000
+      },
+      {
+         "Name":"APU",
+         "Events":[
+            {
+               "Name":"DUAL BLEED",
+               "Condition":"[L:switch_193_73X|double] > 0 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 10", 
+               "Type":1,
+               "Tolerance":2000,
+               "Description":"Avoid engine power above idle"
+            }		
+         ]
+         ,
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[L:APU|double] != 0",
+            "MONITOR_END":"[L:APU|double] == 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "Description":"APU incorrect operation",
          "InstantEvents":false,
 		 "CombineTolerance" : 1000
       }	  
