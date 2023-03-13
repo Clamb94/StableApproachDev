@@ -110,14 +110,16 @@
                "Parameter":"[#S:AIRSPEED INDICATED|knots]"
             },
             {
-               "Name":"R:TouchdownVS",
+               "Name":"TouchdownVS",
                "Type":"instant",
-               "Parameter":"[#S:VERTICAL SPEED|ft/min]"
+               "Parameter":"[#S:VERTICAL SPEED|ft/min]",
+			   "AddToReport":true
             },
             {
-               "Name":"R:TouchdownG",
+               "Name":"TouchdownG",
                "Type":"max",
-               "Parameter":"[C:MaxGForceOnGround|double]"
+               "Parameter":"[C:MaxGForceOnGround|double]",
+			   "AddToReport":true
             },
 			{
                "Name":"Delta G-Force",
@@ -135,29 +137,22 @@
                "Parameter":"[C:OnRwyDetected|double]"
             },
             {
-               "Name":"Airport",
+               "Name":"ArrAirport",
                "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
+               "Parameter":"[C:OnRwyAptIdent|string]",
+			   "AddToReport":true
             },
             {
-               "Name":"Runway",
+               "Name":"ArrRunway",
                "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
-            },
-            {
-               "Name":"R:ArrAirport",
-               "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
-            },
-            {
-               "Name":"R:ArrRunway",
-               "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
+               "Parameter":"[C:OnRwyName|string]",
+			   "AddToReport":true
             },			
             {
                "Name":"AlongTrackDistance",
                "Type":"instant",
-               "Parameter":"[C:OnRwyATD|double]"
+               "Parameter":"[C:OnRwyATD|double]",
+			   "AddToReport":true
             },
             {
                "Name":"CrossTrackError",

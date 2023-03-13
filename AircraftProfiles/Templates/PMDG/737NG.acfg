@@ -2,6 +2,8 @@
 	"Name": "PMDG 737",
 	"Enabled": true,
 	"Templates": [
+		"Templates/RE01_PowerChangeTakeoff.acfg",
+		"Templates/RE08_SlowRotation.acfg",
 		"Templates/UnusualAttitude.acfg",
 		"Templates/FlapPositions.acfg",
 		"Templates/GearPosition.acfg",
@@ -13,12 +15,15 @@
 		"Templates/AntiIce.acfg",
 		"Templates/LandingConfiguration.acfg",
 		"Templates/Rollout.acfg",
+		"Templates/PMDG/737_RE02_TakeoffConfig.acfg",
+		"Templates/PMDG/737_RE07_LateRotation.acfg",
+		
 		"Templates/PMDG/PMDG_EGPWS.acfg",
 		"Templates/PMDG/737_LandingConfig.acfg",
-		"Templates/PMDG/737_TakeoffConfig.acfg",
 		"Templates/PMDG/737_Fuel.acfg",
 		"Templates/PMDG/737_LimitationsEngine.acfg",
-		"Templates/Phases.acfg"
+		"Templates/Phases.acfg",
+		"Templates/Dev.acfg"
 		
 	],
 	"FlightEventDefinitionGroups": [

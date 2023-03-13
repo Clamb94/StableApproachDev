@@ -44,24 +44,16 @@
                "Parameter":"[C:OnRwyDetected|double]"
             },
             {
-               "Name":"Airport",
+               "Name":"DepAirport",
                "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
+               "Parameter":"[C:OnRwyAptIdent|string]",
+			   "AddToReport":true
             },
             {
-               "Name":"Runway",
+               "Name":"DepRunway",
                "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
-            },
-            {
-               "Name":"R:DepAirport",
-               "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
-            },
-            {
-               "Name":"R:DepRunway",
-               "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
+               "Parameter":"[C:OnRwyName|string]",
+			   "AddToReport":true
             },				
             {
                "Name":"AlongTrackDistance",

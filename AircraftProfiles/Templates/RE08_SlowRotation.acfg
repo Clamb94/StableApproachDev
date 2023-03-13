@@ -1,0 +1,44 @@
+{
+   "FlightEventDefinitionGroups":
+   [
+      {
+         "Name":"RE08 - Slow rotation",
+         "Events":
+		 [
+            {
+               "Name":"Slow rotation",
+               "Condition":"1",
+               "Type":1,
+               "Tolerance":9000,
+               "Description":""
+            },
+            {
+               "Name":"Slow rotation",
+               "Condition":"1",
+               "Type":2,
+               "Tolerance":12000,
+               "Description":""
+            }			
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[C:Phase_Takeoff0|double] != 0 && [S:GEAR IS ON GROUND:0|Bool] == 0",
+            "MONITOR_END":"[C:DURATION AIRBORNE|double] > 3",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+			{
+               "Name":"KIAS Unstick",
+               "Type":"instant",
+               "Parameter":"[#S:AIRSPEED INDICATED|knots]",
+			   "RecordingCondition":"[S:GEAR IS ON GROUND:0|Bool] == 0"
+            }
+         ],
+         "Description":"",
+         "InstantEvents":false,
+         "CombineTolerance":0,
+		 "ResetParameterOnEvent": false
+		 }
+   ]
+}

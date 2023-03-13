@@ -1,0 +1,42 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"Dev",
+         "Events":[
+            {
+               "Name":"Smaller",
+               "Condition":"[S:FLAPS HANDLE INDEX:1|number] < [P:FlapsP]",
+               "Type":1,
+               "Tolerance":2000,
+               "Description":""
+            },
+            {
+               "Name":"Bigger",
+               "Condition":"[S:FLAPS HANDLE INDEX:1|number] > [P:FlapsP]",
+               "Type":1,
+               "Tolerance":2000,
+               "Description":""
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[S:SPOILERS HANDLE POSITION|percent] == 0",
+            "MONITOR_END":"[S:SPOILERS HANDLE POSITION|percent] != 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"FlapsP",
+               "Type":"instant",
+               "Parameter":"[S:FLAPS HANDLE INDEX:1|number]"
+            }
+         ],
+         "Description":"Limit speed in turns to 10kn",
+         "InstantEvents":false,
+         "CombineTolerance":2000,
+		 "ResetParameterOnEvent": false
+		 
+      }]
+	  
+}
