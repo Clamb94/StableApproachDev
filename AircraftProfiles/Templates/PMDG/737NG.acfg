@@ -4,6 +4,15 @@
 	"Templates": [
 		"Templates/RE01_PowerChangeTakeoff.acfg",
 		"Templates/RE08_SlowRotation.acfg",
+		"Templates/RE13_InsuffDecel.acfg",
+		"Templates/RE15_RunwayRemainLiftoff.acfg",
+		"Templates/RE16_AircraftHandling.acfg",
+		"Templates/RE17_Crosswind.acfg",
+		"Templates/RE18_ThrustAsym.acfg",
+		"Templates/RE20_LateralDeviation.acfg",
+		"Templates/RE24_Tailwind.acfg",
+		"Templates/RE26_UnstableApproach.acfg",
+		"Templates/RE28_LongFlare.acfg",	
 		"Templates/UnusualAttitude.acfg",
 		"Templates/FlapPositions.acfg",
 		"Templates/GearPosition.acfg",
@@ -11,19 +20,17 @@
 		"Templates/Touchdown.acfg",
 		"Templates/Takeoff.acfg",
 		"Templates/Taxi.acfg",
-		"Templates/ILS.acfg",
 		"Templates/AntiIce.acfg",
-		"Templates/LandingConfiguration.acfg",
 		"Templates/Rollout.acfg",
 		"Templates/PMDG/737_RE02_TakeoffConfig.acfg",
-		"Templates/PMDG/737_RE07_LateRotation.acfg",		
+		"Templates/PMDG/737_RE07_LateRotation.acfg",
+		"Templates/PMDG/737_RE09_NoLiftoff.acfg",
+		"Templates/PMDG/737_RE21_RevAsym.acfg",
+		"Templates/PMDG/737_RE26_UnstableApproach.acfg",
 		"Templates/PMDG/PMDG_EGPWS.acfg",
-		"Templates/PMDG/737_LandingConfig.acfg",
 		"Templates/PMDG/737_Fuel.acfg",
 		"Templates/PMDG/737_LimitationsEngine.acfg",
-		"Templates/Phases.acfg",
-		"Templates/Dev.acfg"
-		
+		"Templates/Phases.acfg"		
 	],
 	"FlightEventDefinitionGroups": [
 		{
@@ -256,6 +263,7 @@
 		"C:Flaps8MaxKIAS|double": "162",
 		"C:MaxFlapExtensionAlt|double": "20000",
 		"C:VMO|string": "340",
-		"C:MMO|string": "0.82"
+		"C:MMO|string": "0.82",
+		"C:VrefVar|string": "[L:ngx_SPDwindow|double]"
 	}
 }

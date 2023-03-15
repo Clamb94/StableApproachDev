@@ -28,7 +28,7 @@
 			   "RecordingCondition":"[S:GEAR IS ON GROUND:0|Bool] == 0"
             }
          ],
-         "Description":"Rotate after 'rotate' callout",
+         "Description":"",
          "InstantEvents":false,
          "CombineTolerance":0,
 		 "ResetParameterOnEvent": false

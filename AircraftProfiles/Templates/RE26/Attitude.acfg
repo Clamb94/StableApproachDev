@@ -1,0 +1,86 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"RE26 - Unstable Approach###PitchAtt",
+         "Events":[
+            {
+               "Name":"High pitch attitude",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] > 10",
+               "Type":1,
+               "Tolerance":3000,
+               "Description":""
+            },
+            {
+               "Name":"High pitch attitude",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] > 15",
+               "Type":2,
+               "Tolerance":3000,
+               "Description":""
+            },
+            {
+               "Name":"Low pitch attitude",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] < -3",
+               "Type":1,
+               "Tolerance":3000,
+               "Description":""
+            },
+            {
+               "Name":"Low pitch attitude",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] < -10",
+               "Type":2,
+               "Tolerance":3000,
+               "Description":""
+            }
+         ],
+         "EventParameters":[
+            {
+               "Name":"PITCH",
+               "Type":"MINMAX",
+               "Parameter":"-1*[S:PLANE PITCH DEGREES|degree]"
+            },
+			{
+				"Name": "Alt above runway",
+				"Type": "MINMAX",
+				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+			}			
+         ],
+         "Description":"High/low pitch attitude",
+         "InstantEvents":false,
+         "CombineTolerance":5000
+      },
+      {
+         "Name":"RE26 - Unstable Approach###RollAtt",
+         "Events":[
+            {
+               "Name":"High roll attitude",
+               "Condition":"-1*[S:PLANE BANK DEGREES|degree] > 15",
+               "Type":1,
+               "Tolerance":3000,
+               "Description":""
+            },
+            {
+               "Name":"High roll attitude",
+               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > 30",
+               "Type":2,
+               "Tolerance":3000,
+               "Description":""
+            }
+         ],
+         "EventParameters":[
+            {
+               "Name":"BANK",
+               "Type":"MINMAX",
+               "Parameter":"[S:PLANE BANK DEGREES|degree]"
+            },
+			{
+				"Name": "Alt above runway",
+				"Type": "MINMAX",
+				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+			}			
+         ],
+         "Description":"High/low pitch attitude",
+         "InstantEvents":false,
+         "CombineTolerance":5000
+      }
+   ]
+}
