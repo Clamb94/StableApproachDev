@@ -1,0 +1,337 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"RE30 - Abnormal runway contact###TouchdownPitch",
+         "Events":[
+            {
+               "Name":"Pitch high at touchdown",
+               "Condition":"-1*[#S:PLANE PITCH DEGREES|degree] > [C:GroundPitchLimit|double]",
+               "Type":1,
+               "Tolerance":500,
+               "Description":""
+            },
+            {
+               "Name":"Pitch high at touchdown",
+               "Condition":"-1*[#S:PLANE PITCH DEGREES|degree] > [C:GroundPitchLimit|double] + 2",
+               "Type":2,
+               "Tolerance":500,
+               "Description":""
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
+            "MONITOR_END":"[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"Pitch",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree]"
+            },
+            {
+               "Name":"Bank",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE BANK DEGREES|degree]"
+            },
+            {
+               "Name":"Crab",
+               "Type":"instant",
+               "Parameter":"[#S:INCIDENCE BETA|degree]"
+            },
+            {
+               "Name":"KIAS",
+               "Type":"instant",
+               "Parameter":"[#S:AIRSPEED INDICATED|knots]"
+            },
+            {
+               "Name":"TouchdownVS",
+               "Type":"instant",
+               "Parameter":"[#S:VERTICAL SPEED|ft/min]"
+            },
+            {
+               "Name":"TouchdownG",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround|double]"
+            },
+            {
+               "Name":"Delta G-Force",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround|double] - [C:LastGForceInFlight|double]"
+            },
+            {
+               "Name":"Flaps (Index)",
+               "Type":"instant",
+               "Parameter":"[S:FLAPS HANDLE INDEX:1|number]"
+            },
+            {
+               "Name":"Runway detected",
+               "Type":"str",
+               "Parameter":"[C:OnRwyDetected|double]"
+            },
+            {
+               "Name":"ArrAirport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent|string]"
+            },
+            {
+               "Name":"ArrRunway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName|string]"
+            },
+            {
+               "Name":"AlongTrackDistance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double]"
+            },
+            {
+               "Name":"CrossTrackError",
+               "Type":"max",
+               "Parameter":"[C:OnRwyCTE|double]"
+            },
+            {
+               "Name":"Runway remaining",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
+            },
+            {
+               "Name":"Threshold distance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
+            }
+         ],
+         "Description":"Nose gear should not touch down first",
+         "InstantEvents":false,
+         "CombineTolerance":5000,
+         "ResetParameterOnEvent":true
+      },
+      {
+         "Name":"RE30 - Abnormal runway contact###Bank",
+         "Events":[
+            {
+               "Name":"High bank angle on ground",
+               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > [C:GroundBankLimit|double]",
+               "Type":1,
+               "Tolerance":500,
+               "Description":""
+            },
+            {
+               "Name":"High bank angle on ground",
+               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > [C:GroundBankLimit|double] + 2",
+               "Type":2,
+               "Tolerance":500,
+               "Description":""
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[S:GEAR IS ON GROUND:1|Bool] != 0 || [S:GEAR IS ON GROUND:2|Bool] != 0",
+            "MONITOR_END":"[S:GEAR IS ON GROUND:1|Bool] == 0 && [S:GEAR IS ON GROUND:2|Bool] == 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"Pitch",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree]"
+            },
+            {
+               "Name":"Bank",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE BANK DEGREES|degree]"
+            },
+            {
+               "Name":"Crab",
+               "Type":"instant",
+               "Parameter":"[#S:INCIDENCE BETA|degree]"
+            },
+            {
+               "Name":"KIAS",
+               "Type":"instant",
+               "Parameter":"[#S:AIRSPEED INDICATED|knots]"
+            },
+            {
+               "Name":"TouchdownVS",
+               "Type":"instant",
+               "Parameter":"[#S:VERTICAL SPEED|ft/min]"
+            },
+            {
+               "Name":"TouchdownG",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround|double]"
+            },
+            {
+               "Name":"Delta G-Force",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround|double] - [C:LastGForceInFlight|double]"
+            },
+            {
+               "Name":"Flaps (Index)",
+               "Type":"instant",
+               "Parameter":"[S:FLAPS HANDLE INDEX:1|number]"
+            },
+            {
+               "Name":"Runway detected",
+               "Type":"str",
+               "Parameter":"[C:OnRwyDetected|double]"
+            },
+            {
+               "Name":"ArrAirport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent|string]"
+            },
+            {
+               "Name":"ArrRunway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName|string]"
+            },
+            {
+               "Name":"AlongTrackDistance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double]"
+            },
+            {
+               "Name":"CrossTrackError",
+               "Type":"max",
+               "Parameter":"[C:OnRwyCTE|double]"
+            },
+            {
+               "Name":"Runway remaining",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
+            },
+            {
+               "Name":"Threshold distance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
+            }
+         ],
+         "Description":"Bank angle on ground",
+         "InstantEvents":false,
+         "CombineTolerance":5000,
+         "ResetParameterOnEvent":true
+      },	  
+      {
+         "Name":"RE30 - Abnormal runway contact###Tailstrike",
+         "Events":[
+            {
+               "Name":"Tail clearance low",
+               "Condition":"[P:TailClearDeg] < 2",
+               "Type":1,
+               "Tolerance":500,
+               "Description":""
+            },
+            {
+               "Name":"Tail clearance low",
+               "Condition":"[P:TailClearDeg] < 1",
+               "Type":2,
+               "Tolerance":500,
+               "Description":""
+            },
+            {
+               "Name":"Tail clearance low",
+               "Condition":"[P:TailClearDeg] < 0",
+               "Type":3,
+               "Tolerance":500,
+               "Description":""
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[S:GEAR IS ON GROUND:1|Bool] != 0 || [S:GEAR IS ON GROUND:2|Bool] != 0",
+            "MONITOR_END":"[S:GEAR IS ON GROUND:1|Bool] == 0 && [S:GEAR IS ON GROUND:2|Bool] == 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"TailClearDeg",
+               "Type":"MIN",
+               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree] - [C:TailstrikeLimit|double]"
+            },
+            {
+               "Name":"Pitch",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree]"
+            },
+            {
+               "Name":"Bank",
+               "Type":"instant",
+               "Parameter":"-1*[#S:PLANE BANK DEGREES|degree]"
+            },
+            {
+               "Name":"Crab",
+               "Type":"instant",
+               "Parameter":"[#S:INCIDENCE BETA|degree]"
+            },
+            {
+               "Name":"KIAS",
+               "Type":"instant",
+               "Parameter":"[#S:AIRSPEED INDICATED|knots]"
+            },
+            {
+               "Name":"TouchdownVS",
+               "Type":"instant",
+               "Parameter":"[#S:VERTICAL SPEED|ft/min]"
+            },
+            {
+               "Name":"TouchdownG",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround|double]"
+            },
+            {
+               "Name":"Delta G-Force",
+               "Type":"max",
+               "Parameter":"[C:MaxGForceOnGround|double] - [C:LastGForceInFlight|double]"
+            },
+            {
+               "Name":"Flaps (Index)",
+               "Type":"instant",
+               "Parameter":"[S:FLAPS HANDLE INDEX:1|number]"
+            },
+            {
+               "Name":"Runway detected",
+               "Type":"str",
+               "Parameter":"[C:OnRwyDetected|double]"
+            },
+            {
+               "Name":"ArrAirport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent|string]"
+            },
+            {
+               "Name":"ArrRunway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName|string]"
+            },
+            {
+               "Name":"AlongTrackDistance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double]"
+            },
+            {
+               "Name":"CrossTrackError",
+               "Type":"max",
+               "Parameter":"[C:OnRwyCTE|double]"
+            },
+            {
+               "Name":"Runway remaining",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
+            },
+            {
+               "Name":"Threshold distance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
+            }
+         ],
+         "Description":"Tail clearance",
+         "InstantEvents":false,
+         "CombineTolerance":5000,
+         "ResetParameterOnEvent":true
+      }
+   ]
+}

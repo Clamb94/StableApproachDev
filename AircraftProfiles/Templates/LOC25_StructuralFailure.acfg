@@ -1,0 +1,56 @@
+{
+    "FlightEventDefinitionGroups":[
+        {
+            "Name":"LOC25 - Structural failure",
+            "Events":[
+                {
+                    "Name":"Overspeed (KIAS)",
+                    "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VMO|string] + 15",
+                    "Type":2,
+                    "Tolerance":3000,
+                    "Description":""
+                },
+                {
+                    "Name":"Overspeed (MACH)",
+                    "Condition":"[S:AIRSPEED MACH|mach] > [C:MMO|string] + 0.05",
+                    "Type":2,
+                    "Tolerance":2000,
+                    "Description":""
+                },
+				{
+                    "Name":"Overspeed (KIAS)",
+                    "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VMO|string]",
+                    "Type":1,
+                    "Tolerance":3000,
+                    "Description":""
+                },
+				{
+                    "Name":"Overspeed (MACH)",
+                    "Condition":"[S:AIRSPEED MACH|mach] > [C:MMO|string]",
+                    "Type":1,
+                    "Tolerance":2000,
+                    "Description":""
+                }
+            ],
+            "EventParameters":[
+                {
+                    "Name":"MACH",
+                    "Type": "MAX",
+                    "Parameter":"[S:AIRSPEED MACH|mach]"
+                },
+				{
+                    "Name":"KIAS",
+                    "Type": "MAX",
+                    "Parameter":"[S:AIRSPEED INDICATED|knots]"
+                }
+            ],
+            "Description":"Excessive airspeed",
+            "InstantEvents":false,
+			"CombineTolerance" : 5000
+        }
+    ],
+    "CustomParameters":{
+        "C:VMO|string":"[S:AIRSPEED BARBER POLE|knots]",
+        "C:MMO|string":"[S:BARBER POLE MACH|mach]"
+    }
+}

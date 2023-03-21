@@ -1,0 +1,48 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"LOC05 - High cabin altitude",
+         "Events":[
+            {
+               "Name":"High cabin altitude",
+               "Condition":"[S:PRESSURIZATION CABIN ALTITUDE|feet] > 8000",
+               "Type":1,
+               "Tolerance":10000,
+               "Description":""
+            },
+            {
+               "Name":"High cabin altitude",
+               "Condition":"[S:PRESSURIZATION CABIN ALTITUDE|feet] > 10000",
+               "Type":1,
+               "Tolerance":10000,
+               "Description":""
+            },
+            {
+               "Name":"High cabin altitude",
+               "Condition":"[S:PRESSURIZATION CABIN ALTITUDE|feet] > 14000",
+               "Type":3,
+               "Tolerance":10000,
+               "Description":""
+            },			
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 2000",
+            "MONITOR_END":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 1500",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"Cabin altitude",
+               "Type":"MAX",
+               "Parameter":"[S:PRESSURIZATION CABIN ALTITUDE|feet]"
+            }
+         ],
+         "Description":"",
+         "InstantEvents":false,
+         "CombineTolerance":20000,
+         "ResetParameterOnEvent":true
+      }
+   ]
+}

@@ -1,6 +1,7 @@
 {
    "FlightEventDefinitionGroups":[
       {
+		 "Name":"Gear###position",
          "Events":[
             {
                "Name":"UP",
@@ -17,7 +18,6 @@
                "Description":""
             }
          ],
-         "Name":"Gear###position",
          "Description":"",
          "InstantEvents":true,
          "EventParameters":[
@@ -81,59 +81,6 @@
          }
       },
       {
-         "Name":"Gear###overspeed",
-         "Events":[
-            {
-               "Name":"Overspeed (Extension)",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtension|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] < [S:GEAR TOTAL PCT EXTENDED|percent]",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
-            },
-            {
-               "Name":"Overspeed (Retraction)",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdRetraction|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] > [S:GEAR TOTAL PCT EXTENDED|percent]",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
-            },
-            {
-               "Name":"Overspeed",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtended|double] && [S:GEAR TOTAL PCT EXTENDED|percent] > 0.95",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
-            }
-         ],
-         "EventParameters":[
-            {
-               "Name":"KIAS",
-               "Type":"MAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots]"
-            },
-            {
-               "Name":"PLANE ALTITUDE",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
-            },
-            {
-               "Name":"ALT AGL",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
-            }
-         ],
-         "Description":"Gear speed limit exceeded",
-         "InstantEvents":false,
-         "CombineTolerance":10000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:GEAR TOTAL PCT EXTENDED|percent] > 0 && [S:SIM ON GROUND|Bool] == 0",
-            "MONITOR_END":"[S:GEAR TOTAL PCT EXTENDED|percent] == 0 || [S:SIM ON GROUND|Bool] != 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
-         }
-      },
-      {
          "Name":"Tire",
          "Events":[
             {
@@ -162,11 +109,5 @@
             "APP_MONITOR":"1"
          }
       }	  
-   ],
-   "CustomParameters":{
-      "C:GearMaxSpdExtension|double":"270",
-      "C:GearMaxSpdExtended|double":"320",
-      "C:GearMaxSpdRetraction|double":"235",
-	  "C:MaxTireSpeed|double":"195"
-   }
+   ]
 }
