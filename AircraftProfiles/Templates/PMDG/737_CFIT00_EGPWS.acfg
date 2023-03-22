@@ -62,7 +62,7 @@
 			{
 				"Name": "SINK RATE",
 				"Condition": "[L:egpws_snk|double] != [#L:egpws_snk|double]",
-				"Type": 1,
+				"Type": 2,
 				"Tolerance": 0,
 				"Description": ""
 			},

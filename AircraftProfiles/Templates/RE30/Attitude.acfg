@@ -250,7 +250,7 @@
             {
                "Name":"TailClearDeg",
                "Type":"MIN",
-               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree] - [C:TailstrikeLimit|double]"
+               "Parameter":"[C:TailstrikeLimit|double] - (-1*[S:PLANE PITCH DEGREES|degree])"
             },
             {
                "Name":"Pitch",

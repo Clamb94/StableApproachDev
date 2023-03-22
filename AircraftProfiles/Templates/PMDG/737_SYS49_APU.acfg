@@ -1,40 +1,17 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups":[     
       {
-         "Name":"Ignition###antiIce",
+         "Name":"SYS49 - APU###alt",
          "Events":[
             {
-               "Name":"OFF (Anti-Ice)",
-               "Condition":"([L:switch_119_73X|double] != 20 && [S:ENG ANTI ICE:1|Bool] != 0) || ([L:switch_121_73X|double] != 20  && [S:ENG ANTI ICE:2|Bool] != 0)", 
-               "Type":1,
-               "Tolerance":2000,
-               "Description":""
-            }				
-         ]
-         ,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[L:AutoIgnitionOption|double] == 0",
-            "MONITOR_END":"[L:AutoIgnitionOption|double] == 1",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
-         },
-         "Description":"Engine ignition must be on for anti-ice operation",
-         "InstantEvents":false,
-		 "CombineTolerance" : 1000
-      },
-      {
-         "Name":"APU###AltLimits",
-         "Events":[
-            {
-               "Name":"BLEED MAX ALT",
+               "Name":"APU BLEED MAX ALT",
                "Condition":"[L:switch_211_73X|double] > 0 && [S:PRESSURE ALTITUDE|feet] > 17500", 
                "Type":1,
                "Tolerance":30000,
                "Description":"APU bleed: max alt 17000 ft"
             },
             {
-               "Name":"BLEED + ELEC MAX ALT",
+               "Name":"APU BLEED + ELEC MAX ALT",
                "Condition":"[L:switch_211_73X|double] > 0 && [L:switch_25_73X|double] == 0 && [S:PRESSURE ALTITUDE|feet] > 10500", 
                "Type":1,
                "Tolerance":30000,
@@ -54,10 +31,10 @@
 		 "CombineTolerance" : 1000
       },
       {
-         "Name":"APU",
+         "Name":"SYS49 - APU###dualbleed",
          "Events":[
             {
-               "Name":"DUAL BLEED",
+               "Name":"APU DUAL BLEED",
                "Condition":"[L:switch_193_73X|double] > 0 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 10", 
                "Type":1,
                "Tolerance":2000,

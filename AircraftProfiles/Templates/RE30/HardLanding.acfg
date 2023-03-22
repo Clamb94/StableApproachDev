@@ -1,7 +1,7 @@
 {
    "FlightEventDefinitionGroups":[
       {
-         "Name":"Touchdown",
+         "Name":"RE30 - Abnormal runway contact###hardLanding",
          "Events":[
 			{
                "Name":"Hard landing (FPM)",

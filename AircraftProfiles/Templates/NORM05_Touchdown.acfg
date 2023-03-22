@@ -1,33 +1,12 @@
 {
    "FlightEventDefinitionGroups":[
       {
-         "Name":"Touchdown",
+         "Name":"NORM05 - Touchdown",
          "Events":[
             {
                "Name":"Info",
                "Condition":"1",
                "Type":0,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 4",
-               "Type": 1,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.5",
-               "Type": 2,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2",
-               "Type": 3,
                "Tolerance":500,
                "Description":""
             }

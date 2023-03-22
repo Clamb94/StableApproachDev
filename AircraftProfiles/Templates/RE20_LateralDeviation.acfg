@@ -39,7 +39,7 @@
                "Parameter":"[C:OnRwyCTE|double]"
             }
          ],
-         "Description":"",
+         "Description":"Stay on centerline during takeoff",
          "InstantEvents":false,
          "CombineTolerance":20000,
          "ResetParameterOnEvent":true
@@ -83,7 +83,7 @@
                "Parameter":"[C:OnRwyCTE|double]"
             }
          ],
-         "Description":"",
+         "Description":"Stay on centerline during landing",
          "InstantEvents":false,
          "CombineTolerance":20000,
          "ResetParameterOnEvent":true

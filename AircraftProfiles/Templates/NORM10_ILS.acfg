@@ -1,39 +1,19 @@
 {
 	"FlightEventDefinitionGroups": [
 	{
-		"Name": "GS",
-		"Events": [{
-				"Name": "Deviation",
-				"Condition": "[S:NAV GSI:1|number]/50 < -2",
-				"Type": 3,
-				"Tolerance": 0,
-				"Description": ""
-			},
+		"Name": "NORM10 - ILS###gs",
+		"Events": [
 			{
-				"Name": "Deviation",
-				"Condition": "Abs([S:NAV GSI:1|number])/50 > 1.5",
-				"Type": 2,
-				"Tolerance": 0,
-				"Description": ""
-			},
-			{
-				"Name": "Deviation",
-				"Condition": "Abs([S:NAV GSI:1|number])/50 > 1",
-				"Type": 1,
-				"Tolerance": 0,
-				"Description": ""
-			},
-			{
-				"Name": "Info",
+				"Name": "Glidelsope info",
 				"Condition": "1",
 				"Type": 0,
-				"Tolerance": 0,
+				"Tolerance": 5000,
 				"Description": ""
 			}
 		],
 		"MonitoringConditions": {
-			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:Phase_FApp|double] != 0 && [S:NAV GS FLAG:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 300",
-			"MONITOR_END": "[C:Phase_FApp|double] == 0 || [S:NAV GS FLAG:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 200",
+			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:Phase_FApp|double] != 0 && [S:NAV GS FLAG:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 400",
+			"MONITOR_END": "[C:Phase_FApp|double] == 0 || [S:NAV GS FLAG:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 300",
 			"SECONDARY": "1",
 			"MARKER_SECONDARY": "1",
 			"APP_MONITOR": "1"
@@ -48,29 +28,15 @@
 			"Type": "str",
 			"Parameter": "[S:NAV IDENT:1|string]"
 		}],
-		"Description": "",
+		"Description": "Excessive Glideslope deviation",
 		"InstantEvents": false,
 		"CombineTolerance" : 2000
 	},
 	{
-		"Name": "LOC",
+		"Name": "NORM10 - ILS###loc",
 		"Events": [
 			{
-				"Name": "Deviation",
-				"Condition": "Abs([S:NAV RADIAL ERROR:1|degree])/12*10 > 1",
-				"Type": 2,
-				"Tolerance": 0,
-				"Description": ""
-			},
-			{
-				"Name": "Deviation",
-				"Condition": "Abs([S:NAV RADIAL ERROR:1|degree])/12*10 > 0.5",
-				"Type": 1,
-				"Tolerance": 0,
-				"Description": ""
-			},
-			{
-				"Name": "Info",
+				"Name": "Localizer Info",
 				"Condition": "1",
 				"Type": 0,
 				"Tolerance": 0,
@@ -95,7 +61,7 @@
 			"Parameter": "[S:NAV IDENT:1|string]"
 		}
 		],
-		"Description": "",
+		"Description": "Excessive Localizer deviation",
 		"InstantEvents": false,
 		"CombineTolerance" : 2000
 	}

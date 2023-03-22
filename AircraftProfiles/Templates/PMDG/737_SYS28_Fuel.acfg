@@ -1,7 +1,7 @@
 {
     "FlightEventDefinitionGroups":[
         {
-            "Name":"Fuel config###CTR OFF",
+            "Name":"SYS28 - Fuel###ctrpumpsoff",
             "Events":[
                 {
                     "Name":"CTR OFF",
@@ -32,12 +32,12 @@
                     "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 }
             ],
-            "Description":"",
+            "Description":"Center pumps muste be ON with fuel in center tank",
             "InstantEvents":false,
             "CombineTolerance":5000
         },
         {
-            "Name":"Fuel config###CTR LOW PRESSURE",
+            "Name":"SYS28 - Fuel###CTR LOW PRESSURE",
             "Events":[
 				{
                     "Name":"CTR LOW PRESSURE",
@@ -68,12 +68,12 @@
                     "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 }
             ],
-            "Description":"",
+            "Description":"Center pumps must be OFF when tank is empty",
             "InstantEvents":false,
             "CombineTolerance":5000
         },
         {
-            "Name":"Fuel config###MAIN PUMPS",
+            "Name":"SYS28 - Fuel###MAIN PUMPS",
             "Events":[
 				{
                     "Name":"LEFT OFF",
@@ -97,12 +97,12 @@
                 "MARKER_SECONDARY":"1",
                 "APP_MONITOR":"1"
             },
-            "Description":"",
+            "Description":"Main pumps must be ON with engines running",
             "InstantEvents":false,
             "CombineTolerance":5000
         },
         {
-            "Name":"Fuel config###IMBALANCE",
+            "Name":"SYS28 - Fuel###IMBALANCE",
             "Events":[
 				{
                     "Name":"L/R IMBALANCE",
@@ -136,7 +136,7 @@
                     "Parameter":"[S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24"
                 }			
             ],
-            "Description":"",
+            "Description":"Fuel must be balanced",
             "InstantEvents":false,
             "CombineTolerance":5000
         }		

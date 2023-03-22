@@ -16,13 +16,6 @@
 				"Type": 1,
 				"Tolerance": 5000,
 				"Description": ""
-			},
-			{
-				"Name": "Glidelsope info",
-				"Condition": "1",
-				"Type": 0,
-				"Tolerance": 0,
-				"Description": ""
 			}
 		],
 		"MonitoringConditions": {
@@ -60,13 +53,6 @@
 				"Name": "Localizer deviation",
 				"Condition": "Abs([S:NAV RADIAL ERROR:1|degree])/12*10 > 1",
 				"Type": 1,
-				"Tolerance": 0,
-				"Description": ""
-			},
-			{
-				"Name": "Localizer Info",
-				"Condition": "1",
-				"Type": 0,
 				"Tolerance": 0,
 				"Description": ""
 			}

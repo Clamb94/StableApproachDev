@@ -46,13 +46,13 @@
 				{
 					"Name": "ENG start switch not CONT",
 					"Condition": "[L:switch_119_73X|double] != 20 || [L:switch_121_73X|double] != 20",
-					"Type": 2,
+					"Type": 1,
 					"Tolerance": 5000,
 					"Description": ""
 				},
 				{
 					"Name": "ENG start switch not CONT",
-					"Condition": "[L:switch_119_73X|double] != 20 || [L:switch_121_73X|double] != 20  && [C:OnAppHeightAboveRwyThrElev|double] < 500",
+					"Condition": "([L:switch_119_73X|double] != 20 || [L:switch_121_73X|double] != 20) && [C:OnAppHeightAboveRwyThrElev|double] < 500",
 					"Type": 2,
 					"Tolerance": 1000,
 					"Description": ""

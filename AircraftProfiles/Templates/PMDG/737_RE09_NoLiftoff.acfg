@@ -4,13 +4,6 @@
          "Name":"RE09 - No lift-off###ASDA",
          "Events":[
             {
-               "Name":"Info",
-               "Condition":"1",
-               "Type":0,
-               "Tolerance":0,
-               "Description":""
-            },
-            {
                "Name":"ASDA short",
                "Condition":"[C:OnRwyReqDecel|double] > 3.7",
                "Type":1,

@@ -1,11 +1,11 @@
 {
     "FlightEventDefinitionGroups":[
         {
-            "Name":"ENG ANTI-ICE",
+            "Name":"SYS30 - Ice and rain protection",
             "Events":[
                 {
-                    "Name":"ON",
-                    "Condition":"[S:TOTAL AIR TEMPERATURE|celsius] > 12 && ([S:ENG ANTI ICE:1|Bool] != 0 || [S:ENG ANTI ICE:2|Bool] != 0)",
+                    "Name":"ENG ANTI-ICE ON above 10°C",
+                    "Condition":"[S:TOTAL AIR TEMPERATURE|celsius] > 15 && ([S:ENG ANTI ICE:1|Bool] != 0 || [S:ENG ANTI ICE:2|Bool] != 0)",
                     "Type":1,
                     "Tolerance":30000,
                     "Description":""

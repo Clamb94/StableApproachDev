@@ -1,7 +1,7 @@
 {
    "FlightEventDefinitionGroups":[
       {
-		 "Name":"Gear###position",
+		 "Name":"NORM21 - Gear",
          "Events":[
             {
                "Name":"UP",
@@ -79,35 +79,6 @@
             "MARKER_SECONDARY":"1",
             "APP_MONITOR":"1"
          }
-      },
-      {
-         "Name":"Tire",
-         "Events":[
-            {
-               "Name":"Overspeed",
-               "Condition":"[S:SURFACE RELATIVE GROUND SPEED|knots] > [C:MaxTireSpeed|double]",
-               "Type":2,
-               "Tolerance":1000,
-               "Description":""
-            }
-         ],
-         "EventParameters":[
-            {
-               "Name":"GS",
-               "Type":"MAX",
-               "Parameter":"[S:SURFACE RELATIVE GROUND SPEED|knots]"
-            }
-         ],
-         "Description":"Tire speed limit exceeded",
-         "InstantEvents":false,
-         "CombineTolerance":1000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] != 0",
-            "MONITOR_END":"[S:SIM ON GROUND|Bool] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
-         }
-      }	  
+      }  
    ]
 }

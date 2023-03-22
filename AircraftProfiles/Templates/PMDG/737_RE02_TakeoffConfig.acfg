@@ -21,6 +21,28 @@
             "Description":"",
             "InstantEvents":false,
             "CombineTolerance":5000
+        },
+		{
+            "Name":"RE02 - Takeoff config###ignition",
+            "Events":[
+                {
+                    "Name":"Ignition not CONT",
+                    "Condition":"[L:switch_119_73X|double] != 20 || [L:switch_121_73X|double] != 20",
+                    "Type":2,
+                    "Tolerance":2000,
+                    "Description":""
+                }
+            ],
+            "MonitoringConditions":{
+                "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] == 1 && [S:AIRSPEED INDICATED|knots] > 60",
+                "MONITOR_END":"[S:SIM ON GROUND|Bool] == 0 || [S:AIRSPEED INDICATED|knots] < 50",
+                "SECONDARY":"1",
+                "MARKER_SECONDARY":"1",
+                "APP_MONITOR":"1"
+            },
+            "Description":"",
+            "InstantEvents":false,
+            "CombineTolerance":5000
         }
     ]
 }

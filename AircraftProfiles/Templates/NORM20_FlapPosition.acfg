@@ -73,8 +73,8 @@
                     "Description":""
                 }
             ],
-            "Name":"Flaps###position",
-            "Description":"Changes in flaps",
+            "Name":"NORM20 - Flaps",
+            "Description":"",
             "InstantEvents":true,
             "EventParameters":[
                 {
