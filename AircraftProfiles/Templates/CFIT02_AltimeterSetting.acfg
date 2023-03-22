@@ -1,0 +1,39 @@
+{
+    "FlightEventDefinitionGroups":[
+        {
+            "Name":"CFIT02 - Wrong altimeter settings",
+            "Events":[
+                {
+                    "Name":"Indicated / true altitude disagree",
+                    "Condition":"Abs([S:INDICATED ALTITUDE|feet] - [S:PLANE ALTITUDE|feet]) > 30",
+                    "Type":1,
+                    "Tolerance":10000,
+                    "Description":""
+                },
+                {
+                    "Name":"Indicated / true altitude disagree",
+                    "Condition":"Abs([S:INDICATED ALTITUDE|feet] - [S:PLANE ALTITUDE|feet]) > 60",
+                    "Type":2,
+                    "Tolerance":10000,
+                    "Description":""
+                }				
+            ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 1000 && [C:AnyEngineRunning|double] != 0",
+            "MONITOR_END":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 1500 || [C:DURATION CLIMBING|double] > 5",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"AltError",
+               "Type":"MAX",
+               "Parameter":"Abs([S:INDICATED ALTITUDE|feet] - [S:PLANE ALTITUDE|feet])"
+            }
+         ],
+            "Description":"",
+            "InstantEvents":false
+        }
+    ]
+}

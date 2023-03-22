@@ -1,0 +1,33 @@
+{
+   "FlightEventDefinitionGroups":[     
+      {
+         "Name":"SYS00 - General###OperatingAltitude",
+         "Events":[
+            {
+               "Name":"Max operating altitude exceeded",
+               "Condition":"[S:PRESSURE ALTITUDE|feet] > ([C:MaxOpAlt|double] + 300)",
+               "Type":2,
+               "Tolerance":1000,
+               "Description":""
+            }
+         ],
+         "EventParameters":[
+            {
+               "Name":"ALT",
+               "Type":"MAX",
+               "Parameter":"[S:PRESSURE ALTITUDE|feet]"
+            }
+         ],
+         "Description":"Operating altitude limit",
+         "InstantEvents":false,
+         "CombineTolerance":5000,
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] == 0",
+            "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         }
+      }	  
+   ]
+}

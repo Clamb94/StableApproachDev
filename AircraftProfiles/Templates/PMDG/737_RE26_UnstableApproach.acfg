@@ -1,18 +1,18 @@
 {
 	"FlightEventDefinitionGroups": [
 		{
-			"Name": "Speedbrake###app",
+			"Name": "RE26 - Unstable Approach###Speedbrake",
 			"Events": [{
-					"Name": "Not armed",
+					"Name": "Speedbrake not ARMED",
 					"Condition": "[L:switch_343_73X|double] == 0",
-					"Type": 2,
-					"Tolerance": 5000,
+					"Type": 1,
+					"Tolerance": 1000,
 					"Description": ""
 				},
 				{
-					"Name": "Not armed",
-					"Condition": "[L:switch_343_73X|double] == 0",
-					"Type": 1,
+					"Name": "Speedbrake not ARMED",
+					"Condition": "[L:switch_343_73X|double] == 0 && [C:OnAppHeightAboveRwyThrElev|double] < 500",
+					"Type": 2,
 					"Tolerance": 1000,
 					"Description": ""
 				}
@@ -36,19 +36,27 @@
 				"Parameter": "[L:switch_343_73X|double]"
 			}			
 			],
-			"Description": "",
+			"Description": "Speedbrake not armed",
 			"InstantEvents": false,
 			"CombineTolerance" : 5000
 		},
 		{
-			"Name": "ENG start switch",
-			"Events": [{
-					"Name": "Not CONT",
+			"Name": "RE26 - Unstable Approach###EngSwitch",
+			"Events": [
+				{
+					"Name": "ENG start switch not CONT",
 					"Condition": "[L:switch_119_73X|double] != 20 || [L:switch_121_73X|double] != 20",
-					"Type": 2,
+					"Type": 1,
 					"Tolerance": 5000,
 					"Description": ""
-				}
+				},
+				{
+					"Name": "ENG start switch not CONT",
+					"Condition": "([L:switch_119_73X|double] != 20 || [L:switch_121_73X|double] != 20) && [C:OnAppHeightAboveRwyThrElev|double] < 500",
+					"Type": 2,
+					"Tolerance": 1000,
+					"Description": ""
+				}				
 			],
 			"MonitoringConditions": {
 				"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:Phase_FApp|double] != 0 && [L:AutoIgnitionOption|double] == 0",
@@ -67,9 +75,14 @@
 				"Name": "R IGN",
 				"Type": "MINMAX",
 				"Parameter": "[L:switch_121_73X|double]"
+			},
+			{
+				"Name": "Alt above runway",
+				"Type": "MINMAX",
+				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
 			}
 			],
-			"Description": "",
+			"Description": "ENG start switches not in AUTO/CONT",
 			"InstantEvents": false,
 			"CombineTolerance" : 5000
 		}

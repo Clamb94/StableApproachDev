@@ -2,46 +2,49 @@
 	"Name": "PMDG 737",
 	"Enabled": true,
 	"Templates": [
-		"Templates/UnusualAttitude.acfg",
-		"Templates/FlapPositions.acfg",
-		"Templates/GearPosition.acfg",
-		"Templates/MaxSpeeds.acfg",
-		"Templates/Touchdown.acfg",
-		"Templates/Takeoff.acfg",
-		"Templates/Taxi.acfg",
-		"Templates/ILS.acfg",
-		"Templates/AntiIce.acfg",
-		"Templates/LandingConfiguration.acfg",
-		"Templates/Rollout.acfg",
-		"Templates/PMDG/PMDG_EGPWS.acfg",
-		"Templates/PMDG/737_LandingConfig.acfg",
-		"Templates/PMDG/737_TakeoffConfig.acfg",
-		"Templates/PMDG/737_Fuel.acfg",
-		"Templates/PMDG/737_LimitationsEngine.acfg",
-		"Templates/Phases.acfg"
-		
+		"Templates/CFIT02_AltimeterSetting.acfg",
+		"Templates/LOC14_InadequateAcftAttitude.acfg",
+		"Templates/LOC25_StructuralFailure.acfg",
+		"Templates/LOC32_IncorrectAcftConfig.acfg",
+		"Templates/LOCG01_TaxiSpeed.acfg",
+		"Templates/NORM02_Takeoff.acfg",
+		"Templates/NORM05_Touchdown.acfg",
+		"Templates/NORM06_Rollout.acfg",
+		"Templates/NORM10_ILS.acfg",		
+		"Templates/NORM20_FlapPosition.acfg",
+		"Templates/NORM21_GearPosition.acfg",		
+		"Templates/RE01_PowerChangeTakeoff.acfg",
+		"Templates/RE08_SlowRotation.acfg",
+		"Templates/RE13_InsuffDecel.acfg",
+		"Templates/RE15_RunwayRemainLiftoff.acfg",
+		"Templates/RE16_AircraftHandling.acfg",
+		"Templates/RE17_Crosswind.acfg",
+		"Templates/RE18_ThrustAsym.acfg",
+		"Templates/RE20_LateralDeviation.acfg",
+		"Templates/RE24_Tailwind.acfg",
+		"Templates/RE26_UnstableApproach.acfg",
+		"Templates/RE28_LongFlare.acfg",	
+		"Templates/RE29_DeepLanding.acfg",
+		"Templates/RE30_AbnormalRwyContact.acfg",
+		"Templates/SYS00_General.acfg",		
+		"Templates/SYS30_AntiIce.acfg",
+		"Templates/SYS32_Gear.acfg",
+		"Templates/SYS33_Lights.acfg",
+		"Templates/PMDG/737_CFIT00_EGPWS.acfg",
+		"Templates/PMDG/737_LOC12_EnvelopeProtection.acfg",
+		"Templates/PMDG/737_RE02_TakeoffConfig.acfg",
+		"Templates/PMDG/737_RE07_LateRotation.acfg",
+		"Templates/PMDG/737_RE09_NoLiftoff.acfg",
+		"Templates/PMDG/737_RE21_RevAsym.acfg",
+		"Templates/PMDG/737_RE26_UnstableApproach.acfg",
+		"Templates/PMDG/737_SYS23_Communications.acfg",
+		"Templates/PMDG/737_SYS27_FlightControls.acfg",		
+		"Templates/PMDG/737_SYS28_Fuel.acfg",
+		"Templates/PMDG/737_SYS33_Lights.acfg",
+		"Templates/PMDG/737_SYS49_APU.acfg",
+		"Templates/PMDG/737_SYS72_Engine.acfg"
 	],
 	"FlightEventDefinitionGroups": [
-		{
-			"Events": [{
-					"Name":"Off",
-					"Condition": "[L:switch_800_73X|double] < 40",
-					"Tolerance": 60000,
-					"Type": 1,
-					"Description": ""
-				}
-			],
-			"Name": "XPDR/TCAS",
-			"Description": "Changes in flaps",
-			"InstantEvents": false,
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
-				"MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
-				"SECONDARY": "1",
-				"MARKER_SECONDARY": "1",
-				"APP_MONITOR": "1"
-			}
-		},
 	{
 			"Events": [{
 					"Name":"[C:Flaps0PositionName|string]",
@@ -114,8 +117,8 @@
 					"Description": ""
 				}
 			],
-			"Name": "Flaps###position",
-			"Description": "Changes in flaps",
+			"Name": "NORM20 - Flaps",
+			"Description": "",
 			"InstantEvents": true,
 			"EventParameters": [{
 					"Name": "KIAS",
@@ -128,106 +131,6 @@
 					"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
 				}
 			]
-		},
-		{
-			"Name": "Stick shaker",
-			"Events": [{
-					"Name": "Active",
-					"Condition": "[L:ShakerLeft|double] != 0",
-					"Type": 3,
-					"Tolerance": 3000,
-					"Description": ""
-				},
-				{
-					"Name": "Active",
-					"Condition": "[L:ShakerLeft|double] != 0",
-					"Type": 2,
-					"Tolerance": 1000,
-					"Description": ""
-				},
-				{
-					"Name": "Active",
-					"Condition": "[L:ShakerLeft|double] != 0",
-					"Type": 1,
-					"Tolerance": 0,
-					"Description": ""
-				}
-
-			],
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
-				"MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
-				"SECONDARY": "1",
-				"MARKER_SECONDARY": "1",
-				"APP_MONITOR": "1"
-			},
-			"Description": "",
-			"InstantEvents": false,
-			"CombineTolerance" : 10000
-		},
-		{
-			"Name": "Speedbrake###FlapLimit",
-			"Events": [{
-				"Name": "Used with Flaps >15",
-				"Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.3",
-				"Type": 1,
-				"Tolerance": 1000,
-				"Description": "Do not use speedbrake when flaps are beyond 15"
-			}],
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 5 && [S:FLAPS HANDLE INDEX:1|number] > 5",
-				"MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 5 || [S:FLAPS HANDLE INDEX:1|number] <= 5",
-				"SECONDARY": "1",
-				"MARKER_SECONDARY": "1",
-				"APP_MONITOR": "1"
-			},
-			"Description": "",
-			"InstantEvents": false
-		},
-		{
-			"Name": "Speedbrake###RALimit",
-			"Events": [{
-				"Name": "Used below 1000ft RA",
-				"Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.2",
-				"Type": 1,
-				"Tolerance": 1000,
-				"Description": "Do not deploy speedbrakes in flight at radio altitude less than 1000ft"
-			}],
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 20 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 900",
-				"MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 950",
-				"SECONDARY": "1",
-				"MARKER_SECONDARY": "1",
-				"APP_MONITOR": "1"
-			},
-			"EventParameters": [{
-				"Name": "RA",
-				"Type": "MIN",
-				"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
-			}],
-			"Description": "",
-			"InstantEvents": false,
-			"CombineTolerance" : 5000
-		},
-		{
-			"Name": "Landing lights",
-			"Events": [{
-				"Name": "OFF",
-				"Condition": "[L:switch_113_73X|double] != 100 || [L:switch_114_73X|double] != 100",
-				"Type": 1,
-				"Tolerance": 60000,
-				"Description": "Turn on landing lights below 10000ft"
-			}],
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:INDICATED ALTITUDE|feet] < 9500 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 100",
-				"MONITOR_END": "[S:INDICATED ALTITUDE|feet] > 9600 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 50",
-				"SECONDARY": "1",
-				"MARKER_SECONDARY": "1",
-				"APP_MONITOR": "1"
-			},
-			"Description": "",
-			"InstantEvents": false,
-			"CombineTolerance" : 5000
 		}
 	],
 	"CustomParameters": {
@@ -252,6 +155,13 @@
 		"C:Flaps8MaxKIAS|double": "162",
 		"C:MaxFlapExtensionAlt|double": "20000",
 		"C:VMO|string": "340",
-		"C:MMO|string": "0.82"
+		"C:MMO|string": "0.82",
+		"C:VrefVar|string": "[L:ngx_SPDwindow|double]",
+		"C:GroundPitchLimit|double": "8",
+		"C:GroundBankLimit|double": "9",
+		"C:GearMaxSpdExtension|double":"270",
+        "C:GearMaxSpdExtended|double":"320",
+        "C:GearMaxSpdRetraction|double":"235",
+	    "C:MaxTireSpeed|double":"195"
 	}
 }

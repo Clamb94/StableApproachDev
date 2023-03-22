@@ -1,33 +1,12 @@
 {
    "FlightEventDefinitionGroups":[
       {
-         "Name":"Takeoff",
+         "Name":"NORM02 - Takeoff",
          "Events":[
             {
                "Name":"Info",
                "Condition":"1",
                "Type":0,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 4",
-               "Type": 1,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.5",
-               "Type": 2,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2",
-               "Type": 3,
                "Tolerance":500,
                "Description":""
             }
@@ -44,24 +23,16 @@
                "Parameter":"[C:OnRwyDetected|double]"
             },
             {
-               "Name":"Airport",
+               "Name":"DepAirport",
                "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
+               "Parameter":"[C:OnRwyAptIdent|string]",
+			   "AddToReport":true
             },
             {
-               "Name":"Runway",
+               "Name":"DepRunway",
                "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
-            },
-            {
-               "Name":"R:DepAirport",
-               "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
-            },
-            {
-               "Name":"R:DepRunway",
-               "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
+               "Parameter":"[C:OnRwyName|string]",
+			   "AddToReport":true
             },				
             {
                "Name":"AlongTrackDistance",

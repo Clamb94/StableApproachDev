@@ -1,0 +1,24 @@
+{
+    "FlightEventDefinitionGroups":[
+		{
+			"Name": "SYS33 - Lights",
+			"Events": [{
+				"Name": "Landing lights OFF",
+				"Condition": "[L:switch_113_73X|double] != 100 || [L:switch_114_73X|double] != 100",
+				"Type": 1,
+				"Tolerance": 60000,
+				"Description": "Turn on landing lights below 10000ft"
+			}],
+			"MonitoringConditions": {
+				"MONITOR_BEGIN": "[S:INDICATED ALTITUDE|feet] < 9500 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 100",
+				"MONITOR_END": "[S:INDICATED ALTITUDE|feet] > 9600 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 50",
+				"SECONDARY": "1",
+				"MARKER_SECONDARY": "1",
+				"APP_MONITOR": "1"
+			},
+			"Description": "Landing lights should be ON below 10000ft",
+			"InstantEvents": false,
+			"CombineTolerance" : 5000
+		}
+    ]
+}

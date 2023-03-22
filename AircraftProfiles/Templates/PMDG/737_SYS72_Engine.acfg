@@ -1,0 +1,27 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"SYS72 - Engine",
+         "Events":[
+            {
+               "Name":"Ignition OFF",
+               "Condition":"([L:switch_119_73X|double] != 20 && [S:ENG ANTI ICE:1|Bool] != 0) || ([L:switch_121_73X|double] != 20  && [S:ENG ANTI ICE:2|Bool] != 0)", 
+               "Type":1,
+               "Tolerance":2000,
+               "Description":""
+            }				
+         ]
+         ,
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[L:AutoIgnitionOption|double] == 0",
+            "MONITOR_END":"[L:AutoIgnitionOption|double] == 1",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "Description":"Engine ignition must be on for anti-ice operation",
+         "InstantEvents":false,
+		 "CombineTolerance" : 1000
+      }
+   ]
+}

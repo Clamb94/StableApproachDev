@@ -1,0 +1,79 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"LOC14 - Inadequate aircraft attitude",
+         "Events":[
+            {
+               "Name":"Pitch high",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] > [C:PitchUpLimitWarning|double]",
+               "Type":3,
+               "Tolerance":2000,
+               "Description":""
+            },
+            {
+               "Name":"Pitch high",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] > [C:PitchUpLimitCaution|double]",
+               "Type":2,
+               "Tolerance":2000,
+               "Description":""
+            },
+            {
+               "Name":"Pitch low",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] < [C:PitchDnLimitWarning|double]",
+               "Type":3,
+               "Tolerance":2000,
+               "Description":""
+            },
+            {
+               "Name":"Pitch low",
+               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] < [C:PitchDnLimitCaution|double]",
+               "Type":2,
+               "Tolerance":2000,
+               "Description":""
+            },
+            {
+               "Name":"Excessive bank",
+               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > [C:BankLimitWarning|double]",
+               "Type":3,
+               "Tolerance":2000,
+               "Description":""
+            },
+            {
+               "Name":"Excessive bank",
+               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > [C:BankLimitCaution|double]",
+               "Type":2,
+               "Tolerance":2000,
+               "Description":""
+            }
+         ],
+         "EventParameters":[
+            {
+               "Name":"BANK",
+               "Type":"MAX",
+               "Parameter":"Abs([S:PLANE BANK DEGREES|degree])"
+            },
+            {
+               "Name":"PITCH",
+               "Type":"MINMAX",
+               "Parameter":"-1*[S:PLANE PITCH DEGREES|degree]"
+            }
+         ],
+         "Description":"Unusual attitude",
+         "InstantEvents":false,
+         "CombineTolerance":5000
+      }
+   ],
+   "CustomParameters":{
+      "C:PitchUpLimitCaution|double":"25",
+      "C:PitchUpLimitWarning|double":"27",
+      "C:PitchDnLimitCaution|double":"-10",
+      "C:PitchDnLimitWarning|double":"-12",
+      "C:BankLimitCaution|double":"40",
+      "C:BankLimitWarning|double":"45",
+      "C:GLimitFlapsUpPos|double":"2.5",
+      "C:GLimitFlapsUpNeg|double":"-1",
+      "C:GLimitFlapsDnPos|double":"2",
+      "C:GLimitFlapsDnNeg|double":"0",
+      "C:MaxOpAlt|double":"50000"
+   }
+}

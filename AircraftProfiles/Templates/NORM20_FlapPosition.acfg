@@ -73,8 +73,8 @@
                     "Description":""
                 }
             ],
-            "Name":"Flaps###position",
-            "Description":"Changes in flaps",
+            "Name":"NORM20 - Flaps",
+            "Description":"",
             "InstantEvents":true,
             "EventParameters":[
                 {
@@ -123,109 +123,6 @@
                     "Parameter":"[S:INDICATED ALTITUDE|feet]"
                 }
             ]
-        },
-        {
-            "Events":[
-                {
-                    "Name":"Flaps [C:Flaps0PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 0 && [S:AIRSPEED INDICATED|knots] > [C:Flaps0MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps1PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 1 && [S:AIRSPEED INDICATED|knots] > [C:Flaps1MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps2PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 2 && [S:AIRSPEED INDICATED|knots] > [C:Flaps2MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps3PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 3 && [S:AIRSPEED INDICATED|knots] > [C:Flaps3MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps4PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 4 && [S:AIRSPEED INDICATED|knots] > [C:Flaps4MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps5PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 5 && [S:AIRSPEED INDICATED|knots] > [C:Flaps5MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps6PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 6 && [S:AIRSPEED INDICATED|knots] > [C:Flaps6MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps7PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 7 && [S:AIRSPEED INDICATED|knots] > [C:Flaps7MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps8PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 8 && [S:AIRSPEED INDICATED|knots] > [C:Flaps8MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps9PositionName|string] overspeed",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 9 && [S:AIRSPEED INDICATED|knots] > [C:Flaps9MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                }
-            ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] == 0",
-                "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
-            },
-            "Name":"Flaps###overspeed",
-            "Description":"",
-            "InstantEvents":false,
-            "EventParameters":[
-                {
-                    "Name":"KIAS",
-                    "Type":"MAX",
-                    "Parameter":"[S:AIRSPEED INDICATED|knots]"
-                }
-            ]
-        },
-        {
-            "Events":[
-                {
-                    "Name":"Max. Flap extension altitude exceeded",
-                    "Condition":"([S:PRESSURE ALTITUDE|feet] > [C:MaxFlapExtensionAlt|double]) && [S:FLAPS HANDLE INDEX:1|number] != 0",
-                    "Tolerance":3000,
-                    "Type":3
-                }
-            ],
-            "Name":"Max. Flaps altitude",
-            "Description":"Maximum flap exension altitude exceeded"
         }
     ],
     "CustomParameters":{

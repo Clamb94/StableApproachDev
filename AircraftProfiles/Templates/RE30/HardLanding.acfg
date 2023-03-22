@@ -1,64 +1,8 @@
 {
    "FlightEventDefinitionGroups":[
       {
-         "Name":"Touchdown",
+         "Name":"RE30 - Abnormal runway contact###hardLanding",
          "Events":[
-            {
-               "Name":"Info",
-               "Condition":"1",
-               "Type":0,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 4",
-               "Type": 1,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.5",
-               "Type": 2,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Centerline deviation",
-			   "Condition":"Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2",
-               "Type": 3,
-               "Tolerance":500,
-               "Description":""
-            },			
-			{
-               "Name":"Too short",
-               "Condition":"[C:OnRwyATD|double] < [C:OnRwyDispThreshold|double] - 10",
-               "Type":2,
-               "Tolerance":0,
-               "Description":""
-            },
-			{
-               "Name":"Too short",
-               "Condition":"[C:OnRwyATD|double] < 0",
-               "Type":3,
-               "Tolerance":0,
-               "Description":""
-            },
-			{
-               "Name":"Long landing",
-               "Condition":"[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double] * 1.1)",
-               "Type":2,
-               "Tolerance":500,
-               "Description":""
-            },
-			{
-               "Name":"Long landing",
-               "Condition":"[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double])",
-               "Type":1,
-               "Tolerance":500,
-               "Description":""
-            },
 			{
                "Name":"Hard landing (FPM)",
                "Condition":"[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1 && [#S:VERTICAL SPEED|ft/min] < -600",
@@ -73,6 +17,13 @@
                "Tolerance":0,
                "Description":""
             },
+			{
+               "Name":"Hard landing (G)",
+               "Condition":"[C:MaxGForceOnGround|double] > 1.8",
+               "Type":2,
+               "Tolerance":0,
+               "Description":""
+            },			
 			{
                "Name":"Hard landing (G)",
                "Condition":"[C:MaxGForceOnGround|double] > 2.1",
@@ -110,14 +61,16 @@
                "Parameter":"[#S:AIRSPEED INDICATED|knots]"
             },
             {
-               "Name":"R:TouchdownVS",
+               "Name":"TouchdownVS",
                "Type":"instant",
-               "Parameter":"[#S:VERTICAL SPEED|ft/min]"
+               "Parameter":"[#S:VERTICAL SPEED|ft/min]",
+			   "AddToReport":true
             },
             {
-               "Name":"R:TouchdownG",
+               "Name":"TouchdownG",
                "Type":"max",
-               "Parameter":"[C:MaxGForceOnGround|double]"
+               "Parameter":"[C:MaxGForceOnGround|double]",
+			   "AddToReport":true
             },
 			{
                "Name":"Delta G-Force",
@@ -135,29 +88,22 @@
                "Parameter":"[C:OnRwyDetected|double]"
             },
             {
-               "Name":"Airport",
+               "Name":"ArrAirport",
                "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
+               "Parameter":"[C:OnRwyAptIdent|string]",
+			   "AddToReport":true
             },
             {
-               "Name":"Runway",
+               "Name":"ArrRunway",
                "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
-            },
-            {
-               "Name":"R:ArrAirport",
-               "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
-            },
-            {
-               "Name":"R:ArrRunway",
-               "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
+               "Parameter":"[C:OnRwyName|string]",
+			   "AddToReport":true
             },			
             {
                "Name":"AlongTrackDistance",
                "Type":"instant",
-               "Parameter":"[C:OnRwyATD|double]"
+               "Parameter":"[C:OnRwyATD|double]",
+			   "AddToReport":true
             },
             {
                "Name":"CrossTrackError",
@@ -182,7 +128,7 @@
             "MARKER_SECONDARY":"1",
             "APP_MONITOR":"1"
          },
-         "Description":"Touchdown detected",
+         "Description":"Hard landing",
          "InstantEvents":false,
 		 "CombineTolerance" : 500
       }

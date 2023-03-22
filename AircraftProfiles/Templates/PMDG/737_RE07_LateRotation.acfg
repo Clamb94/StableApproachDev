@@ -1,0 +1,37 @@
+{
+   "FlightEventDefinitionGroups":
+   [
+      {
+         "Name":"RE07 - Late rotation",
+         "Events":
+		 [
+            {
+               "Name":"Delayed rotation",
+               "Condition":"1",
+               "Type":1,
+               "Tolerance":5000,
+               "Description":""
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[L:CO_Rotate|double] != [#L:CO_Rotate|double]",
+            "MONITOR_END":"[S:GEAR IS ON GROUND:0|Bool] == 0 || [C:Phase_Takeoff0|double] == 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+			{
+               "Name":"KIAS Unstick",
+               "Type":"instant",
+               "Parameter":"[#S:AIRSPEED INDICATED|knots]",
+			   "RecordingCondition":"[S:GEAR IS ON GROUND:0|Bool] == 0"
+            }
+         ],
+         "Description":"",
+         "InstantEvents":false,
+         "CombineTolerance":0,
+		 "ResetParameterOnEvent": false
+		 }
+   ]  
+}

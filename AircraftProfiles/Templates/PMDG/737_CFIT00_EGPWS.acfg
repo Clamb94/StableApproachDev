@@ -1,6 +1,6 @@
 {
 	"FlightEventDefinitionGroups": [{
-		"Name": "EGPWS",
+		"Name": "CFIT00 - EGPWS",
 		"Events": [
 			{
 				"Name": "PULL UP",
@@ -62,7 +62,7 @@
 			{
 				"Name": "SINK RATE",
 				"Condition": "[L:egpws_snk|double] != [#L:egpws_snk|double]",
-				"Type": 1,
+				"Type": 2,
 				"Tolerance": 0,
 				"Description": ""
 			},
@@ -96,8 +96,8 @@
 			}
 		],
 		"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
-				"MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
+			"MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
+			"MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
 			"SECONDARY": "1",
 			"MARKER_SECONDARY": "1",
 			"APP_MONITOR": "1"

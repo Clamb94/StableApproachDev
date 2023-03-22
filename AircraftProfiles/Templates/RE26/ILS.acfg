@@ -1,0 +1,83 @@
+{
+	"FlightEventDefinitionGroups": [
+	{
+		"Name": "RE26 - Unstable Approach###GS",
+		"Events": [
+			{
+				"Name": "Glidelsope deviation",
+				"Condition": "Abs([S:NAV GSI:1|number])/50 > 2",
+				"Type": 2,
+				"Tolerance": 5000,
+				"Description": ""
+			},
+			{
+				"Name": "Glidelsope deviation",
+				"Condition": "Abs([S:NAV GSI:1|number])/50 > 1",
+				"Type": 1,
+				"Tolerance": 5000,
+				"Description": ""
+			}
+		],
+		"MonitoringConditions": {
+			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:Phase_FApp|double] != 0 && [S:NAV GS FLAG:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 400",
+			"MONITOR_END": "[C:Phase_FApp|double] == 0 || [S:NAV GS FLAG:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 300",
+			"SECONDARY": "1",
+			"MARKER_SECONDARY": "1",
+			"APP_MONITOR": "1"
+		},
+		"EventParameters": [{
+			"Name": "Dots",
+			"Type": "MINMAX",
+			"Parameter": "[S:NAV GSI:1|number]/50"
+		},
+		{
+			"Name": "Ident",
+			"Type": "str",
+			"Parameter": "[S:NAV IDENT:1|string]"
+		}],
+		"Description": "Excessive Glideslope deviation",
+		"InstantEvents": false,
+		"CombineTolerance" : 2000
+	},
+	{
+		"Name": "RE26 - Unstable Approach###LOC",
+		"Events": [
+			{
+				"Name": "Localizer deviation",
+				"Condition": "Abs([S:NAV RADIAL ERROR:1|degree])/12*10 > 1.5",
+				"Type": 2,
+				"Tolerance": 0,
+				"Description": ""
+			},
+			{
+				"Name": "Localizer deviation",
+				"Condition": "Abs([S:NAV RADIAL ERROR:1|degree])/12*10 > 1",
+				"Type": 1,
+				"Tolerance": 0,
+				"Description": ""
+			}
+		],
+		"MonitoringConditions": {
+			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:Phase_FApp|double] != 0 && [S:NAV HAS LOCALIZER:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 300",
+			"MONITOR_END": "[C:Phase_FApp|double] == 0 || [S:NAV HAS LOCALIZER:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 200",
+			"SECONDARY": "1",
+			"MARKER_SECONDARY": "1",
+			"APP_MONITOR": "1"
+		},
+		"EventParameters": [{
+			"Name": "Dots",
+			"Type": "MINMAX",
+			"Parameter": "[S:NAV RADIAL ERROR:1|degree]/12*10"
+		},
+		{
+			"Name": "Ident",
+			"Type": "str",
+			"Parameter": "[S:NAV IDENT:1|string]"
+		}
+		],
+		"Description": "Excessive Localizer deviation",
+		"InstantEvents": false,
+		"CombineTolerance" : 2000
+	}
+	]
+}

@@ -1,0 +1,108 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"RE29 - Deep landing###longlanding",
+         "Events":[
+			{
+               "Name":"Long landing",
+               "Condition":"[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double] * 1.1)",
+               "Type":2,
+               "Tolerance":500,
+               "Description":""
+            },
+			{
+               "Name":"Long landing",
+               "Condition":"[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double])",
+               "Type":1,
+               "Tolerance":500,
+               "Description":""
+            },			
+			{
+               "Name":"Short landing",
+               "Condition":"[C:OnRwyATD|double] < [C:OnRwyDispThreshold|double] - 10",
+               "Type":2,
+               "Tolerance":0,
+               "Description":""
+            }				
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
+            "MONITOR_END":"[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"ArrAirport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent|string]"
+            },
+            {
+               "Name":"ArrRunway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName|string]"
+            },			
+            {
+               "Name":"AlongTrackDistance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double]"
+            },
+            {
+               "Name":"CrossTrackError",
+               "Type":"max",
+               "Parameter":"[C:OnRwyCTE|double]"
+            },
+            {
+               "Name":"Runway remaining",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
+            },
+			{
+               "Name":"Threshold distance",
+               "Type":"instant",
+               "Parameter":"[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
+            }
+         ],
+         "Description":"Touchdown should be within touchdown zone",
+         "InstantEvents":false,
+         "CombineTolerance":0,
+         "ResetParameterOnEvent":true
+      },
+      {
+         "Name":"RE29 - Deep landing###derotation",
+         "Events":[
+			{
+               "Name":"High time to de-rotation",
+               "Condition":"1",
+               "Type":1,
+               "Tolerance":9000,
+               "Description":""
+            }				
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[#C:DURATION AIRBORNE|double] > 1 && [S:GEAR IS ON GROUND:1|Bool] != 0 && [S:GEAR IS ON GROUND:2|Bool] != 0",
+            "MONITOR_END":"[S:GEAR IS ON GROUND:0|Bool] != 0",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1",
+            "APP_MONITOR":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"ArrAirport",
+               "Type":"str",
+               "Parameter":"[C:OnRwyAptIdent|string]"
+            },
+            {
+               "Name":"ArrRunway",
+               "Type":"str",
+               "Parameter":"[C:OnRwyName|string]"
+            }
+         ],
+         "Description":"Lower nosegear immediately after touchdown",
+         "InstantEvents":false,
+         "CombineTolerance":0,
+         "ResetParameterOnEvent":true
+      }	  
+	  ]
+}
