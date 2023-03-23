@@ -3,7 +3,7 @@
 	"Enabled": true,
 	"Templates": [
 		"Templates/CFIT02_AltimeterSetting.acfg",
-		"Templates/CFIT02_LateGearRetraction.acfg",
+		"Templates/CFIT100_LateGearRetraction.acfg",
 		"Templates/LOC14_InadequateAcftAttitude.acfg",
 		"Templates/LOC25_StructuralFailure.acfg",
 		"Templates/LOC32_IncorrectAcftConfig.acfg",
