@@ -5,6 +5,7 @@
 		"Templates/PMDG/737NG.acfg"
 	],
 	"CustomParameters": {
-		"C:TailstrikeLimit|double": "9.3"
+		"C:TailstrikeLimitCompressed|double": "9.3",
+		"C:TailstrikeLimitExtended|double": "11.0"
 	}	
 }
