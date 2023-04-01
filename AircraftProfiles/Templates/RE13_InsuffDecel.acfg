@@ -5,7 +5,7 @@
          "Events":[
             {
                "Name":"DECEL low",
-               "Condition":"[C:Acceleration|double] > -0.5",
+               "Condition":"[C:Acceleration|double] > -0.2",
                "Type":1,
                "Tolerance":8000,
                "Description":""
@@ -51,7 +51,7 @@
          "Name":"RE13 - Insufficient deceleration###rwyremaining",
          "Events":[
             {
-               "Name":"DECEL low",
+               "Name":"Late braking",
                "Condition":"(-1*[C:Acceleration|double]) < [C:OnRwyReqDecel|double]",
                "Type":1,
                "Tolerance":3000,

@@ -44,17 +44,17 @@
             {
                "Name":"Runway detected",
                "Type":"str",
-               "Parameter":"[C:OnRwyDetected|double]"
+               "Parameter":"[C:OnAppDetected|double]"
             },
             {
                "Name":"Airport",
                "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
+               "Parameter":"[C:OnAppAptIdent|string]"
             },
             {
                "Name":"Runway",
                "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
+               "Parameter":"[C:OnAppName|string]"
             },
             {
                "Name":"Height above rwy",
