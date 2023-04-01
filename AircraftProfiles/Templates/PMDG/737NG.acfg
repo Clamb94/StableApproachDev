@@ -9,6 +9,7 @@
 		"Templates/LOC32_IncorrectAcftConfig.acfg",
 		"Templates/LOCG01_TaxiSpeed.acfg",
 		"Templates/NORM02_Takeoff.acfg",
+		"Templates/NORM04_Approach.acfg",
 		"Templates/NORM05_Touchdown.acfg",
 		"Templates/NORM06_Rollout.acfg",
 		"Templates/NORM10_ILS.acfg",		
