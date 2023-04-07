@@ -1,0 +1,11 @@
+{
+	"Name": "PMDG 737",
+	"Enabled": true,
+	"Templates": [
+		"Templates/PMDG/737NG.acfg"
+	],
+	"CustomParameters": {
+		"C:TailstrikeLimitCompressed|double": "12.4",
+		"C:TailstrikeLimitExtended|double": "14.8"
+	}	
+}
