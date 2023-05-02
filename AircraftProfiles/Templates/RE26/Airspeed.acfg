@@ -54,12 +54,17 @@
             {
                "Name":"Runway",
                "Type":"str",
-               "Parameter":"[C:OnAppName|string]"
+               "Parameter":"[C:OnAppRwyName|string]"
             },
             {
                "Name":"Height above rwy",
                "Type":"MINMAX",
                "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+            },
+            {
+               "Name":"Plane altitude",
+               "Type":"MINMAX",
+               "Parameter":"[S:PLANE ALTITUDE|feet]"
             }
          ],
          "Description":"High appraoch speed",
@@ -105,34 +110,39 @@
                "Parameter":"[S:AIRSPEED INDICATED|knots]"
             },
             {
+               "Name":"VS",
+               "Type":"MAX",
+               "Parameter":"[S:VERTICAL SPEED|ft/min]"
+            },
+            {
                "Name":"Vapp",
                "Type":"MAX",
                "Parameter":"[C:VrefVar|string]"
-            },	
-            {
-               "Name":"Speed delta",
-               "Type":"MINMAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots] - [C:VrefVar|string]"
-            },				
+            },
             {
                "Name":"Runway detected",
                "Type":"str",
-               "Parameter":"[C:OnRwyDetected|double]"
+               "Parameter":"[C:OnAppDetected|double]"
             },
             {
                "Name":"Airport",
                "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
+               "Parameter":"[C:OnAppAptIdent|string]"
             },
             {
                "Name":"Runway",
                "Type":"str",
-               "Parameter":"[C:OnRwyName|string]"
+               "Parameter":"[C:OnAppRwyName|string]"
             },
             {
                "Name":"Height above rwy",
                "Type":"MINMAX",
                "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+            },
+            {
+               "Name":"Plane altitude",
+               "Type":"MINMAX",
+               "Parameter":"[S:PLANE ALTITUDE|feet]"
             }
          ],
          "Description":"Low appraoch speed",

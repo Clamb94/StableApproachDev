@@ -4,23 +4,23 @@
             "Name":"CFIT02 - Wrong altimeter settings",
             "Events":[
                 {
-                    "Name":"Indicated / true altitude disagree",
-                    "Condition":"Abs([S:INDICATED ALTITUDE|feet] - [S:PLANE ALTITUDE|feet]) > 30",
+                    "Name":"Incorrect QNH",
+                    "Condition":"Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars]) > 2",
                     "Type":1,
                     "Tolerance":10000,
                     "Description":""
                 },
                 {
-                    "Name":"Indicated / true altitude disagree",
-                    "Condition":"Abs([S:INDICATED ALTITUDE|feet] - [S:PLANE ALTITUDE|feet]) > 60",
+                    "Name":"Incorrect QNH",
+                    "Condition":"Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars]) > 4",
                     "Type":2,
                     "Tolerance":10000,
                     "Description":""
                 }				
             ],
          "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 1000 && [C:AnyEngineRunning|double] != 0",
-            "MONITOR_END":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 1500 || [C:DURATION CLIMBING|double] > 5",
+            "MONITOR_BEGIN":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 1000 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 50",
+            "MONITOR_END":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 1100 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 20",
             "SECONDARY":"1",
             "MARKER_SECONDARY":"1",
             "APP_MONITOR":"1"
@@ -29,7 +29,7 @@
             {
                "Name":"AltError",
                "Type":"MAX",
-               "Parameter":"Abs([S:INDICATED ALTITUDE|feet] - [S:PLANE ALTITUDE|feet])"
+               "Parameter":"Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars])"
             }
          ],
             "Description":"",

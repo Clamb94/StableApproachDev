@@ -76,7 +76,12 @@
 				"Name": "Alt above runway",
 				"Type": "MINMAX",
 				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-			}			
+			},
+            {
+               "Name":"Plane altitude",
+               "Type":"MINMAX",
+               "Parameter":"[S:PLANE ALTITUDE|feet]"
+            }			
          ],
          "Description":"High/low pitch attitude",
          "InstantEvents":false,

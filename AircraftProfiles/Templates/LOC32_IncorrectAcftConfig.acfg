@@ -197,7 +197,7 @@
                "Name":"Speed brake deployed with high thrust",
                "Condition":"[S:SPOILERS HANDLE POSITION|percent] > 0.3 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 40",
                "Type":1,
-               "Tolerance":0,
+               "Tolerance":20000,
                "Description":""
             }
          ],

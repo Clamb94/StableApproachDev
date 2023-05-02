@@ -39,7 +39,7 @@
             {
                "Name":"Runway",
                "Type":"str",
-               "Parameter":"[C:OnAppName|string]"
+               "Parameter":"[C:OnAppRwyName|string]"
             },
             {
                "Name":"Height above rwy",
@@ -69,14 +69,14 @@
                "Description":""
             },
             {
-               "Name":"Not in landing position",
+               "Name":"Flaps not in landing position",
                "Condition":"[C:NoLandingFlapsCondition|string]",
                "Type":2,
                "Tolerance":0,
                "Description":""
             },
             {
-               "Name":"Not in landing position",
+               "Name":"Flaps not in landing position",
                "Condition":"[C:NoLandingFlapsCondition|string] && [C:OnAppHeightAboveRwyThrElev|double] < 500",
                "Type":1,
                "Tolerance":0,
@@ -104,7 +104,7 @@
             {
                "Name":"Runway",
                "Type":"str",
-               "Parameter":"[C:OnAppName|string]"
+               "Parameter":"[C:OnAppRwyName|string]"
             },
             {
                "Name":"Height above rwy",

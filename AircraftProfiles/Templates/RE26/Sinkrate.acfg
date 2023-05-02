@@ -54,12 +54,17 @@
             {
                "Name":"Runway",
                "Type":"str",
-               "Parameter":"[C:OnAppName|string]"
+               "Parameter":"[C:OnAppRwyName|string]"
             },
             {
                "Name":"Height above rwy",
                "Type":"MINMAX",
                "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+            },
+            {
+               "Name":"Plane altitude",
+               "Type":"MINMAX",
+               "Parameter":"[S:PLANE ALTITUDE|feet]"
             }
          ],
          "Description":"Fast descend (vertical speed)",
