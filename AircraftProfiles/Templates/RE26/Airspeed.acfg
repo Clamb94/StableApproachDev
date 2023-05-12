@@ -43,7 +43,7 @@
             },				
             {
                "Name":"Runway detected",
-               "Type":"str",
+               "Type":"MINMAX",
                "Parameter":"[C:OnAppDetected|double]"
             },
             {
@@ -121,7 +121,7 @@
             },
             {
                "Name":"Runway detected",
-               "Type":"str",
+               "Type":"MINMAX",
                "Parameter":"[C:OnAppDetected|double]"
             },
             {

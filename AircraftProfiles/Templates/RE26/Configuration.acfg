@@ -28,7 +28,7 @@
          "EventParameters":[
             {
                "Name":"Runway detected",
-               "Type":"str",
+               "Type":"MINMAX",
                "Parameter":"[C:OnAppDetected|double]"
             },
             {

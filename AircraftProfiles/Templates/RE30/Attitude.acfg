@@ -152,7 +152,7 @@
             },
             {
                "Name":"Runway detected",
-               "Type":"str",
+               "Type":"MINMAX",
                "Parameter":"[C:OnRwyDetected|double]"
             },
             {
