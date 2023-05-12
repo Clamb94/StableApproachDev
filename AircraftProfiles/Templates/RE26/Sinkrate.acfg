@@ -37,11 +37,6 @@
                "Parameter":"[S:VERTICAL SPEED|ft/min]"
             },
             {
-               "Name":"Vapp",
-               "Type":"MAX",
-               "Parameter":"[C:VrefVar|string]"
-            },
-            {
                "Name":"Runway detected",
                "Type":"MINMAX",
                "Parameter":"[C:OnAppDetected|double]"
