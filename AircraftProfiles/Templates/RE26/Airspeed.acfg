@@ -67,7 +67,7 @@
                "Parameter":"[S:PLANE ALTITUDE|feet]"
             }
          ],
-         "Description":"High appraoch speed",
+         "Description":"High approach speed",
          "InstantEvents":false,
          "CombineTolerance":2000
       },
@@ -145,7 +145,7 @@
                "Parameter":"[S:PLANE ALTITUDE|feet]"
             }
          ],
-         "Description":"Low appraoch speed",
+         "Description":"Low approach speed",
          "InstantEvents":false,
          "CombineTolerance":2000
       }
