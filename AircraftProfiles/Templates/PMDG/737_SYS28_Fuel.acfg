@@ -39,13 +39,6 @@
         {
             "Name":"SYS28 - Fuel###CTR LOW PRESSURE",
             "Events":[
-				{
-                    "Name":"CTR LOW PRESSURE",
-                    "Condition":"([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",
-                    "Type":2,
-                    "Tolerance":120000,
-                    "Description":""
-                },
                 {
                     "Name":"CTR LOW PRESSURE",
                     "Condition":"([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",

@@ -52,7 +52,7 @@
          "Events":[
             {
                "Name":"Late braking",
-               "Condition":"(-1*[C:Acceleration|double]) < [C:OnRwyReqDecel|double] && [C:OnRwyReqDecel|double] > 0.3",
+               "Condition":"(-1*[C:Acceleration|double]) < [C:OnRwyReqDecel|double] && [C:OnRwyReqDecel|double] > 2",
                "Type":1,
                "Tolerance":3000,
                "Description":""
