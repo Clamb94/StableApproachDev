@@ -109,14 +109,14 @@
          "Events":[
             {
                "Name":"Tail clearance low",
-               "Condition":"[P:TailClearDeg] < 0.5",
+               "Condition":"[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree]) < 0.5",
                "Type":1,
                "Tolerance":500,
                "Description":""
             },
             {
                "Name":"Tail clearance low",
-               "Condition":"[P:TailClearDeg] < 0.1",
+               "Condition":"[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree]) < 0.1",
                "Type":2,
                "Tolerance":500,
                "Description":""
