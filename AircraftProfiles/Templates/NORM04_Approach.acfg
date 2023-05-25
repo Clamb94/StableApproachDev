@@ -35,12 +35,12 @@
             {
                "Name":"Vapp",
                "Type":"MINMAX",
-               "Parameter":"[C:VrefVar|string]"
+               "Parameter":"[C:VappVar|string]"
             },	
             {
                "Name":"Speed delta",
                "Type":"MINMAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots] - [C:VrefVar|string]"
+               "Parameter":"[S:AIRSPEED INDICATED|knots] - [C:VappVar|string]"
             },
             {
                "Name":"Height above rwy",
