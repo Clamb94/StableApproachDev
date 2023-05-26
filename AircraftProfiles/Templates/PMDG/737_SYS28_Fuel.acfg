@@ -8,6 +8,7 @@
                     "Condition":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 1300 && ([L:switch_45_73X|double] != 100 || [L:switch_46_73X|double] != 100)",
                     "Type":1,
                     "Tolerance":60000,
+					"LiveMonitorTolerance":30000,
                     "Description":""
                 },
                 {
@@ -15,6 +16,7 @@
                     "Condition":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 200 && ([L:switch_45_73X|double] != 100 || [L:switch_45_73X|double] != 100) && [S:PRESSURE ALTITUDE|feet] > 12000",
                     "Type":1,
                     "Tolerance":60000,
+					"LiveMonitorTolerance":30000,
                     "Description":""
                 }
             ],
@@ -44,6 +46,7 @@
                     "Condition":"([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",
                     "Type":1,
                     "Tolerance":60000,
+					"LiveMonitorTolerance":30000,
                     "Description":""
                 }
             ],
@@ -72,7 +75,8 @@
                     "Name":"LEFT OFF",
                     "Condition":"([L:switch_37_73X|double] == 0 || [L:switch_38_73X|double] == 0) && [L:switch_49_73X|double] == 100",
                     "Type":2,
-                    "Tolerance":300000,
+                    "Tolerance":30000,
+					"LiveMonitorTolerance":15000,
                     "Description":""
                 },
                 {
@@ -80,6 +84,7 @@
                     "Condition":"([L:switch_39_73X|double] == 0 || [L:switch_40_73X|double] == 0) && [L:switch_49_73X|double] == 100",
                     "Type":1,
                     "Tolerance":30000,
+					"LiveMonitorTolerance":15000,
                     "Description":""
                 }
             ],
@@ -102,6 +107,7 @@
                     "Condition":"Abs([S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24 - [S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24) > 600",
                     "Type":1,
                     "Tolerance":120000,
+					"LiveMonitorTolerance":30000,
                     "Description":""
                 }
             ],
