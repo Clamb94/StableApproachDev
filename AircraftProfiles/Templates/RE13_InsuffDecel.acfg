@@ -22,7 +22,8 @@
             "MONITOR_BEGIN":"[#C:Phase_Rollout|double] != 0 && [S:SURFACE RELATIVE GROUND SPEED|knots] > [C:RolloutHighspeedLimit|double] + 5 && [C:DURATION ON GROUND|double] > 5",
             "MONITOR_END":"[C:Phase_Rollout|double] == 0 || [S:SURFACE RELATIVE GROUND SPEED|knots] < [C:RolloutHighspeedLimit|double]",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+            "MARKER_SECONDARY":"1",
+			"LIVEMONITOR_BEGIN":"0"
          },
          "EventParameters":[
             {

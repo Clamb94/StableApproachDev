@@ -8,6 +8,7 @@
                     "Condition":"[S:TOTAL AIR TEMPERATURE|celsius] > 15 && ([S:ENG ANTI ICE:1|Bool] != 0 || [S:ENG ANTI ICE:2|Bool] != 0)",
                     "Type":1,
                     "Tolerance":30000,
+                    "LiveMonitorTolerance":20000,
                     "Description":""
                 }
             ],

@@ -39,7 +39,7 @@
 				"Name": "Localizer Info",
 				"Condition": "1",
 				"Type": 0,
-				"Tolerance": 0,
+				"Tolerance": 5000,
 				"Description": ""
 			}
 		],

@@ -8,6 +8,7 @@
                     "Condition":"1",
                     "Type":1,
                     "Tolerance":10000,
+                    "LiveMonitorTolerance":5000,
                     "Description":""
                 }				
             ],
