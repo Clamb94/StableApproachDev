@@ -22,8 +22,7 @@
             "MONITOR_BEGIN":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 50 && [C:DURATION AIRBORNE|double] > 10 && [C:DURATION DESCENDING|double] > 5",
             "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0 || [C:DURATION CLIMBING|double] > 2",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "EventParameters":[
            {

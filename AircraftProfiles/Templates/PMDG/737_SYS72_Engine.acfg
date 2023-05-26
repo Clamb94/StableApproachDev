@@ -16,8 +16,7 @@
             "MONITOR_BEGIN":"[L:AutoIgnitionOption|double] == 0",
             "MONITOR_END":"[L:AutoIgnitionOption|double] == 1",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "Description":"Engine ignition must be on for anti-ice operation",
          "InstantEvents":false,

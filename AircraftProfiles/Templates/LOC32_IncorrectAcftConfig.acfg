@@ -152,8 +152,7 @@
             "MONITOR_BEGIN":"[S:GEAR TOTAL PCT EXTENDED|percent] > 0 && [S:SIM ON GROUND|Bool] == 0",
             "MONITOR_END":"[S:GEAR TOTAL PCT EXTENDED|percent] == 0 || [S:SIM ON GROUND|Bool] != 0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          }
       },
       {
@@ -186,8 +185,7 @@
             "MONITOR_BEGIN":"[C:Phase_Takeoff0|double] != 0 && [S:SIM ON GROUND|Bool] != 0",
             "MONITOR_END":"[S:PLANE ALTITUDE|feet] > [C:LiftoffAlt|double] + 800 ",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          }
       },
       {
@@ -220,8 +218,7 @@
             "MONITOR_BEGIN":"1",
             "MONITOR_END":"0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          }
       }	  
    ]

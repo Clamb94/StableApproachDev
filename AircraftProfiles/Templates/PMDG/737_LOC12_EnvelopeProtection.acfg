@@ -22,8 +22,7 @@
             "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] == 0",
             "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "EventParameters":[
             {
@@ -58,8 +57,7 @@
             "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] == 0",
             "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "Description":"Stick shaker",
          "InstantEvents":false,

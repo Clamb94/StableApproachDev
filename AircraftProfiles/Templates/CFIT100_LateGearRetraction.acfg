@@ -15,8 +15,7 @@
             "MONITOR_BEGIN":"[S:GEAR TOTAL PCT EXTENDED|percent] > 0.95 && [C:DURATION CLIMBING|double] > 4 && [S:PLANE ALT ABOVE GROUND|feet] < 500 && [S:IS GEAR RETRACTABLE|Bool] != 0",
             "MONITOR_END":"[S:GEAR TOTAL PCT EXTENDED|percent] < 0.9",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "EventParameters":[
          ],

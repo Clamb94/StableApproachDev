@@ -90,8 +90,7 @@
             "MONITOR_BEGIN":"[S:FLAPS HANDLE INDEX:1|number] == 0",
             "MONITOR_END":"[S:FLAPS HANDLE INDEX:1|number] != 0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          }
       },
       {
@@ -136,8 +135,7 @@
             "MONITOR_BEGIN":"[S:FLAPS HANDLE INDEX:1|number] != 0",
             "MONITOR_END":"[S:FLAPS HANDLE INDEX:1|number] == 0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          }
       }		
     ],

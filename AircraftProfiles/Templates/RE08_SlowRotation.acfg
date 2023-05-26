@@ -24,8 +24,7 @@
             "MONITOR_BEGIN":"[C:Phase_Takeoff0|double] != 0 && [S:GEAR IS ON GROUND:0|Bool] == 0",
             "MONITOR_END":"[C:DURATION AIRBORNE|double] > 3",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "EventParameters":[
 			{

@@ -97,8 +97,7 @@
             "MONITOR_BEGIN":"[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
             "MONITOR_END":"[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "Description":"Touchdown detected",
          "InstantEvents":false,

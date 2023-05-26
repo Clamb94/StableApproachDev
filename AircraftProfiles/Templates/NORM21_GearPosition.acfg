@@ -76,8 +76,7 @@
             "MONITOR_BEGIN":"1",
             "MONITOR_END":"0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          }
       }  
    ]

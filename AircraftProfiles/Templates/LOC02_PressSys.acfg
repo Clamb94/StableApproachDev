@@ -29,8 +29,7 @@
             "MONITOR_BEGIN":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 2000",
             "MONITOR_END":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 1500",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1",
-            "APP_MONITOR":"1"
+            "MARKER_SECONDARY":"1"
          },
          "EventParameters":[
             {
