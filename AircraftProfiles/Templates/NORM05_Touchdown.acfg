@@ -91,6 +91,11 @@
                "Name":"Threshold distance",
                "Type":"instant",
                "Parameter":"[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
+            },
+			{
+               "Name":"Threshold crossing height",
+               "Type":"instant",
+               "Parameter":"[C:TCH|double]"
             }
          ],
          "MonitoringConditions":{
