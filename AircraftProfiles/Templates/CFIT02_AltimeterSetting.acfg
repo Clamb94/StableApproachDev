@@ -12,7 +12,7 @@
                 },
                 {
                     "Name":"Incorrect QNH",
-                    "Condition":"Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars]) > 4",
+                    "Condition":"Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars]) > 8",
                     "Type":2,
                     "Tolerance":10000,
                     "Description":""
@@ -26,7 +26,7 @@
          },
          "EventParameters":[
             {
-               "Name":"AltError",
+               "Name":"QNHError",
                "Type":"MAX",
                "Parameter":"Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars])"
             }
