@@ -83,7 +83,8 @@
             "MONITOR_BEGIN":"[#C:DURATION AIRBORNE|double] > 1 && [S:GEAR IS ON GROUND:1|Bool] != 0 && [S:GEAR IS ON GROUND:2|Bool] != 0",
             "MONITOR_END":"[S:GEAR IS ON GROUND:0|Bool] != 0",
             "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+            "MARKER_SECONDARY":"1",
+			"LIVEMONITOR_BEGIN":"0"
          },
          "EventParameters":[
             {
