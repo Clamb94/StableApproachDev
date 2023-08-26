@@ -1,0 +1,40 @@
+{
+   "FlightEventDefinitionGroups":[
+      {
+         "Name":"RE21 - Reverse thrust asymmetry",
+         "Events":[
+            {
+               "Name":"Thrust asymmetry",
+               "Condition":"Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 5",
+               "Type":1,
+               "Tolerance":5000,
+               "Description":""
+            },
+            {
+               "Name":"Thrust asymmetry",
+               "Condition":"Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 15",
+               "Type":2,
+               "Tolerance":5000,
+               "Description":""
+            }
+         ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[L:A_FC_THROTTLE_LEFT_INPUT|double] < 2 || [L:A_FC_THROTTLE_RIGHT_INPUT|double] < 2",
+            "MONITOR_END":"[L:A_FC_THROTTLE_LEFT_INPUT|double] >= 2 && [L:A_FC_THROTTLE_RIGHT_INPUT|double] >= 2",
+            "SECONDARY":"1",
+            "MARKER_SECONDARY":"1"
+         },
+         "EventParameters":[
+            {
+               "Name":"N1 Delta",
+               "Type":"MAX",
+               "Parameter":"Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent])"
+            }
+         ],
+         "Description":"",
+         "InstantEvents":false,
+         "CombineTolerance":20000,
+         "ResetParameterOnEvent":true
+      }
+   ]
+}
