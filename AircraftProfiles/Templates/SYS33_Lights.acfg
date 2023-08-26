@@ -7,6 +7,7 @@
 				"Condition": "[S:LIGHT BEACON|Bool] == 0 && [C:AnyEngineRunning|double] != 0",
 				"Type": 2,
 				"Tolerance": 10000,
+				"LiveMonitorTolerance": 1000,
 				"Description": ""
 			}],
 			"MonitoringConditions": {
