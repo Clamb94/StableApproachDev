@@ -47,7 +47,7 @@
 			},
 			{
 				"Name": "WINDSHEAR",
-				"Condition": "[L:A320_Audio:Windshear|double] != 0 || [L:A320_Audio:Pred_windshear_Windshear|double] != 0 || [L:A320_Audio:Go_around_windshear|double] != 0 ||",
+				"Condition": "[L:A320_Audio:Windshear|double] != 0 || [L:A320_Audio:Pred_windshear_Windshear|double] != 0 || [L:A320_Audio:Go_around_windshear|double] != 0",
 				"Type": 1,
 				"Tolerance": 0,
 				"Description": ""
