@@ -3,18 +3,18 @@
       {
          "Name":"RE29 - Deep landing###longlanding",
          "Events":[
-			{
+		{
                "Name":"Long landing",
                "Condition":"[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double] * 1.1)",
                "Type":2,
-               "Tolerance":500,
+               "Tolerance":999999,
                "Description":""
             },
 			{
                "Name":"Long landing",
                "Condition":"[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double])",
                "Type":1,
-               "Tolerance":500,
+               "Tolerance":999999,
                "Description":""
             },			
 			{
