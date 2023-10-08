@@ -1,0 +1,11 @@
+{
+	"Name": "Fenix A320 IAE",
+	"Enabled": true,
+	"Templates": [
+		"Templates/Fenix/A320.acfg"
+	],
+	"CustomParameters": {
+		"C:TailstrikeLimitCompressed|double": "99",
+		"C:TailstrikeLimitExtended|double": "99"
+	}	
+}
