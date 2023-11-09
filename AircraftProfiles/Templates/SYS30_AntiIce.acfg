@@ -1,14 +1,14 @@
 {
     "FlightEventDefinitionGroups":[
         {
-            "Name":"SYS30 - Ice and rain protection",
+            "Name":"SYS30 - Ice and rain protection###toowarm",
             "Events":[
                 {
                     "Name":"ENG ANTI-ICE ON above 10°C",
                     "Condition":"[S:TOTAL AIR TEMPERATURE|celsius] > 15 && ([S:ENG ANTI ICE:1|Bool] != 0 || [S:ENG ANTI ICE:2|Bool] != 0)",
                     "Type":1,
-                    "Tolerance":30000,
-                    "LiveMonitorTolerance":20000,
+                    "Tolerance":60000,
+                    "LiveMonitorTolerance":30000,
                     "Description":""
                 }
             ],
@@ -20,7 +20,35 @@
             }
          ],
             "Description":"Engine anti-ice should not be ON above +10°C TAT",
-            "InstantEvents":false
+            "InstantEvents":false,
+			"CombineTolerance" : 30000
+        },
+		{
+            "Name":"SYS30 - Ice and rain protection###inicing",
+            "Events":[
+                {
+                    "Name":"ENG ANTI-ICE OFF",
+				"Condition":"([S:AMBIENT TEMPERATURE|celsius] > -40 || [C:DURATION DESCENDING|double] > 0) && [S:TOTAL AIR TEMPERATURE|celsius] < 8 && ([S:ENG ANTI ICE:1|Bool] == 0 || [S:ENG ANTI ICE:2|Bool] == 0) && ([S:AMBIENT IN CLOUD|Bool] != 0 || ([S:AMBIENT PRECIP STATE|number] >= 4 && [S:AMBIENT PRECIP RATE|millimeters of water] > 2))",
+                    "Type":1,
+                    "Tolerance":60000,
+                    "LiveMonitorTolerance":30000,
+                    "Description":""
+                }
+            ],
+         "MonitoringConditions":{
+            "MONITOR_BEGIN":"[C:AllEnginesRunning|double] != 0",
+            "MONITOR_END":"[C:AllEnginesRunning|double] == 0"
+         },
+         "EventParameters":[
+            {
+               "Name":"TAT",
+               "Type":"MAX",
+               "Parameter":"[S:TOTAL AIR TEMPERATURE|celsius]"
+            }
+         ],
+            "Description":"Engine anti-ice should be ON below 10°C and visible moisture",
+            "InstantEvents":false,
+			"CombineTolerance" : 30000
         }
     ]
 }
