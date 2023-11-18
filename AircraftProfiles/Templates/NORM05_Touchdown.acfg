@@ -4,7 +4,7 @@
          "Name":"NORM05 - Touchdown",
          "Events":[
             {
-               "Name":"Info",
+               "Name":"Touchdown Info",
                "Condition":"1",
                "Type":0,
                "Tolerance":500,

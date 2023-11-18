@@ -15,7 +15,7 @@
          ],
          "MonitoringConditions":{
             "MONITOR_BEGIN":"[L:CO_Rotate|double] != [#L:CO_Rotate|double]",
-            "MONITOR_END":"[S:GEAR IS ON GROUND:0|Bool] == 0 || [C:Phase_Takeoff0|double] == 0",
+            "MONITOR_END":"[S:GEAR IS ON GROUND:0|Bool] == 0 || [C:SubPhase_Takeoff0|double] == 0",
             "SECONDARY":"1",
             "MARKER_SECONDARY":"1"
          },

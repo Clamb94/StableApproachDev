@@ -19,10 +19,10 @@
 			}
 		],
 		"MonitoringConditions": {
-			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:Phase_FApp|double] != 0 && [S:NAV GS FLAG:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 400",
-			"MONITOR_END": "[C:Phase_FApp|double] == 0 || [S:NAV GS FLAG:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 300",
+			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0 && [S:NAV GS FLAG:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 400",
+			"MONITOR_END": "[C:SubPhase_FApp|double] == 0 || [S:NAV GS FLAG:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 300",
 			"SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 100",
-			"MARKER_SECONDARY": "[C:Phase_FApp|double] == 0",
+			"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0",
 			"APP_MONITOR": "1"
 		},
 		"EventParameters": [{
@@ -58,10 +58,10 @@
 			}
 		],
 		"MonitoringConditions": {
-			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:Phase_FApp|double] != 0 && [S:NAV HAS LOCALIZER:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 300",
-			"MONITOR_END": "[C:Phase_FApp|double] == 0 || [S:NAV HAS LOCALIZER:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 200",
+			"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0 && [S:NAV HAS LOCALIZER:1|Bool] != 0 && [C:OnAppHeightAboveRwyThrElev|double] > 300",
+			"MONITOR_END": "[C:SubPhase_FApp|double] == 0 || [S:NAV HAS LOCALIZER:1|Bool] == 0 || [C:OnAppHeightAboveRwyThrElev|double] < 200",
 			"SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 100",
-			"MARKER_SECONDARY": "[C:Phase_FApp|double] == 0",
+			"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0",
 			"APP_MONITOR": "1"
 		},
 		"EventParameters": [{

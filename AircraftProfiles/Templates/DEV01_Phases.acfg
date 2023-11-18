@@ -5,7 +5,7 @@
             "Events":[
                 {
                     "Name":"Active",
-                    "Condition":"[C:Phase_FApp|double] != 0",
+                    "Condition":"[C:SubPhase_FApp|double] != 0",
                     "Tolerance":0,
                     "Type":0,
                     "Description":""

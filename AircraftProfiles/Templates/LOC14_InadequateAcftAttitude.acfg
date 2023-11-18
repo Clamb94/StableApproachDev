@@ -1,7 +1,7 @@
 {
    "FlightEventDefinitionGroups":[
       {
-         "Name":"LOC14 - Inadequate aircraft attitude",
+         "Name":"LOC14 - Inadequate aircraft attitude###Test",
          "Events":[
             {
                "Name":"Pitch high",

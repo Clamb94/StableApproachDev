@@ -26,7 +26,7 @@
             }
          ],
          "MonitoringConditions":{
-            "MONITOR_BEGIN":"[#C:Phase_Takeoff0|double] != 0 && ([L:CO_V1|double] != [#L:CO_V1|double] || [L:egpws_v1|double] != [#L:egpws_v1|double])",
+            "MONITOR_BEGIN":"[#C:SubPhase_Takeoff0|double] != 0 && ([L:CO_V1|double] != [#L:CO_V1|double] || [L:egpws_v1|double] != [#L:egpws_v1|double])",
             "MONITOR_END":"1",
             "SECONDARY":"1",
             "MARKER_SECONDARY":"1"

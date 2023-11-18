@@ -19,8 +19,8 @@
             }
          ],
          "MonitoringConditions":{
-            "MONITOR_BEGIN":"[#C:Phase_Taxi|double] != 0",
-            "MONITOR_END":"[#C:Phase_Taxi|double] == 0",
+            "MONITOR_BEGIN":"[#C:SubPhase_Taxi|double] != 0",
+            "MONITOR_END":"[#C:SubPhase_Taxi|double] == 0",
             "SECONDARY":"1",
             "MARKER_SECONDARY":"1"
          },
@@ -54,8 +54,8 @@
             }
          ],
          "MonitoringConditions":{
-            "MONITOR_BEGIN":"[#C:Phase_Taxi|double] != 0 && [#C:Phase_TaxiOnRunway|double] == 0",
-            "MONITOR_END":"[#C:Phase_Taxi|double] == 0 || [#C:Phase_TaxiOnRunway|double] != 0",
+            "MONITOR_BEGIN":"[#C:SubPhase_Taxi|double] != 0 && [#C:SubPhase_TaxiOnRunway|double] == 0",
+            "MONITOR_END":"[#C:SubPhase_Taxi|double] == 0 || [#C:SubPhase_TaxiOnRunway|double] != 0",
             "SECONDARY":"1",
             "MARKER_SECONDARY":"1"
          },
@@ -89,8 +89,8 @@
             }
          ],
          "MonitoringConditions":{
-            "MONITOR_BEGIN":"[#C:Phase_TaxiOnRunway|double] != 0",
-            "MONITOR_END":"[#C:Phase_TaxiOnRunway|double] == 0",
+            "MONITOR_BEGIN":"[#C:SubPhase_TaxiOnRunway|double] != 0",
+            "MONITOR_END":"[#C:SubPhase_TaxiOnRunway|double] == 0",
             "SECONDARY":"1",
             "MARKER_SECONDARY":"1"
          },

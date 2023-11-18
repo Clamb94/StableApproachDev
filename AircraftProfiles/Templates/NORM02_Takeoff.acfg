@@ -4,7 +4,7 @@
          "Name":"NORM02 - Takeoff",
          "Events":[
             {
-               "Name":"Info",
+               "Name":"Takeoff Info",
                "Condition":"1",
                "Type":0,
                "Tolerance":500,
@@ -51,8 +51,8 @@
             }
          ],
          "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:Phase_Takeoff0|double] != 0",
-            "MONITOR_END":"[C:Phase_Takeoff0|double] == 0",
+            "MONITOR_BEGIN":"[C:SubPhase_Takeoff0|double] != 0",
+            "MONITOR_END":"[C:SubPhase_Takeoff0|double] == 0",
             "SECONDARY":"1",
             "MARKER_SECONDARY":"1"
          },
