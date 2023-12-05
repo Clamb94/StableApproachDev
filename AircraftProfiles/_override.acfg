@@ -2,5 +2,5 @@
 	"CustomParameters": {
 		"C:FlightStartCondition|string": "[S:LIGHT BEACON|Bool] == 1",
 		"C:FlightEndCondition|string": "[S:LIGHT BEACON|Bool] != 1"
-	}	
+	}
 }

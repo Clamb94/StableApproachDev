@@ -2,7 +2,8 @@
 	"FlightEventDefinitionGroups": [
 		{
 			"Name": "RE26 - Unstable Approach###Speedbrake",
-			"Events": [{
+			"Events": [
+				{
 					"Name": "Speedbrake not ARMED",
 					"Condition": "[L:switch_343_73X|double] == 0",
 					"Type": 1,
@@ -25,20 +26,20 @@
 				"APP_MONITOR": "1"
 			},
 			"EventParameters": [
-			{
-				"Name": "Alt above runway",
-				"Type": "MINMAX",
-				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-			},
-			{
-				"Name": "Speedbrake ARMED light",
-				"Type": "MINMAX",
-				"Parameter": "[L:switch_343_73X|double]"
-			}			
+				{
+					"Name": "Alt above runway",
+					"Type": "MINMAX",
+					"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+				},
+				{
+					"Name": "Speedbrake ARMED light",
+					"Type": "MINMAX",
+					"Parameter": "[L:switch_343_73X|double]"
+				}
 			],
 			"Description": "Speedbrake not armed",
 			"InstantEvents": false,
-			"CombineTolerance" : 5000
+			"CombineTolerance": 5000
 		},
 		{
 			"Name": "RE26 - Unstable Approach###EngSwitch",
@@ -56,7 +57,7 @@
 					"Type": 2,
 					"Tolerance": 1000,
 					"Description": ""
-				}				
+				}
 			],
 			"MonitoringConditions": {
 				"MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0 && [L:AutoIgnitionOption|double] == 0",
@@ -66,25 +67,25 @@
 				"APP_MONITOR": "1"
 			},
 			"EventParameters": [
-			{
-				"Name": "L IGN",
-				"Type": "MINMAX",
-				"Parameter": "[L:switch_119_73X|double]"
-			},
-			{
-				"Name": "R IGN",
-				"Type": "MINMAX",
-				"Parameter": "[L:switch_121_73X|double]"
-			},
-			{
-				"Name": "Alt above runway",
-				"Type": "MINMAX",
-				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-			}
+				{
+					"Name": "L IGN",
+					"Type": "MINMAX",
+					"Parameter": "[L:switch_119_73X|double]"
+				},
+				{
+					"Name": "R IGN",
+					"Type": "MINMAX",
+					"Parameter": "[L:switch_121_73X|double]"
+				},
+				{
+					"Name": "Alt above runway",
+					"Type": "MINMAX",
+					"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+				}
 			],
 			"Description": "ENG start switches not in AUTO/CONT",
 			"InstantEvents": false,
-			"CombineTolerance" : 5000
+			"CombineTolerance": 5000
 		}
 	]
 }

@@ -1,69 +1,69 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"RE26 - Unstable Approach###Sinkrate",
-         "Events":[
+         "Name": "RE26 - Unstable Approach###Sinkrate",
+         "Events": [
             {
-               "Name":"Fast descend (vertical speed)",
-               "Condition":"[S:VERTICAL SPEED|ft/min] < -1200",
-               "Tolerance":3000,
-               "Type":1,
-               "Description":""
+               "Name": "Fast descend (vertical speed)",
+               "Condition": "[S:VERTICAL SPEED|ft/min] < -1200",
+               "Tolerance": 3000,
+               "Type": 1,
+               "Description": ""
             },
             {
-               "Name":"Fast descend (vertical speed)",
-               "Condition":"[S:VERTICAL SPEED|ft/min] < -1500",
-               "Tolerance":3000,
-               "Type":2,
-               "Description":""
+               "Name": "Fast descend (vertical speed)",
+               "Condition": "[S:VERTICAL SPEED|ft/min] < -1500",
+               "Tolerance": 3000,
+               "Type": 2,
+               "Description": ""
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
-            "MONITOR_END":"[C:SubPhase_FApp|double] == 0",
-			"SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
-			"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
+            "MONITOR_END": "[C:SubPhase_FApp|double] == 0",
+            "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
+            "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
          },
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"KIAS",
-               "Type":"MAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots]"
+               "Name": "KIAS",
+               "Type": "MAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
             },
             {
-               "Name":"VS",
-               "Type":"MAX",
-               "Parameter":"[S:VERTICAL SPEED|ft/min]"
+               "Name": "VS",
+               "Type": "MAX",
+               "Parameter": "[S:VERTICAL SPEED|ft/min]"
             },
             {
-               "Name":"Runway detected",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppDetected|double]"
+               "Name": "Runway detected",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppDetected|double]"
             },
             {
-               "Name":"Airport",
-               "Type":"str",
-               "Parameter":"[C:OnAppAptIdent|string]"
+               "Name": "Airport",
+               "Type": "str",
+               "Parameter": "[C:OnAppAptIdent|string]"
             },
             {
-               "Name":"Runway",
-               "Type":"str",
-               "Parameter":"[C:OnAppRwyName|string]"
+               "Name": "Runway",
+               "Type": "str",
+               "Parameter": "[C:OnAppRwyName|string]"
             },
             {
-               "Name":"Height above rwy",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+               "Name": "Height above rwy",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
             },
             {
-               "Name":"Plane altitude",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
+               "Name": "Plane altitude",
+               "Type": "MINMAX",
+               "Parameter": "[S:PLANE ALTITUDE|feet]"
             }
          ],
-         "Description":"Fast descend (vertical speed)",
-         "InstantEvents":false,
-         "CombineTolerance":5000
+         "Description": "Fast descend (vertical speed)",
+         "InstantEvents": false,
+         "CombineTolerance": 5000
       }
    ]
 }

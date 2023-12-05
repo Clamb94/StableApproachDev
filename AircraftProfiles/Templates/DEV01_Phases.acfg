@@ -1,129 +1,129 @@
 {
-    "FlightEventDefinitionGroups":[
+    "FlightEventDefinitionGroups": [
         {
-            "Name":"Phase_FApp",
-            "Events":[
+            "Name": "Phase_FApp",
+            "Events": [
                 {
-                    "Name":"Active",
-                    "Condition":"[C:SubPhase_FApp|double] != 0",
-                    "Tolerance":0,
-                    "Type":0,
-                    "Description":""
+                    "Name": "Active",
+                    "Condition": "[C:SubPhase_FApp|double] != 0",
+                    "Tolerance": 0,
+                    "Type": 0,
+                    "Description": ""
                 }
             ],
-            "Description":"",
-            "InstantEvents":false,
-            "EventParameters":[
+            "Description": "",
+            "InstantEvents": false,
+            "EventParameters": [
                 {
-                    "Name":"ALT ABOVE RWY",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+                    "Name": "ALT ABOVE RWY",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
                 },
                 {
-                    "Name":"APP APT",
-                    "Type":"str",
-                    "Parameter":"[C:OnAppAptIdent|string]"
+                    "Name": "APP APT",
+                    "Type": "str",
+                    "Parameter": "[C:OnAppAptIdent|string]"
                 },
                 {
-                    "Name":"APP RWY",
-                    "Type":"str",
-                    "Parameter":"[C:OnAppRwyName|string]"
+                    "Name": "APP RWY",
+                    "Type": "str",
+                    "Parameter": "[C:OnAppRwyName|string]"
                 },
                 {
-                    "Name":"APP RWY ELEV",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyElevation|double]"
+                    "Name": "APP RWY ELEV",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppRwyElevation|double]"
                 },
                 {
-                    "Name":"CHECK ALT",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyCheckAlt|double]"
+                    "Name": "CHECK ALT",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppRwyCheckAlt|double]"
                 },
                 {
-                    "Name":"APP DETECTED",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppDetected|double]"
+                    "Name": "APP DETECTED",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppDetected|double]"
                 },
                 {
-                    "Name":"PLANE ALTITUDE",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:PLANE ALTITUDE|feet]"
+                    "Name": "PLANE ALTITUDE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:PLANE ALTITUDE|feet]"
                 },
                 {
-                    "Name":"INDICATED ALTITUDE",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:INDICATED ALTITUDE|feet]"
+                    "Name": "INDICATED ALTITUDE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:INDICATED ALTITUDE|feet]"
                 }
             ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"1",
-                "MONITOR_END":"0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "1",
+                "MONITOR_END": "0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
             }
         },
         {
-            "Name":"Below check height",
-            "Events":[
+            "Name": "Below check height",
+            "Events": [
                 {
-                    "Name":"true",
-                    "Condition":"[C:BelowCheckHeight|double] != 0",
-                    "Tolerance":0,
-                    "Type":0,
-                    "Description":""
+                    "Name": "true",
+                    "Condition": "[C:BelowCheckHeight|double] != 0",
+                    "Tolerance": 0,
+                    "Type": 0,
+                    "Description": ""
                 }
             ],
-            "Description":"",
-            "InstantEvents":false,
-            "EventParameters":[
+            "Description": "",
+            "InstantEvents": false,
+            "EventParameters": [
                 {
-                    "Name":"ALT ABOVE RWY",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+                    "Name": "ALT ABOVE RWY",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
                 },
                 {
-                    "Name":"APP APT",
-                    "Type":"str",
-                    "Parameter":"[C:OnAppAptIdent|string]"
+                    "Name": "APP APT",
+                    "Type": "str",
+                    "Parameter": "[C:OnAppAptIdent|string]"
                 },
                 {
-                    "Name":"APP RWY",
-                    "Type":"str",
-                    "Parameter":"[C:OnAppRwyName|string]"
+                    "Name": "APP RWY",
+                    "Type": "str",
+                    "Parameter": "[C:OnAppRwyName|string]"
                 },
                 {
-                    "Name":"APP RWY ELEV",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyElevation|double]"
+                    "Name": "APP RWY ELEV",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppRwyElevation|double]"
                 },
                 {
-                    "Name":"APP DETECTED",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppDetected|double]"
+                    "Name": "APP DETECTED",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppDetected|double]"
                 },
                 {
-                    "Name":"CHECK ALT",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyCheckAlt|double]"
-                },				
-                {
-                    "Name":"PLANE ALTITUDE",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:PLANE ALTITUDE|feet]"
+                    "Name": "CHECK ALT",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppRwyCheckAlt|double]"
                 },
                 {
-                    "Name":"INDICATED ALTITUDE",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:INDICATED ALTITUDE|feet]"
+                    "Name": "PLANE ALTITUDE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:PLANE ALTITUDE|feet]"
+                },
+                {
+                    "Name": "INDICATED ALTITUDE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:INDICATED ALTITUDE|feet]"
                 }
             ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"1",
-                "MONITOR_END":"0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "1",
+                "MONITOR_END": "0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
             }
         }
     ]

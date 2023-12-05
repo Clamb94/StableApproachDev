@@ -1,26 +1,25 @@
 {
-   "FlightEventDefinitionGroups":[     
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"SYS49 - APU###alt",
-         "Events":[
+         "Name": "SYS49 - APU###alt",
+         "Events": [
             {
-               "Name":"APU BLEED MAX ALT",
-               "Condition":"[L:I_OH_PNEUMATIC_APU_BLEED_L|double] > 0 && [S:PRESSURE ALTITUDE|feet] > 20500", 
-               "Type":1,
-               "Tolerance":30000,
-               "Description":"APU bleed: max alt 20000 ft"
-            }			
-         ]
-         ,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[L:I_OH_ELEC_APU_START_U|double] > 0",
-            "MONITOR_END":"[L:I_OH_ELEC_APU_START_U|double] > 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+               "Name": "APU BLEED MAX ALT",
+               "Condition": "[L:I_OH_PNEUMATIC_APU_BLEED_L|double] > 0 && [S:PRESSURE ALTITUDE|feet] > 20500",
+               "Type": 1,
+               "Tolerance": 30000,
+               "Description": "APU bleed: max alt 20000 ft"
+            }
+         ],
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[L:I_OH_ELEC_APU_START_U|double] > 0",
+            "MONITOR_END": "[L:I_OH_ELEC_APU_START_U|double] > 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "Description":"APU operating limit exceeded",
-         "InstantEvents":false,
-		 "CombineTolerance" : 1000
-      }	  
+         "Description": "APU operating limit exceeded",
+         "InstantEvents": false,
+         "CombineTolerance": 1000
+      }
    ]
 }

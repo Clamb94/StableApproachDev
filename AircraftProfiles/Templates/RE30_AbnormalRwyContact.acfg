@@ -1,7 +1,7 @@
 {
-   "Templates":[
+   "Templates": [
       "Templates/RE30/NoseLanding.acfg",
-	  "Templates/RE30/HardLanding.acfg",
-	  "Templates/RE30/Attitude.acfg"
+      "Templates/RE30/HardLanding.acfg",
+      "Templates/RE30/Attitude.acfg"
    ]
 }

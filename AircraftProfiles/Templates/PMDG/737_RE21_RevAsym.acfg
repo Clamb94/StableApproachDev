@@ -1,40 +1,40 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"RE21 - Reverse thrust asymmetry",
-         "Events":[
+         "Name": "RE21 - Reverse thrust asymmetry",
+         "Events": [
             {
-               "Name":"Thrust asymmetry",
-               "Condition":"Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 5",
-               "Type":1,
-               "Tolerance":5000,
-               "Description":""
+               "Name": "Thrust asymmetry",
+               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 5",
+               "Type": 1,
+               "Tolerance": 5000,
+               "Description": ""
             },
             {
-               "Name":"Thrust asymmetry",
-               "Condition":"Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 15",
-               "Type":2,
-               "Tolerance":5000,
-               "Description":""
+               "Name": "Thrust asymmetry",
+               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 15",
+               "Type": 2,
+               "Tolerance": 5000,
+               "Description": ""
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[L:eng2_two_reverse|double] != 0 || [L:eng1_one_reverse|double] != 0",
-            "MONITOR_END":"[L:eng2_two_reverse|double] == 0 && [L:eng1_one_reverse|double] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[L:eng2_two_reverse|double] != 0 || [L:eng1_one_reverse|double] != 0",
+            "MONITOR_END": "[L:eng2_two_reverse|double] == 0 && [L:eng1_one_reverse|double] == 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"N1 Delta",
-               "Type":"MAX",
-               "Parameter":"Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent])"
+               "Name": "N1 Delta",
+               "Type": "MAX",
+               "Parameter": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent])"
             }
          ],
-         "Description":"",
-         "InstantEvents":false,
-         "CombineTolerance":20000,
-         "ResetParameterOnEvent":true
+         "Description": "",
+         "InstantEvents": false,
+         "CombineTolerance": 20000,
+         "ResetParameterOnEvent": true
       }
    ]
 }

@@ -2,7 +2,8 @@
 	"FlightEventDefinitionGroups": [
 		{
 			"Name": "RE26 - Unstable Approach###Speedbrake",
-			"Events": [{
+			"Events": [
+				{
 					"Name": "Speedbrake not ARMED",
 					"Condition": "[L:A_FC_SPEEDBRAKE|double] != 0",
 					"Type": 1,
@@ -25,20 +26,20 @@
 				"APP_MONITOR": "1"
 			},
 			"EventParameters": [
-			{
-				"Name": "Alt above runway",
-				"Type": "MINMAX",
-				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-			},
-			{
-				"Name": "Speedbrake ARMED light",
-				"Type": "MINMAX",
-				"Parameter": "[L:A_FC_SPEEDBRAKE|double]"
-			}			
+				{
+					"Name": "Alt above runway",
+					"Type": "MINMAX",
+					"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+				},
+				{
+					"Name": "Speedbrake ARMED light",
+					"Type": "MINMAX",
+					"Parameter": "[L:A_FC_SPEEDBRAKE|double]"
+				}
 			],
 			"Description": "Speedbrake not armed",
 			"InstantEvents": false,
-			"CombineTolerance" : 5000
+			"CombineTolerance": 5000
 		}
 	]
 }

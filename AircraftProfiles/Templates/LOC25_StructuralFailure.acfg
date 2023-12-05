@@ -1,146 +1,146 @@
 {
-    "FlightEventDefinitionGroups":[
-        {
-            "Name":"LOC25 - Structural failure",
-            "Events":[
-                {
-                    "Name":"Overspeed (KIAS)",
-                    "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VMO|string] + 15",
-                    "Type":2,
-                    "Tolerance":3000,
-                    "Description":""
-                },
-                {
-                    "Name":"Overspeed (MACH)",
-                    "Condition":"[S:AIRSPEED MACH|mach] > [C:MMO|string] + 0.05",
-                    "Type":2,
-                    "Tolerance":2000,
-                    "Description":""
-                },
-				{
-                    "Name":"Overspeed (KIAS)",
-                    "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VMO|string]",
-                    "Type":1,
-                    "Tolerance":3000,
-                    "Description":""
-                },
-				{
-                    "Name":"Overspeed (MACH)",
-                    "Condition":"[S:AIRSPEED MACH|mach] > [C:MMO|string]",
-                    "Type":1,
-                    "Tolerance":2000,
-                    "Description":""
-                }
-            ],
-            "EventParameters":[
-                {
-                    "Name":"MACH",
-                    "Type": "MAX",
-                    "Parameter":"[S:AIRSPEED MACH|mach]"
-                },
-				{
-                    "Name":"KIAS",
-                    "Type": "MAX",
-                    "Parameter":"[S:AIRSPEED INDICATED|knots]"
-                }
-            ],
-            "Description":"Excessive airspeed",
-            "InstantEvents":false,
-			"CombineTolerance" : 5000
-        },
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"LOC25 - Structural failure###gloadFlapsUP",
-         "Events":[
+         "Name": "LOC25 - Structural failure",
+         "Events": [
             {
-               "Name":"Excessive positive G force",
-               "Condition":"[S:G FORCE|GForce] > [C:GLimitFlapsUpPos|double]",
-               "Type":2,
-               "Tolerance":1000,
-               "Description":""
+               "Name": "Overspeed (KIAS)",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:VMO|string] + 15",
+               "Type": 2,
+               "Tolerance": 3000,
+               "Description": ""
             },
             {
-               "Name":"Excessive negative G force",
-               "Condition":"[S:G FORCE|GForce] < [C:GLimitFlapsUpNeg|double]",
-               "Type":2,
-               "Tolerance":1000,
-               "Description":""
+               "Name": "Overspeed (MACH)",
+               "Condition": "[S:AIRSPEED MACH|mach] > [C:MMO|string] + 0.05",
+               "Type": 2,
+               "Tolerance": 2000,
+               "Description": ""
+            },
+            {
+               "Name": "Overspeed (KIAS)",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:VMO|string]",
+               "Type": 1,
+               "Tolerance": 3000,
+               "Description": ""
+            },
+            {
+               "Name": "Overspeed (MACH)",
+               "Condition": "[S:AIRSPEED MACH|mach] > [C:MMO|string]",
+               "Type": 1,
+               "Tolerance": 2000,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"GFORCE",
-               "Type":"MINMAX",
-               "Parameter":"[S:G FORCE|GForce]"
+               "Name": "MACH",
+               "Type": "MAX",
+               "Parameter": "[S:AIRSPEED MACH|mach]"
             },
             {
-               "Name":"GFORCE LIMIT POS",
-               "Type":"MAX",
-               "Parameter":"[C:GLimitFlapsUpPos|double]"
-            },
-            {
-               "Name":"GFORCE LIMIT NEG",
-               "Type":"MIN",
-               "Parameter":"[C:GLimitFlapsUpNeg|double]"
+               "Name": "KIAS",
+               "Type": "MAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
             }
          ],
-         "Description":"G-Limit exceeded",
-         "InstantEvents":false,
-         "CombineTolerance":5000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:FLAPS HANDLE INDEX:1|number] == 0",
-            "MONITOR_END":"[S:FLAPS HANDLE INDEX:1|number] != 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "Description": "Excessive airspeed",
+         "InstantEvents": false,
+         "CombineTolerance": 5000
+      },
+      {
+         "Name": "LOC25 - Structural failure###gloadFlapsUP",
+         "Events": [
+            {
+               "Name": "Excessive positive G force",
+               "Condition": "[S:G FORCE|GForce] > [C:GLimitFlapsUpPos|double]",
+               "Type": 2,
+               "Tolerance": 1000,
+               "Description": ""
+            },
+            {
+               "Name": "Excessive negative G force",
+               "Condition": "[S:G FORCE|GForce] < [C:GLimitFlapsUpNeg|double]",
+               "Type": 2,
+               "Tolerance": 1000,
+               "Description": ""
+            }
+         ],
+         "EventParameters": [
+            {
+               "Name": "GFORCE",
+               "Type": "MINMAX",
+               "Parameter": "[S:G FORCE|GForce]"
+            },
+            {
+               "Name": "GFORCE LIMIT POS",
+               "Type": "MAX",
+               "Parameter": "[C:GLimitFlapsUpPos|double]"
+            },
+            {
+               "Name": "GFORCE LIMIT NEG",
+               "Type": "MIN",
+               "Parameter": "[C:GLimitFlapsUpNeg|double]"
+            }
+         ],
+         "Description": "G-Limit exceeded",
+         "InstantEvents": false,
+         "CombineTolerance": 5000,
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:FLAPS HANDLE INDEX:1|number] == 0",
+            "MONITOR_END": "[S:FLAPS HANDLE INDEX:1|number] != 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          }
       },
       {
-         "Name":"LOC25 - Structural failure###gloadFlapsDn",
-         "Events":[
+         "Name": "LOC25 - Structural failure###gloadFlapsDn",
+         "Events": [
             {
-               "Name":"Excessive positive G force",
-               "Condition":"[S:G FORCE|GForce] > [C:GLimitFlapsDnPos|double]",
-               "Type":2,
-               "Tolerance":1000,
-               "Description":""
+               "Name": "Excessive positive G force",
+               "Condition": "[S:G FORCE|GForce] > [C:GLimitFlapsDnPos|double]",
+               "Type": 2,
+               "Tolerance": 1000,
+               "Description": ""
             },
             {
-               "Name":"Excessive negative G force",
-               "Condition":"[S:G FORCE|GForce] < [C:GLimitFlapsDnNeg|double]",
-               "Type":2,
-               "Tolerance":1000,
-               "Description":""
+               "Name": "Excessive negative G force",
+               "Condition": "[S:G FORCE|GForce] < [C:GLimitFlapsDnNeg|double]",
+               "Type": 2,
+               "Tolerance": 1000,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"GFORCE",
-               "Type":"MINMAX",
-               "Parameter":"[S:G FORCE|GForce]"
+               "Name": "GFORCE",
+               "Type": "MINMAX",
+               "Parameter": "[S:G FORCE|GForce]"
             },
             {
-               "Name":"GFORCE LIMIT POS",
-               "Type":"MAX",
-               "Parameter":"[C:GLimitFlapsDnPos|double]"
+               "Name": "GFORCE LIMIT POS",
+               "Type": "MAX",
+               "Parameter": "[C:GLimitFlapsDnPos|double]"
             },
             {
-               "Name":"GFORCE LIMIT NEG",
-               "Type":"MIN",
-               "Parameter":"[C:GLimitFlapsDnNeg|double]"
+               "Name": "GFORCE LIMIT NEG",
+               "Type": "MIN",
+               "Parameter": "[C:GLimitFlapsDnNeg|double]"
             }
          ],
-         "Description":"G-Limit exceeded",
-         "InstantEvents":false,
-         "CombineTolerance":5000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:FLAPS HANDLE INDEX:1|number] != 0",
-            "MONITOR_END":"[S:FLAPS HANDLE INDEX:1|number] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "Description": "G-Limit exceeded",
+         "InstantEvents": false,
+         "CombineTolerance": 5000,
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:FLAPS HANDLE INDEX:1|number] != 0",
+            "MONITOR_END": "[S:FLAPS HANDLE INDEX:1|number] == 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          }
-      }		
-    ],
-    "CustomParameters":{
-        "C:VMO|string":"[S:AIRSPEED BARBER POLE|knots]",
-        "C:MMO|string":"[S:BARBER POLE MACH|mach]"
-    }
+      }
+   ],
+   "CustomParameters": {
+      "C:VMO|string": "[S:AIRSPEED BARBER POLE|knots]",
+      "C:MMO|string": "[S:BARBER POLE MACH|mach]"
+   }
 }

@@ -1,151 +1,151 @@
 {
-    "FlightEventDefinitionGroups":[
+    "FlightEventDefinitionGroups": [
         {
-            "Events":[
+            "Events": [
                 {
-                    "Name":"[C:Flaps0PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 0",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps0PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps1PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 1",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps1PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps2PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 2",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps2PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps3PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 3",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps3PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps4PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 4",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps4PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps5PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 5",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps5PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps6PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 6",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps6PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps7PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 7",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps7PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps8PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 8",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps8PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 },
                 {
-                    "Name":"[C:Flaps9PositionName|string]",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 9",
-                    "Tolerance":1000,
-                    "Type":0,
-                    "Description":""
+                    "Name": "[C:Flaps9PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
                 }
             ],
-            "Name":"NORM20 - Flaps",
-            "Description":"",
-            "InstantEvents":true,
-            "EventParameters":[
+            "Name": "NORM20 - Flaps",
+            "Description": "",
+            "InstantEvents": true,
+            "EventParameters": [
                 {
-                    "Name":"KIAS",
-                    "Type":"instant",
-                    "Parameter":"[S:AIRSPEED INDICATED|knots]"
+                    "Name": "KIAS",
+                    "Type": "instant",
+                    "Parameter": "[S:AIRSPEED INDICATED|knots]"
                 },
                 {
-                    "Name":"ALT ABOVE RWY",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+                    "Name": "ALT ABOVE RWY",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
                 },
                 {
-                    "Name":"APP APT",
-                    "Type":"str",
-                    "Parameter":"[C:OnAppAptIdent|string]"
+                    "Name": "APP APT",
+                    "Type": "str",
+                    "Parameter": "[C:OnAppAptIdent|string]"
                 },
                 {
-                    "Name":"APP RWY",
-                    "Type":"str",
-                    "Parameter":"[C:OnAppRwyName|string]"
+                    "Name": "APP RWY",
+                    "Type": "str",
+                    "Parameter": "[C:OnAppRwyName|string]"
                 },
                 {
-                    "Name":"APP RWY ELEV",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyElevation|double]"
+                    "Name": "APP RWY ELEV",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppRwyElevation|double]"
                 },
                 {
-                    "Name":"APP DETECTED",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppDetected|double]"
+                    "Name": "APP DETECTED",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppDetected|double]"
                 },
                 {
-                    "Name":"CHECK ALT",
-                    "Type":"MINMAX",
-                    "Parameter":"[C:OnAppRwyCheckAlt|double]"
+                    "Name": "CHECK ALT",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppRwyCheckAlt|double]"
                 },
                 {
-                    "Name":"PLANE ALTITUDE",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:PLANE ALTITUDE|feet]"
+                    "Name": "PLANE ALTITUDE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:PLANE ALTITUDE|feet]"
                 },
                 {
-                    "Name":"INDICATED ALTITUDE",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:INDICATED ALTITUDE|feet]"
+                    "Name": "INDICATED ALTITUDE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:INDICATED ALTITUDE|feet]"
                 }
             ]
         }
     ],
-    "CustomParameters":{
-        "C:Flaps0PositionName|string":"UP",
-        "C:Flaps1PositionName|string":"1",
-        "C:Flaps2PositionName|string":"2",
-        "C:Flaps3PositionName|string":"3",
-        "C:Flaps4PositionName|string":"4",
-        "C:Flaps5PositionName|string":"5",
-        "C:Flaps6PositionName|string":"6",
-        "C:Flaps7PositionName|string":"7",
-        "C:Flaps8PositionName|string":"8",
-        "C:Flaps9PositionName|string":"9",
-        "C:Flaps0MaxKIAS|double":"999",
-        "C:Flaps1MaxKIAS|double":"999",
-        "C:Flaps2MaxKIAS|double":"999",
-        "C:Flaps3MaxKIAS|double":"999",
-        "C:Flaps4MaxKIAS|double":"999",
-        "C:Flaps5MaxKIAS|double":"999",
-        "C:Flaps6MaxKIAS|double":"999",
-        "C:Flaps7MaxKIAS|double":"999",
-        "C:Flaps8MaxKIAS|double":"999",
-        "C:Flaps9MaxKIAS|double":"999",
-        "C:MaxFlapExtensionAlt|double":"999999"
+    "CustomParameters": {
+        "C:Flaps0PositionName|string": "UP",
+        "C:Flaps1PositionName|string": "1",
+        "C:Flaps2PositionName|string": "2",
+        "C:Flaps3PositionName|string": "3",
+        "C:Flaps4PositionName|string": "4",
+        "C:Flaps5PositionName|string": "5",
+        "C:Flaps6PositionName|string": "6",
+        "C:Flaps7PositionName|string": "7",
+        "C:Flaps8PositionName|string": "8",
+        "C:Flaps9PositionName|string": "9",
+        "C:Flaps0MaxKIAS|double": "999",
+        "C:Flaps1MaxKIAS|double": "999",
+        "C:Flaps2MaxKIAS|double": "999",
+        "C:Flaps3MaxKIAS|double": "999",
+        "C:Flaps4MaxKIAS|double": "999",
+        "C:Flaps5MaxKIAS|double": "999",
+        "C:Flaps6MaxKIAS|double": "999",
+        "C:Flaps7MaxKIAS|double": "999",
+        "C:Flaps8MaxKIAS|double": "999",
+        "C:Flaps9MaxKIAS|double": "999",
+        "C:MaxFlapExtensionAlt|double": "999999"
     }
 }

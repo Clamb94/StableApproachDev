@@ -1,225 +1,225 @@
 {
-   "FlightEventDefinitionGroups":[
-        {
-			"Name":"LOC32 - Incorrect aicraft configuration###flapsOverspeed",
-            "Events":[
-                {
-                    "Name":"Flaps [C:Flaps0PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 0 && [S:AIRSPEED INDICATED|knots] > [C:Flaps0MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps1PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 1 && [S:AIRSPEED INDICATED|knots] > [C:Flaps1MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps2PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 2 && [S:AIRSPEED INDICATED|knots] > [C:Flaps2MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps3PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 3 && [S:AIRSPEED INDICATED|knots] > [C:Flaps3MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps4PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 4 && [S:AIRSPEED INDICATED|knots] > [C:Flaps4MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps5PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 5 && [S:AIRSPEED INDICATED|knots] > [C:Flaps5MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps6PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 6 && [S:AIRSPEED INDICATED|knots] > [C:Flaps6MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps7PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 7 && [S:AIRSPEED INDICATED|knots] > [C:Flaps7MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps8PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 8 && [S:AIRSPEED INDICATED|knots] > [C:Flaps8MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                },
-                {
-                    "Name":"Flaps [C:Flaps9PositionName|string] speed exceeded",
-                    "Condition":"[S:FLAPS HANDLE INDEX:1|number] == 9 && [S:AIRSPEED INDICATED|knots] > [C:Flaps9MaxKIAS|double]",
-                    "Tolerance":1000,
-                    "Type":2,
-                    "Description":""
-                }
-            ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] == 0",
-                "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
-            },
-            "Description":"",
-            "InstantEvents":false,
-            "EventParameters":[
-                {
-                    "Name":"KIAS",
-                    "Type":"MAX",
-                    "Parameter":"[S:AIRSPEED INDICATED|knots]"
-                }
-            ]
-        },
-        {
-			"Name":"LOC32 - Incorrect aicraft configuration###flapsAltitude",
-            "Events":[
-                {
-                    "Name":"Max flaps operating altitude exceeded",
-                    "Condition":"([S:PRESSURE ALTITUDE|feet] > [C:MaxFlapExtensionAlt|double]) && [S:FLAPS HANDLE INDEX:1|number] != 0",
-                    "Tolerance":3000,
-                    "Type":2
-                }
-            ],
-            "Description":"Maximum flap exension altitude"
-        },
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"LOC32 - Incorrect aicraft configuration###Gear",
-         "Events":[
+         "Name": "LOC32 - Incorrect aicraft configuration###flapsOverspeed",
+         "Events": [
             {
-               "Name":"Gear speed limit exceeded (Extension)",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtension|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] < [S:GEAR TOTAL PCT EXTENDED|percent]",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "Flaps [C:Flaps0PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0 && [S:AIRSPEED INDICATED|knots] > [C:Flaps0MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
             },
             {
-               "Name":"Gear speed limit exceeded  (Retraction)",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdRetraction|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] > [S:GEAR TOTAL PCT EXTENDED|percent]",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "Flaps [C:Flaps1PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1 && [S:AIRSPEED INDICATED|knots] > [C:Flaps1MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
             },
             {
-               "Name":"Gear speed limit exceeded",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtended|double] && [S:GEAR TOTAL PCT EXTENDED|percent] > 0.95",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "Flaps [C:Flaps2PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2 && [S:AIRSPEED INDICATED|knots] > [C:Flaps2MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
+            },
+            {
+               "Name": "Flaps [C:Flaps3PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3 && [S:AIRSPEED INDICATED|knots] > [C:Flaps3MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
+            },
+            {
+               "Name": "Flaps [C:Flaps4PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4 && [S:AIRSPEED INDICATED|knots] > [C:Flaps4MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
+            },
+            {
+               "Name": "Flaps [C:Flaps5PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5 && [S:AIRSPEED INDICATED|knots] > [C:Flaps5MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
+            },
+            {
+               "Name": "Flaps [C:Flaps6PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6 && [S:AIRSPEED INDICATED|knots] > [C:Flaps6MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
+            },
+            {
+               "Name": "Flaps [C:Flaps7PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7 && [S:AIRSPEED INDICATED|knots] > [C:Flaps7MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
+            },
+            {
+               "Name": "Flaps [C:Flaps8PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8 && [S:AIRSPEED INDICATED|knots] > [C:Flaps8MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
+            },
+            {
+               "Name": "Flaps [C:Flaps9PositionName|string] speed exceeded",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9 && [S:AIRSPEED INDICATED|knots] > [C:Flaps9MaxKIAS|double]",
+               "Tolerance": 1000,
+               "Type": 2,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
+            "MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1",
+            "APP_MONITOR": "1"
+         },
+         "Description": "",
+         "InstantEvents": false,
+         "EventParameters": [
             {
-               "Name":"KIAS",
-               "Type":"MAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots]"
-            },
+               "Name": "KIAS",
+               "Type": "MAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
+            }
+         ]
+      },
+      {
+         "Name": "LOC32 - Incorrect aicraft configuration###flapsAltitude",
+         "Events": [
             {
-               "Name":"PLANE ALTITUDE",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
-            },
-            {
-               "Name":"ALT AGL",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
+               "Name": "Max flaps operating altitude exceeded",
+               "Condition": "([S:PRESSURE ALTITUDE|feet] > [C:MaxFlapExtensionAlt|double]) && [S:FLAPS HANDLE INDEX:1|number] != 0",
+               "Tolerance": 3000,
+               "Type": 2
             }
          ],
-         "Description":"Gear speed limit exceeded",
-         "InstantEvents":false,
-         "CombineTolerance":10000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:GEAR TOTAL PCT EXTENDED|percent] > 0 && [S:SIM ON GROUND|Bool] == 0",
-            "MONITOR_END":"[S:GEAR TOTAL PCT EXTENDED|percent] == 0 || [S:SIM ON GROUND|Bool] != 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "Description": "Maximum flap exension altitude"
+      },
+      {
+         "Name": "LOC32 - Incorrect aicraft configuration###Gear",
+         "Events": [
+            {
+               "Name": "Gear speed limit exceeded (Extension)",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtension|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] < [S:GEAR TOTAL PCT EXTENDED|percent]",
+               "Type": 2,
+               "Tolerance": 3000,
+               "Description": ""
+            },
+            {
+               "Name": "Gear speed limit exceeded  (Retraction)",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdRetraction|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] > [S:GEAR TOTAL PCT EXTENDED|percent]",
+               "Type": 2,
+               "Tolerance": 3000,
+               "Description": ""
+            },
+            {
+               "Name": "Gear speed limit exceeded",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtended|double] && [S:GEAR TOTAL PCT EXTENDED|percent] > 0.95",
+               "Type": 2,
+               "Tolerance": 3000,
+               "Description": ""
+            }
+         ],
+         "EventParameters": [
+            {
+               "Name": "KIAS",
+               "Type": "MAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
+            },
+            {
+               "Name": "PLANE ALTITUDE",
+               "Type": "MINMAX",
+               "Parameter": "[S:PLANE ALTITUDE|feet]"
+            },
+            {
+               "Name": "ALT AGL",
+               "Type": "MINMAX",
+               "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
+            }
+         ],
+         "Description": "Gear speed limit exceeded",
+         "InstantEvents": false,
+         "CombineTolerance": 10000,
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:GEAR TOTAL PCT EXTENDED|percent] > 0 && [S:SIM ON GROUND|Bool] == 0",
+            "MONITOR_END": "[S:GEAR TOTAL PCT EXTENDED|percent] == 0 || [S:SIM ON GROUND|Bool] != 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          }
       },
       {
-         "Name":"LOC32 - Incorrect aicraft configuration###EarlyFlaps",
-         "Events":[
+         "Name": "LOC32 - Incorrect aicraft configuration###EarlyFlaps",
+         "Events": [
             {
-               "Name":"Early configuation change after take-off",
-               "Condition":"[S:FLAPS HANDLE INDEX:1|number] != [#S:FLAPS HANDLE INDEX:1|number]",
-               "Type":1,
-               "Tolerance":0,
-               "Description":""
+               "Name": "Early configuation change after take-off",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] != [#S:FLAPS HANDLE INDEX:1|number]",
+               "Type": 1,
+               "Tolerance": 0,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"PLANE ALTITUDE",
-               "Type":"MIN",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
+               "Name": "PLANE ALTITUDE",
+               "Type": "MIN",
+               "Parameter": "[S:PLANE ALTITUDE|feet]"
             },
             {
-               "Name":"ALT AGL",
-               "Type":"MIN",
-               "Parameter":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
+               "Name": "ALT AGL",
+               "Type": "MIN",
+               "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
             }
          ],
-         "Description":"Early flap retraction",
-         "InstantEvents":false,
-         "CombineTolerance":10000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:SubPhase_Takeoff0|double] != 0 && [S:SIM ON GROUND|Bool] != 0",
-            "MONITOR_END":"[S:PLANE ALTITUDE|feet] > [C:LiftoffAlt|double] + 500",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "Description": "Early flap retraction",
+         "InstantEvents": false,
+         "CombineTolerance": 10000,
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0 && [S:SIM ON GROUND|Bool] != 0",
+            "MONITOR_END": "[S:PLANE ALTITUDE|feet] > [C:LiftoffAlt|double] + 500",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          }
       },
       {
-         "Name":"LOC32 - Incorrect aicraft configuration###SpeedbrakeThrust",
-         "Events":[
+         "Name": "LOC32 - Incorrect aicraft configuration###SpeedbrakeThrust",
+         "Events": [
             {
-               "Name":"Speed brake deployed with high thrust",
-               "Condition":"[S:SPOILERS HANDLE POSITION|percent] > 0.3 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 40",
-               "Type":1,
-               "Tolerance":20000,
-               "Description":""
+               "Name": "Speed brake deployed with high thrust",
+               "Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.3 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 40",
+               "Type": 1,
+               "Tolerance": 20000,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"PLANE ALTITUDE",
-               "Type":"MIN",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
+               "Name": "PLANE ALTITUDE",
+               "Type": "MIN",
+               "Parameter": "[S:PLANE ALTITUDE|feet]"
             },
             {
-               "Name":"ALT AGL",
-               "Type":"MIN",
-               "Parameter":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
+               "Name": "ALT AGL",
+               "Type": "MIN",
+               "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
             }
          ],
-         "Description":"Speed brake deployed with thrust above idle",
-         "InstantEvents":false,
-         "CombineTolerance":10000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"1",
-            "MONITOR_END":"0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "Description": "Speed brake deployed with thrust above idle",
+         "InstantEvents": false,
+         "CombineTolerance": 10000,
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "1",
+            "MONITOR_END": "0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          }
-      }	  
+      }
    ]
 }

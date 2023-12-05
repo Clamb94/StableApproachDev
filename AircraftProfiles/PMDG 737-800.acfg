@@ -7,5 +7,5 @@
 	"CustomParameters": {
 		"C:TailstrikeLimitCompressed|double": "9.3",
 		"C:TailstrikeLimitExtended|double": "11.0"
-	}	
+	}
 }

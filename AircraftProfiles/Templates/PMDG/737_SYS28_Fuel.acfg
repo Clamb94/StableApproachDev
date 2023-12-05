@@ -1,143 +1,143 @@
 {
-    "FlightEventDefinitionGroups":[
+    "FlightEventDefinitionGroups": [
         {
-            "Name":"SYS28 - Fuel###ctrpumpsoff",
-            "Events":[
+            "Name": "SYS28 - Fuel###ctrpumpsoff",
+            "Events": [
                 {
-                    "Name":"CTR OFF",
-                    "Condition":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 1300 && ([L:switch_45_73X|double] != 100 || [L:switch_46_73X|double] != 100)",
-                    "Type":1,
-                    "Tolerance":60000,
-					"LiveMonitorTolerance":30000,
-                    "Description":""
+                    "Name": "CTR OFF",
+                    "Condition": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 1300 && ([L:switch_45_73X|double] != 100 || [L:switch_46_73X|double] != 100)",
+                    "Type": 1,
+                    "Tolerance": 60000,
+                    "LiveMonitorTolerance": 30000,
+                    "Description": ""
                 },
                 {
-                    "Name":"CTR OFF",
-                    "Condition":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 200 && ([L:switch_45_73X|double] != 100 || [L:switch_45_73X|double] != 100) && [S:PRESSURE ALTITUDE|feet] > 12000",
-                    "Type":1,
-                    "Tolerance":60000,
-					"LiveMonitorTolerance":30000,
-                    "Description":""
+                    "Name": "CTR OFF",
+                    "Condition": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 200 && ([L:switch_45_73X|double] != 100 || [L:switch_45_73X|double] != 100) && [S:PRESSURE ALTITUDE|feet] > 12000",
+                    "Type": 1,
+                    "Tolerance": 60000,
+                    "LiveMonitorTolerance": 30000,
+                    "Description": ""
                 }
             ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"[C:AllEnginesRunning|double] != 0",
-                "MONITOR_END":"[C:AllEnginesRunning|double] == 0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:AllEnginesRunning|double] != 0",
+                "MONITOR_END": "[C:AllEnginesRunning|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
             },
-            "EventParameters":[
+            "EventParameters": [
                 {
-                    "Name":"CTR FUEL (kg)",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
+                    "Name": "CTR FUEL (kg)",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 }
             ],
-            "Description":"Center pumps muste be ON with fuel in center tank",
-            "InstantEvents":false,
-            "CombineTolerance":5000
+            "Description": "Center pumps muste be ON with fuel in center tank",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
         },
         {
-            "Name":"SYS28 - Fuel###CTR LOW PRESSURE",
-            "Events":[
+            "Name": "SYS28 - Fuel###CTR LOW PRESSURE",
+            "Events": [
                 {
-                    "Name":"CTR LOW PRESSURE",
-                    "Condition":"([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",
-                    "Type":1,
-                    "Tolerance":60000,
-					"LiveMonitorTolerance":30000,
-                    "Description":""
+                    "Name": "CTR LOW PRESSURE",
+                    "Condition": "([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",
+                    "Type": 1,
+                    "Tolerance": 60000,
+                    "LiveMonitorTolerance": 30000,
+                    "Description": ""
                 }
             ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"1",
-                "MONITOR_END":"0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "1",
+                "MONITOR_END": "0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
             },
-            "EventParameters":[
+            "EventParameters": [
                 {
-                    "Name":"CTR FUEL (kg)",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
+                    "Name": "CTR FUEL (kg)",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 }
             ],
-            "Description":"Center pumps must be OFF when tank is empty",
-            "InstantEvents":false,
-            "CombineTolerance":5000
+            "Description": "Center pumps must be OFF when tank is empty",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
         },
         {
-            "Name":"SYS28 - Fuel###MAIN PUMPS",
-            "Events":[
-				{
-                    "Name":"LEFT OFF",
-                    "Condition":"([L:switch_37_73X|double] == 0 || [L:switch_38_73X|double] == 0) && [L:switch_49_73X|double] == 100",
-                    "Type":2,
-                    "Tolerance":30000,
-					"LiveMonitorTolerance":15000,
-                    "Description":""
+            "Name": "SYS28 - Fuel###MAIN PUMPS",
+            "Events": [
+                {
+                    "Name": "LEFT OFF",
+                    "Condition": "([L:switch_37_73X|double] == 0 || [L:switch_38_73X|double] == 0) && [L:switch_49_73X|double] == 100",
+                    "Type": 2,
+                    "Tolerance": 30000,
+                    "LiveMonitorTolerance": 15000,
+                    "Description": ""
                 },
                 {
-                    "Name":"RIGHT OFF",
-                    "Condition":"([L:switch_39_73X|double] == 0 || [L:switch_40_73X|double] == 0) && [L:switch_49_73X|double] == 100",
-                    "Type":1,
-                    "Tolerance":30000,
-					"LiveMonitorTolerance":15000,
-                    "Description":""
+                    "Name": "RIGHT OFF",
+                    "Condition": "([L:switch_39_73X|double] == 0 || [L:switch_40_73X|double] == 0) && [L:switch_49_73X|double] == 100",
+                    "Type": 1,
+                    "Tolerance": 30000,
+                    "LiveMonitorTolerance": 15000,
+                    "Description": ""
                 }
             ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"[C:AllEnginesRunning|double] != 0",
-                "MONITOR_END":"[C:AllEnginesRunning|double] == 0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:AllEnginesRunning|double] != 0",
+                "MONITOR_END": "[C:AllEnginesRunning|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
             },
-            "Description":"Main pumps must be ON with engines running",
-            "InstantEvents":false,
-            "CombineTolerance":5000
+            "Description": "Main pumps must be ON with engines running",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
         },
         {
-            "Name":"SYS28 - Fuel###IMBALANCE",
-            "Events":[
-				{
-                    "Name":"L/R IMBALANCE",
-                    "Condition":"Abs([S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24 - [S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24) > 600",
-                    "Type":1,
-                    "Tolerance":120000,
-					"LiveMonitorTolerance":30000,
-                    "Description":""
+            "Name": "SYS28 - Fuel###IMBALANCE",
+            "Events": [
+                {
+                    "Name": "L/R IMBALANCE",
+                    "Condition": "Abs([S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24 - [S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24) > 600",
+                    "Type": 1,
+                    "Tolerance": 120000,
+                    "LiveMonitorTolerance": 30000,
+                    "Description": ""
                 }
             ],
-            "MonitoringConditions":{
-                "MONITOR_BEGIN":"[C:AllEnginesRunning|double] != 0",
-                "MONITOR_END":"[C:AllEnginesRunning|double] == 0",
-                "SECONDARY":"1",
-                "MARKER_SECONDARY":"1",
-                "APP_MONITOR":"1"
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:AllEnginesRunning|double] != 0",
+                "MONITOR_END": "[C:AllEnginesRunning|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
             },
-            "EventParameters":[
+            "EventParameters": [
                 {
-                    "Name":"CTR FUEL (kg)",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
+                    "Name": "CTR FUEL (kg)",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
                 },
                 {
-                    "Name":"L FUEL (kg)",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24"
+                    "Name": "L FUEL (kg)",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24"
                 },
                 {
-                    "Name":"R FUEL (kg)",
-                    "Type":"MINMAX",
-                    "Parameter":"[S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24"
-                }			
+                    "Name": "R FUEL (kg)",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24"
+                }
             ],
-            "Description":"Fuel must be balanced",
-            "InstantEvents":false,
-            "CombineTolerance":5000
-        }		
+            "Description": "Fuel must be balanced",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
+        }
     ]
 }

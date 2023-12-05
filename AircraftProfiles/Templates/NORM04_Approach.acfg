@@ -1,83 +1,83 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"NORM04 - Approach",
-         "Events":[
+         "Name": "NORM04 - Approach",
+         "Events": [
             {
-               "Name":"Approach Info",
-               "Condition":"1",
-               "Type":0,
-               "Tolerance":500,
-               "Description":""
+               "Name": "Approach Info",
+               "Condition": "1",
+               "Type": 0,
+               "Tolerance": 500,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"Pitch",
-               "Type":"MINMAX",
-               "Parameter":"-1*[S:PLANE PITCH DEGREES|degree]"
-            },
-			{
-               "Name":"Bank",
-               "Type":"MINMAX",
-               "Parameter":"-1*[S:PLANE BANK DEGREES|degree]"
-            },
-			{
-               "Name":"Crab",
-               "Type":"MINMAX",
-               "Parameter":"[S:INCIDENCE BETA|degree]"
+               "Name": "Pitch",
+               "Type": "MINMAX",
+               "Parameter": "-1*[S:PLANE PITCH DEGREES|degree]"
             },
             {
-               "Name":"KIAS",
-               "Type":"MINMAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots]"
+               "Name": "Bank",
+               "Type": "MINMAX",
+               "Parameter": "-1*[S:PLANE BANK DEGREES|degree]"
             },
             {
-               "Name":"Vapp",
-               "Type":"MINMAX",
-               "Parameter":"[C:VappVar|string]"
-            },	
-            {
-               "Name":"Speed delta",
-               "Type":"MINMAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots] - [C:VappVar|string]"
+               "Name": "Crab",
+               "Type": "MINMAX",
+               "Parameter": "[S:INCIDENCE BETA|degree]"
             },
             {
-               "Name":"Height above rwy",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
+               "Name": "KIAS",
+               "Type": "MINMAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
             },
             {
-               "Name":"Flaps (Index)",
-               "Type":"MINMAX",
-               "Parameter":"[S:FLAPS HANDLE INDEX:1|number]"
+               "Name": "Vapp",
+               "Type": "MINMAX",
+               "Parameter": "[C:VappVar|string]"
             },
             {
-               "Name":"Runway detected",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppDetected|double]"
-            },			
-            {
-               "Name":"AlongTrackDistance",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppATD|double]",
-			   "AddToReport":true
+               "Name": "Speed delta",
+               "Type": "MINMAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots] - [C:VappVar|string]"
             },
             {
-               "Name":"CrossTrackError",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppCTE|double]"
+               "Name": "Height above rwy",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+            },
+            {
+               "Name": "Flaps (Index)",
+               "Type": "MINMAX",
+               "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
+            },
+            {
+               "Name": "Runway detected",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppDetected|double]"
+            },
+            {
+               "Name": "AlongTrackDistance",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppATD|double]",
+               "AddToReport": true
+            },
+            {
+               "Name": "CrossTrackError",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppCTE|double]"
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
-            "MONITOR_END":"[C:SubPhase_FApp|double] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
+            "MONITOR_END": "[C:SubPhase_FApp|double] == 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "Description":"Approach detected",
-         "InstantEvents":false,
-		 "CombineTolerance" : 500
+         "Description": "Approach detected",
+         "InstantEvents": false,
+         "CombineTolerance": 500
       }
    ]
 }

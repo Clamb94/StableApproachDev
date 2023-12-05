@@ -1,32 +1,32 @@
 {
-   "FlightEventDefinitionGroups":[     
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"SYS32 - Tire speed limit",
-         "Events":[
+         "Name": "SYS32 - Tire speed limit",
+         "Events": [
             {
-               "Name":"Tire overspeed",
-               "Condition":"[S:SURFACE RELATIVE GROUND SPEED|knots] > [C:MaxTireSpeed|double]",
-               "Type":2,
-               "Tolerance":1000,
-               "Description":""
+               "Name": "Tire overspeed",
+               "Condition": "[S:SURFACE RELATIVE GROUND SPEED|knots] > [C:MaxTireSpeed|double]",
+               "Type": 2,
+               "Tolerance": 1000,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"GS",
-               "Type":"MAX",
-               "Parameter":"[S:SURFACE RELATIVE GROUND SPEED|knots]"
+               "Name": "GS",
+               "Type": "MAX",
+               "Parameter": "[S:SURFACE RELATIVE GROUND SPEED|knots]"
             }
          ],
-         "Description":"Tire speed limit exceeded",
-         "InstantEvents":false,
-         "CombineTolerance":1000,
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:SIM ON GROUND|Bool] != 0",
-            "MONITOR_END":"[S:SIM ON GROUND|Bool] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "Description": "Tire speed limit exceeded",
+         "InstantEvents": false,
+         "CombineTolerance": 1000,
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] != 0",
+            "MONITOR_END": "[S:SIM ON GROUND|Bool] == 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          }
-      }	  
+      }
    ]
 }

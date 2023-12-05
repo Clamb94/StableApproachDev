@@ -1,154 +1,154 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"RE26 - Unstable Approach###HighAirspeed",
-         "Events":[
+         "Name": "RE26 - Unstable Approach###HighAirspeed",
+         "Events": [
             {
-               "Name":"High airspeed",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VappVar|string] + 20",
-               "Tolerance":3000,
-               "Type":1,
-               "Description":""
+               "Name": "High airspeed",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:VappVar|string] + 20",
+               "Tolerance": 3000,
+               "Type": 1,
+               "Description": ""
             },
             {
-               "Name":"High airspeed",
-               "Condition":"[S:AIRSPEED INDICATED|knots] > [C:VappVar|string] + 35",
-               "Tolerance":3000,
-               "Type":2,
-               "Description":""
-            }			
-         ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0 && [C:VappVar|string] > 50",
-            "MONITOR_END":"[C:SubPhase_FApp|double] == 0",
-			"SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
-			"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
-         },
-         "EventParameters":[
-            {
-               "Name":"KIAS",
-               "Type":"MINMAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots]"
-            },
-            {
-               "Name":"Vapp",
-               "Type":"MINMAX",
-               "Parameter":"[C:VappVar|string]"
-            },	
-            {
-               "Name":"Speed delta",
-               "Type":"MINMAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots] - [C:VappVar|string]"
-            },				
-            {
-               "Name":"Runway detected",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppDetected|double]"
-            },
-            {
-               "Name":"Airport",
-               "Type":"str",
-               "Parameter":"[C:OnAppAptIdent|string]"
-            },
-            {
-               "Name":"Runway",
-               "Type":"str",
-               "Parameter":"[C:OnAppRwyName|string]"
-            },
-            {
-               "Name":"Height above rwy",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
-            },
-            {
-               "Name":"Plane altitude",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
+               "Name": "High airspeed",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:VappVar|string] + 35",
+               "Tolerance": 3000,
+               "Type": 2,
+               "Description": ""
             }
          ],
-         "Description":"High approach speed",
-         "InstantEvents":false,
-         "CombineTolerance":2000
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0 && [C:VappVar|string] > 50",
+            "MONITOR_END": "[C:SubPhase_FApp|double] == 0",
+            "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
+            "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
+         },
+         "EventParameters": [
+            {
+               "Name": "KIAS",
+               "Type": "MINMAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
+            },
+            {
+               "Name": "Vapp",
+               "Type": "MINMAX",
+               "Parameter": "[C:VappVar|string]"
+            },
+            {
+               "Name": "Speed delta",
+               "Type": "MINMAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots] - [C:VappVar|string]"
+            },
+            {
+               "Name": "Runway detected",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppDetected|double]"
+            },
+            {
+               "Name": "Airport",
+               "Type": "str",
+               "Parameter": "[C:OnAppAptIdent|string]"
+            },
+            {
+               "Name": "Runway",
+               "Type": "str",
+               "Parameter": "[C:OnAppRwyName|string]"
+            },
+            {
+               "Name": "Height above rwy",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+            },
+            {
+               "Name": "Plane altitude",
+               "Type": "MINMAX",
+               "Parameter": "[S:PLANE ALTITUDE|feet]"
+            }
+         ],
+         "Description": "High approach speed",
+         "InstantEvents": false,
+         "CombineTolerance": 2000
       },
       {
-         "Name":"RE26 - Unstable Approach###LowAirspeed",
-         "Events":[
+         "Name": "RE26 - Unstable Approach###LowAirspeed",
+         "Events": [
             {
-               "Name":"Low airspeed",
-               "Condition":"[S:AIRSPEED INDICATED|knots] < [C:VappVar|string] + -5",
-               "Tolerance":3000,
-               "Type":1,
-               "Description":""
+               "Name": "Low airspeed",
+               "Condition": "[S:AIRSPEED INDICATED|knots] < [C:VappVar|string] + -5",
+               "Tolerance": 3000,
+               "Type": 1,
+               "Description": ""
             },
             {
-               "Name":"Low airspeed",
-               "Condition":"[S:AIRSPEED INDICATED|knots] < [C:VappVar|string] -10",
-               "Tolerance":3000,
-               "Type":2,
-               "Description":""
+               "Name": "Low airspeed",
+               "Condition": "[S:AIRSPEED INDICATED|knots] < [C:VappVar|string] -10",
+               "Tolerance": 3000,
+               "Type": 2,
+               "Description": ""
             },
             {
-               "Name":"Low airspeed",
-               "Condition":"[S:AIRSPEED INDICATED|knots] < [C:VappVar|string] -15",
-               "Tolerance":3000,
-               "Type":3,
-               "Description":""
-            }			
-         ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0  && [C:VappVar|string] > 50",
-            "MONITOR_END":"[C:SubPhase_FApp|double] == 0",
-			"SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 20",
-			"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
-         },
-         "EventParameters":[
-            {
-               "Name":"KIAS",
-               "Type":"MAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots]"
-            },
-            {
-               "Name":"VS",
-               "Type":"MAX",
-               "Parameter":"[S:VERTICAL SPEED|ft/min]"
-            },
-            {
-               "Name":"Vapp",
-               "Type":"MAX",
-               "Parameter":"[C:VappVar|string]"
-            },
-            {
-               "Name":"Runway detected",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppDetected|double]"
-            },
-            {
-               "Name":"Airport",
-               "Type":"str",
-               "Parameter":"[C:OnAppAptIdent|string]"
-            },
-            {
-               "Name":"Runway",
-               "Type":"str",
-               "Parameter":"[C:OnAppRwyName|string]"
-            },
-            {
-               "Name":"Height above rwy",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnAppHeightAboveRwyThrElev|double]"
-            },
-            {
-               "Name":"Plane altitude",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
+               "Name": "Low airspeed",
+               "Condition": "[S:AIRSPEED INDICATED|knots] < [C:VappVar|string] -15",
+               "Tolerance": 3000,
+               "Type": 3,
+               "Description": ""
             }
          ],
-         "Description":"Low approach speed",
-         "InstantEvents":false,
-         "CombineTolerance":2000
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0  && [C:VappVar|string] > 50",
+            "MONITOR_END": "[C:SubPhase_FApp|double] == 0",
+            "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 20",
+            "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
+         },
+         "EventParameters": [
+            {
+               "Name": "KIAS",
+               "Type": "MAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
+            },
+            {
+               "Name": "VS",
+               "Type": "MAX",
+               "Parameter": "[S:VERTICAL SPEED|ft/min]"
+            },
+            {
+               "Name": "Vapp",
+               "Type": "MAX",
+               "Parameter": "[C:VappVar|string]"
+            },
+            {
+               "Name": "Runway detected",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppDetected|double]"
+            },
+            {
+               "Name": "Airport",
+               "Type": "str",
+               "Parameter": "[C:OnAppAptIdent|string]"
+            },
+            {
+               "Name": "Runway",
+               "Type": "str",
+               "Parameter": "[C:OnAppRwyName|string]"
+            },
+            {
+               "Name": "Height above rwy",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+            },
+            {
+               "Name": "Plane altitude",
+               "Type": "MINMAX",
+               "Parameter": "[S:PLANE ALTITUDE|feet]"
+            }
+         ],
+         "Description": "Low approach speed",
+         "InstantEvents": false,
+         "CombineTolerance": 2000
       }
    ],
-	"CustomParameters": {
-		"C:VappVar|string": "[S:AUTOPILOT AIRSPEED HOLD VAR|knots]"
-	}
+   "CustomParameters": {
+      "C:VappVar|string": "[S:AUTOPILOT AIRSPEED HOLD VAR|knots]"
+   }
 }

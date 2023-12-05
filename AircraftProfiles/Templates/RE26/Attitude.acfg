@@ -1,103 +1,103 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"RE26 - Unstable Approach###PitchAtt",
-         "Events":[
+         "Name": "RE26 - Unstable Approach###PitchAtt",
+         "Events": [
             {
-               "Name":"High pitch attitude",
-               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] > 10",
-               "Type":1,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "High pitch attitude",
+               "Condition": "-1*[S:PLANE PITCH DEGREES|degree] > 10",
+               "Type": 1,
+               "Tolerance": 3000,
+               "Description": ""
             },
             {
-               "Name":"High pitch attitude",
-               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] > 15",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "High pitch attitude",
+               "Condition": "-1*[S:PLANE PITCH DEGREES|degree] > 15",
+               "Type": 2,
+               "Tolerance": 3000,
+               "Description": ""
             },
             {
-               "Name":"Low pitch attitude",
-               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] < -3",
-               "Type":1,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "Low pitch attitude",
+               "Condition": "-1*[S:PLANE PITCH DEGREES|degree] < -3",
+               "Type": 1,
+               "Tolerance": 3000,
+               "Description": ""
             },
             {
-               "Name":"Low pitch attitude",
-               "Condition":"-1*[S:PLANE PITCH DEGREES|degree] < -10",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "Low pitch attitude",
+               "Condition": "-1*[S:PLANE PITCH DEGREES|degree] < -10",
+               "Type": 2,
+               "Tolerance": 3000,
+               "Description": ""
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
-            "MONITOR_END":"[C:SubPhase_FApp|double] == 0",
-			"SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
-			"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
+            "MONITOR_END": "[C:SubPhase_FApp|double] == 0",
+            "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
+            "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
          },
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"PITCH",
-               "Type":"MINMAX",
-               "Parameter":"-1*[S:PLANE PITCH DEGREES|degree]"
+               "Name": "PITCH",
+               "Type": "MINMAX",
+               "Parameter": "-1*[S:PLANE PITCH DEGREES|degree]"
             },
-			{
-				"Name": "Alt above runway",
-				"Type": "MINMAX",
-				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-			}			
+            {
+               "Name": "Alt above runway",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+            }
          ],
-         "Description":"High/low pitch attitude",
-         "InstantEvents":false,
-         "CombineTolerance":5000
+         "Description": "High/low pitch attitude",
+         "InstantEvents": false,
+         "CombineTolerance": 5000
       },
       {
-         "Name":"RE26 - Unstable Approach###RollAtt",
-         "Events":[
+         "Name": "RE26 - Unstable Approach###RollAtt",
+         "Events": [
             {
-               "Name":"High roll attitude",
-               "Condition":"-1*[S:PLANE BANK DEGREES|degree] > 15",
-               "Type":1,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "High roll attitude",
+               "Condition": "-1*[S:PLANE BANK DEGREES|degree] > 15",
+               "Type": 1,
+               "Tolerance": 3000,
+               "Description": ""
             },
             {
-               "Name":"High roll attitude",
-               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > 30",
-               "Type":2,
-               "Tolerance":3000,
-               "Description":""
+               "Name": "High roll attitude",
+               "Condition": "Abs([S:PLANE BANK DEGREES|degree]) > 30",
+               "Type": 2,
+               "Tolerance": 3000,
+               "Description": ""
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
-            "MONITOR_END":"[C:SubPhase_FApp|double] == 0",
-			"SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
-			"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
+            "MONITOR_END": "[C:SubPhase_FApp|double] == 0",
+            "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
+            "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
          },
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"BANK",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE BANK DEGREES|degree]"
+               "Name": "BANK",
+               "Type": "MINMAX",
+               "Parameter": "[S:PLANE BANK DEGREES|degree]"
             },
-			{
-				"Name": "Alt above runway",
-				"Type": "MINMAX",
-				"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-			},
             {
-               "Name":"Plane altitude",
-               "Type":"MINMAX",
-               "Parameter":"[S:PLANE ALTITUDE|feet]"
-            }			
+               "Name": "Alt above runway",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
+            },
+            {
+               "Name": "Plane altitude",
+               "Type": "MINMAX",
+               "Parameter": "[S:PLANE ALTITUDE|feet]"
+            }
          ],
-         "Description":"High/low pitch attitude",
-         "InstantEvents":false,
-         "CombineTolerance":5000
+         "Description": "High/low pitch attitude",
+         "InstantEvents": false,
+         "CombineTolerance": 5000
       }
    ]
 }

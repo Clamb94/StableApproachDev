@@ -1,170 +1,170 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"RE30 - Abnormal runway contact###TouchdownPitch",
-         "Events":[
+         "Name": "RE30 - Abnormal runway contact###TouchdownPitch",
+         "Events": [
             {
-               "Name":"Pitch high at touchdown",
-               "Condition":"-1*[#S:PLANE PITCH DEGREES|degree] > [C:GroundPitchLimit|double]",
-               "Type":1,
-               "Tolerance":500,
-               "Description":""
+               "Name": "Pitch high at touchdown",
+               "Condition": "-1*[#S:PLANE PITCH DEGREES|degree] > [C:GroundPitchLimit|double]",
+               "Type": 1,
+               "Tolerance": 500,
+               "Description": ""
             },
             {
-               "Name":"Pitch high at touchdown",
-               "Condition":"-1*[#S:PLANE PITCH DEGREES|degree] > [C:GroundPitchLimit|double] + 2",
-               "Type":2,
-               "Tolerance":500,
-               "Description":""
+               "Name": "Pitch high at touchdown",
+               "Condition": "-1*[#S:PLANE PITCH DEGREES|degree] > [C:GroundPitchLimit|double] + 2",
+               "Type": 2,
+               "Tolerance": 500,
+               "Description": ""
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
-            "MONITOR_END":"[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
+            "MONITOR_END": "[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"Pitch",
-               "Type":"MAX",
-               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree]"
+               "Name": "Pitch",
+               "Type": "MAX",
+               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
             },
             {
-               "Name":"Bank",
-               "Type":"MAX",
-               "Parameter":"-1*[#S:PLANE BANK DEGREES|degree]"
+               "Name": "Bank",
+               "Type": "MAX",
+               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
             },
             {
-               "Name":"Crab",
-               "Type":"MAX",
-               "Parameter":"[#S:INCIDENCE BETA|degree]"
+               "Name": "Crab",
+               "Type": "MAX",
+               "Parameter": "[#S:INCIDENCE BETA|degree]"
             },
             {
-               "Name":"KIAS",
-               "Type":"MINMAX",
-               "Parameter":"[#S:AIRSPEED INDICATED|knots]"
+               "Name": "KIAS",
+               "Type": "MINMAX",
+               "Parameter": "[#S:AIRSPEED INDICATED|knots]"
             }
          ],
-         "Description":"Nose gear should not touch down first",
-         "InstantEvents":false,
-         "CombineTolerance":5000,
-         "ResetParameterOnEvent":true
+         "Description": "Nose gear should not touch down first",
+         "InstantEvents": false,
+         "CombineTolerance": 5000,
+         "ResetParameterOnEvent": true
       },
       {
-         "Name":"RE30 - Abnormal runway contact###Bank",
-         "Events":[
+         "Name": "RE30 - Abnormal runway contact###Bank",
+         "Events": [
             {
-               "Name":"High bank angle on ground",
-               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > [C:GroundBankLimit|double]",
-               "Type":1,
-               "Tolerance":500,
-               "Description":""
+               "Name": "High bank angle on ground",
+               "Condition": "Abs([S:PLANE BANK DEGREES|degree]) > [C:GroundBankLimit|double]",
+               "Type": 1,
+               "Tolerance": 500,
+               "Description": ""
             },
             {
-               "Name":"High bank angle on ground",
-               "Condition":"Abs([S:PLANE BANK DEGREES|degree]) > [C:GroundBankLimit|double] + 2",
-               "Type":2,
-               "Tolerance":500,
-               "Description":""
+               "Name": "High bank angle on ground",
+               "Condition": "Abs([S:PLANE BANK DEGREES|degree]) > [C:GroundBankLimit|double] + 2",
+               "Type": 2,
+               "Tolerance": 500,
+               "Description": ""
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:GEAR IS ON GROUND:1|Bool] != 0 || [S:GEAR IS ON GROUND:2|Bool] != 0",
-            "MONITOR_END":"[S:GEAR IS ON GROUND:1|Bool] == 0 && [S:GEAR IS ON GROUND:2|Bool] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:GEAR IS ON GROUND:1|Bool] != 0 || [S:GEAR IS ON GROUND:2|Bool] != 0",
+            "MONITOR_END": "[S:GEAR IS ON GROUND:1|Bool] == 0 && [S:GEAR IS ON GROUND:2|Bool] == 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"Pitch",
-               "Type":"MAX",
-               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree]"
+               "Name": "Pitch",
+               "Type": "MAX",
+               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
             },
             {
-               "Name":"Bank",
-               "Type":"MAX",
-               "Parameter":"-1*[#S:PLANE BANK DEGREES|degree]"
+               "Name": "Bank",
+               "Type": "MAX",
+               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
             },
             {
-               "Name":"Crab",
-               "Type":"MAX",
-               "Parameter":"[#S:INCIDENCE BETA|degree]"
+               "Name": "Crab",
+               "Type": "MAX",
+               "Parameter": "[#S:INCIDENCE BETA|degree]"
             },
             {
-               "Name":"KIAS",
-               "Type":"MINMAX",
-               "Parameter":"[#S:AIRSPEED INDICATED|knots]"
+               "Name": "KIAS",
+               "Type": "MINMAX",
+               "Parameter": "[#S:AIRSPEED INDICATED|knots]"
             }
          ],
-         "Description":"Bank angle on ground",
-         "InstantEvents":false,
-         "CombineTolerance":5000,
-         "ResetParameterOnEvent":true
-      },	  
+         "Description": "Bank angle on ground",
+         "InstantEvents": false,
+         "CombineTolerance": 5000,
+         "ResetParameterOnEvent": true
+      },
       {
-         "Name":"RE30 - Abnormal runway contact###Tailstrike",
-         "Events":[
+         "Name": "RE30 - Abnormal runway contact###Tailstrike",
+         "Events": [
             {
-               "Name":"Tail clearance low",
-               "Condition":"[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree]) < 0.5",
-               "Type":1,
-               "Tolerance":500,
-               "Description":""
+               "Name": "Tail clearance low",
+               "Condition": "[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree]) < 0.5",
+               "Type": 1,
+               "Tolerance": 500,
+               "Description": ""
             },
             {
-               "Name":"Tail clearance low",
-               "Condition":"[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree]) < 0.1",
-               "Type":2,
-               "Tolerance":500,
-               "Description":""
+               "Name": "Tail clearance low",
+               "Condition": "[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree]) < 0.1",
+               "Type": 2,
+               "Tolerance": 500,
+               "Description": ""
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:GEAR IS ON GROUND:1|Bool] != 0 || [S:GEAR IS ON GROUND:2|Bool] != 0",
-            "MONITOR_END":"[S:GEAR IS ON GROUND:1|Bool] == 0 && [S:GEAR IS ON GROUND:2|Bool] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:GEAR IS ON GROUND:1|Bool] != 0 || [S:GEAR IS ON GROUND:2|Bool] != 0",
+            "MONITOR_END": "[S:GEAR IS ON GROUND:1|Bool] == 0 && [S:GEAR IS ON GROUND:2|Bool] == 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"TailClearDeg",
-               "Type":"MIN",
-               "Parameter":"[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree])"
+               "Name": "TailClearDeg",
+               "Type": "MIN",
+               "Parameter": "[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree])"
             },
             {
-               "Name":"TailstrikeLimit",
-               "Type":"MINMAX",
-               "Parameter":"[C:CurrentTailstrikeLimit|string]"
-            },			
-            {
-               "Name":"Pitch",
-               "Type":"MAX",
-               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree]"
+               "Name": "TailstrikeLimit",
+               "Type": "MINMAX",
+               "Parameter": "[C:CurrentTailstrikeLimit|string]"
             },
             {
-               "Name":"Bank",
-               "Type":"MAX",
-               "Parameter":"-1*[#S:PLANE BANK DEGREES|degree]"
+               "Name": "Pitch",
+               "Type": "MAX",
+               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
             },
             {
-               "Name":"Runway detected",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnRwyDetected|double]"
+               "Name": "Bank",
+               "Type": "MAX",
+               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
             },
             {
-               "Name":"ArrAirport",
-               "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]"
+               "Name": "Runway detected",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnRwyDetected|double]"
+            },
+            {
+               "Name": "ArrAirport",
+               "Type": "str",
+               "Parameter": "[C:OnRwyAptIdent|string]"
             }
          ],
-         "Description":"Tail clearance",
-         "InstantEvents":false,
-         "CombineTolerance":0,
-         "ResetParameterOnEvent":true
+         "Description": "Tail clearance",
+         "InstantEvents": false,
+         "CombineTolerance": 0,
+         "ResetParameterOnEvent": true
       }
    ],
-	"CustomParameters": {
-		"C:CurrentTailstrikeLimit|string":"Map(Max([S:CONTACT POINT COMPRESSION:1|percent], [S:CONTACT POINT COMPRESSION:1|percent]), 0, 100, [C:TailstrikeLimitExtended|double], [C:TailstrikeLimitCompressed|double])"
-	}
+   "CustomParameters": {
+      "C:CurrentTailstrikeLimit|string": "Map(Max([S:CONTACT POINT COMPRESSION:1|percent], [S:CONTACT POINT COMPRESSION:1|percent]), 0, 100, [C:TailstrikeLimitExtended|double], [C:TailstrikeLimitCompressed|double])"
+   }
 }

@@ -1,28 +1,27 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"RE30 - Abnormal runway contact###nosegear",
-         "Events":[
-			{
-               "Name":"Nose landing",
-               "Condition":"[S:GEAR IS ON GROUND:1|Bool] == 0 || [S:GEAR IS ON GROUND:2|Bool] == 0",
-               "Type":3,
-               "Tolerance":1000,
-               "Description":""
-            }				
+         "Name": "RE30 - Abnormal runway contact###nosegear",
+         "Events": [
+            {
+               "Name": "Nose landing",
+               "Condition": "[S:GEAR IS ON GROUND:1|Bool] == 0 || [S:GEAR IS ON GROUND:2|Bool] == 0",
+               "Type": 3,
+               "Tolerance": 1000,
+               "Description": ""
+            }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:GEAR IS ON GROUND:0|Bool] != 0",
-            "MONITOR_END":"[S:GEAR IS ON GROUND:0|Bool] == 0",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:GEAR IS ON GROUND:0|Bool] != 0",
+            "MONITOR_END": "[S:GEAR IS ON GROUND:0|Bool] == 0",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "EventParameters":[
-         ],
-         "Description":"Nose gear should not touch down first",
-         "InstantEvents":false,
-         "CombineTolerance":5000,
-         "ResetParameterOnEvent":true
-      }  
-	  ]
+         "EventParameters": [],
+         "Description": "Nose gear should not touch down first",
+         "InstantEvents": false,
+         "CombineTolerance": 5000,
+         "ResetParameterOnEvent": true
+      }
+   ]
 }

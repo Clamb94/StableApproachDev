@@ -1,8 +1,8 @@
 {
-   "Templates":[
+   "Templates": [
       "Templates/RE26/ILS.acfg",
-	  "Templates/RE26/Configuration.acfg",
-	  "Templates/RE26/Airspeed.acfg",
-	  "Templates/RE26/Sinkrate.acfg"
+      "Templates/RE26/Configuration.acfg",
+      "Templates/RE26/Airspeed.acfg",
+      "Templates/RE26/Sinkrate.acfg"
    ]
 }

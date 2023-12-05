@@ -12,9 +12,9 @@
 		"Templates/NORM04_Approach.acfg",
 		"Templates/NORM05_Touchdown.acfg",
 		"Templates/NORM06_Rollout.acfg",
-		"Templates/NORM10_ILS.acfg",		
+		"Templates/NORM10_ILS.acfg",
 		"Templates/NORM20_FlapPosition.acfg",
-		"Templates/NORM21_GearPosition.acfg",		
+		"Templates/NORM21_GearPosition.acfg",
 		"Templates/RE01_PowerChangeTakeoff.acfg",
 		"Templates/RE08_SlowRotation.acfg",
 		"Templates/RE13_InsuffDecel.acfg",
@@ -25,10 +25,10 @@
 		"Templates/RE20_LateralDeviation.acfg",
 		"Templates/RE24_Tailwind.acfg",
 		"Templates/RE26_UnstableApproach.acfg",
-		"Templates/RE28_LongFlare.acfg",	
+		"Templates/RE28_LongFlare.acfg",
 		"Templates/RE29_DeepLanding.acfg",
 		"Templates/RE30_AbnormalRwyContact.acfg",
-		"Templates/SYS00_General.acfg",		
+		"Templates/SYS00_General.acfg",
 		"Templates/SYS30_AntiIce.acfg",
 		"Templates/SYS32_Gear.acfg",
 		"Templates/SYS33_Lights.acfg",
@@ -41,72 +41,73 @@
 		"Templates/Fenix/A320_CFIT00_EGPWS.acfg"
 	],
 	"FlightEventDefinitionGroups": [
-	{
-			"Events": [{
-					"Name":"[C:Flaps0PositionName|string]",
+		{
+			"Events": [
+				{
+					"Name": "[C:Flaps0PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps1PositionName|string]",
+					"Name": "[C:Flaps1PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps2PositionName|string]",
+					"Name": "[C:Flaps2PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2  && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps3PositionName|string]",
+					"Name": "[C:Flaps3PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps4PositionName|string]",
+					"Name": "[C:Flaps4PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps5PositionName|string]",
+					"Name": "[C:Flaps5PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps6PositionName|string]",
+					"Name": "[C:Flaps6PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps7PositionName|string]",
+					"Name": "[C:Flaps7PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps8PositionName|string]",
+					"Name": "[C:Flaps8PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
 					"Description": ""
 				},
 				{
-					"Name":"[C:Flaps9PositionName|string]",
+					"Name": "[C:Flaps9PositionName|string]",
 					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9 && [L:FlapMovement|double] == 0",
 					"Tolerance": 1000,
 					"Type": 0,
@@ -116,7 +117,8 @@
 			"Name": "NORM20 - Flaps",
 			"Description": "",
 			"InstantEvents": true,
-			"EventParameters": [{
+			"EventParameters": [
+				{
 					"Name": "KIAS",
 					"Type": "instant",
 					"Parameter": "[S:AIRSPEED INDICATED|knots]"
@@ -152,9 +154,9 @@
 		"C:VappVar|string": "[S:AIRSPEED INDICATED|knots]",
 		"C:GroundPitchLimit|double": "8",
 		"C:GroundBankLimit|double": "9",
-		"C:GearMaxSpdExtension|double":"250",
-        "C:GearMaxSpdExtended|double":"280",
-        "C:GearMaxSpdRetraction|double":"220",
-	    "C:MaxTireSpeed|double":"195"
+		"C:GearMaxSpdExtension|double": "250",
+		"C:GearMaxSpdExtended|double": "280",
+		"C:GearMaxSpdRetraction|double": "220",
+		"C:MaxTireSpeed|double": "195"
 	}
 }

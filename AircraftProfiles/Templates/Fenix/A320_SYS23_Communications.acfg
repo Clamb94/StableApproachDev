@@ -1,24 +1,24 @@
 {
-   "FlightEventDefinitionGroups":[     
+	"FlightEventDefinitionGroups": [
 		{
-			"Name": "SYS23 - XPDR/TCAS",		
+			"Name": "SYS23 - XPDR/TCAS",
 			"Events": [
 				{
-					"Name":"XPDR OFF",
+					"Name": "XPDR OFF",
 					"Condition": "[L:S_XPDR_OPERATION|double] < 1",
 					"Tolerance": 60000,
 					"Type": 1,
 					"Description": ""
 				},
 				{
-					"Name":"TCAS OFF",
+					"Name": "TCAS OFF",
 					"Condition": "[L:S_XPDR_MODE|double] < 2",
 					"Tolerance": 60000,
 					"Type": 1,
 					"Description": ""
 				},
 				{
-					"Name":"ALT RPTG OFF",
+					"Name": "ALT RPTG OFF",
 					"Condition": "[L:S_XPDR_ALTREPORTING|double] < 1",
 					"Tolerance": 60000,
 					"Type": 1,
@@ -35,5 +35,5 @@
 				"APP_MONITOR": "1"
 			}
 		}
-   ]
+	]
 }

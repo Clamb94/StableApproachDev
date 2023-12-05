@@ -1,15 +1,17 @@
 {
-    "FlightEventDefinitionGroups":[
+	"FlightEventDefinitionGroups": [
 		{
 			"Name": "SYS33 - Lights###beacon",
-			"Events": [{
-				"Name": "Beacon OFF with engine running",
-				"Condition": "[S:LIGHT BEACON|Bool] == 0 && [C:AnyEngineRunning|double] != 0",
-				"Type": 2,
-				"Tolerance": 10000,
-				"LiveMonitorTolerance": 1000,
-				"Description": ""
-			}],
+			"Events": [
+				{
+					"Name": "Beacon OFF with engine running",
+					"Condition": "[S:LIGHT BEACON|Bool] == 0 && [C:AnyEngineRunning|double] != 0",
+					"Type": 2,
+					"Tolerance": 10000,
+					"LiveMonitorTolerance": 1000,
+					"Description": ""
+				}
+			],
 			"MonitoringConditions": {
 				"MONITOR_BEGIN": "1",
 				"MONITOR_END": "0",
@@ -19,7 +21,7 @@
 			},
 			"Description": "Beacon must be on when engine is running",
 			"InstantEvents": false,
-			"CombineTolerance" : 5000
+			"CombineTolerance": 5000
 		}
-    ]
+	]
 }

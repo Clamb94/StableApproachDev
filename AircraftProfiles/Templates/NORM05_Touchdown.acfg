@@ -1,112 +1,112 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"NORM05 - Touchdown",
-         "Events":[
+         "Name": "NORM05 - Touchdown",
+         "Events": [
             {
-               "Name":"Touchdown Info",
-               "Condition":"1",
-               "Type":0,
-               "Tolerance":500,
-               "Description":""
+               "Name": "Touchdown Info",
+               "Condition": "1",
+               "Type": 0,
+               "Tolerance": 500,
+               "Description": ""
             }
          ],
-         "EventParameters":[
+         "EventParameters": [
             {
-               "Name":"Pitch",
-               "Type":"instant",
-               "Parameter":"-1*[#S:PLANE PITCH DEGREES|degree]"
-            },
-			{
-               "Name":"Bank",
-               "Type":"instant",
-               "Parameter":"-1*[#S:PLANE BANK DEGREES|degree]"
-            },
-			{
-               "Name":"Crab",
-               "Type":"instant",
-               "Parameter":"[#S:INCIDENCE BETA|degree]"
+               "Name": "Pitch",
+               "Type": "instant",
+               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
             },
             {
-               "Name":"KIAS",
-               "Type":"instant",
-               "Parameter":"[#S:AIRSPEED INDICATED|knots]"
+               "Name": "Bank",
+               "Type": "instant",
+               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
             },
             {
-               "Name":"TouchdownVS",
-               "Type":"instant",
-               "Parameter":"[#S:VERTICAL SPEED|ft/min]",
-			   "AddToReport":true
+               "Name": "Crab",
+               "Type": "instant",
+               "Parameter": "[#S:INCIDENCE BETA|degree]"
             },
             {
-               "Name":"TouchdownG",
-               "Type":"max",
-               "Parameter":"[C:MaxGForceOnGround|double]",
-			   "AddToReport":true
-            },
-			{
-               "Name":"Delta G-Force",
-               "Type":"max",
-               "Parameter":"[C:MaxGForceOnGround|double] - [C:LastGForceInFlight|double]"
+               "Name": "KIAS",
+               "Type": "instant",
+               "Parameter": "[#S:AIRSPEED INDICATED|knots]"
             },
             {
-               "Name":"Flaps (Index)",
-               "Type":"instant",
-               "Parameter":"[S:FLAPS HANDLE INDEX:1|number]"
+               "Name": "TouchdownVS",
+               "Type": "instant",
+               "Parameter": "[#S:VERTICAL SPEED|ft/min]",
+               "AddToReport": true
             },
             {
-               "Name":"Runway detected",
-               "Type":"MINMAX",
-               "Parameter":"[C:OnRwyDetected|double]"
+               "Name": "TouchdownG",
+               "Type": "max",
+               "Parameter": "[C:MaxGForceOnGround|double]",
+               "AddToReport": true
             },
             {
-               "Name":"ArrAirport",
-               "Type":"str",
-               "Parameter":"[C:OnRwyAptIdent|string]",
-			   "AddToReport":true
+               "Name": "Delta G-Force",
+               "Type": "max",
+               "Parameter": "[C:MaxGForceOnGround|double] - [C:LastGForceInFlight|double]"
             },
             {
-               "Name":"ArrRunway",
-               "Type":"str",
-               "Parameter":"[C:OnRwyName|string]",
-			   "AddToReport":true
-            },			
-            {
-               "Name":"AlongTrackDistance",
-               "Type":"instant",
-               "Parameter":"[C:OnRwyATD|double]",
-			   "AddToReport":true
+               "Name": "Flaps (Index)",
+               "Type": "instant",
+               "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
             },
             {
-               "Name":"CrossTrackError",
-               "Type":"max",
-               "Parameter":"[C:OnRwyCTE|double]"
+               "Name": "Runway detected",
+               "Type": "MINMAX",
+               "Parameter": "[C:OnRwyDetected|double]"
             },
             {
-               "Name":"Runway remaining",
-               "Type":"instant",
-               "Parameter":"[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
+               "Name": "ArrAirport",
+               "Type": "str",
+               "Parameter": "[C:OnRwyAptIdent|string]",
+               "AddToReport": true
             },
-			{
-               "Name":"Threshold distance",
-               "Type":"instant",
-               "Parameter":"[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
+            {
+               "Name": "ArrRunway",
+               "Type": "str",
+               "Parameter": "[C:OnRwyName|string]",
+               "AddToReport": true
             },
-			{
-               "Name":"Threshold crossing height",
-               "Type":"instant",
-               "Parameter":"[C:TCH|double]"
+            {
+               "Name": "AlongTrackDistance",
+               "Type": "instant",
+               "Parameter": "[C:OnRwyATD|double]",
+               "AddToReport": true
+            },
+            {
+               "Name": "CrossTrackError",
+               "Type": "max",
+               "Parameter": "[C:OnRwyCTE|double]"
+            },
+            {
+               "Name": "Runway remaining",
+               "Type": "instant",
+               "Parameter": "[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
+            },
+            {
+               "Name": "Threshold distance",
+               "Type": "instant",
+               "Parameter": "[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
+            },
+            {
+               "Name": "Threshold crossing height",
+               "Type": "instant",
+               "Parameter": "[C:TCH|double]"
             }
          ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
-            "MONITOR_END":"[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
+            "MONITOR_END": "[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
          },
-         "Description":"Touchdown detected",
-         "InstantEvents":false,
-		 "CombineTolerance" : 500
+         "Description": "Touchdown detected",
+         "InstantEvents": false,
+         "CombineTolerance": 500
       }
    ]
 }

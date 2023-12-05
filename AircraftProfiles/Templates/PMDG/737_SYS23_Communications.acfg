@@ -1,9 +1,10 @@
 {
-   "FlightEventDefinitionGroups":[     
+	"FlightEventDefinitionGroups": [
 		{
-			"Name": "SYS23 - XPDR/TCAS",		
-			"Events": [{
-					"Name":"XPDR/TCAS OFF",
+			"Name": "SYS23 - XPDR/TCAS",
+			"Events": [
+				{
+					"Name": "XPDR/TCAS OFF",
 					"Condition": "[L:switch_800_73X|double] < 40",
 					"Tolerance": 60000,
 					"Type": 1,
@@ -20,5 +21,5 @@
 				"APP_MONITOR": "1"
 			}
 		}
-   ]
+	]
 }

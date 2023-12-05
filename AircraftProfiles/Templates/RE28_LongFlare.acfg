@@ -1,42 +1,42 @@
 {
-   "FlightEventDefinitionGroups":[
+   "FlightEventDefinitionGroups": [
       {
-         "Name":"RE28 - Long flare",
-         "Events":[
+         "Name": "RE28 - Long flare",
+         "Events": [
             {
-               "Name":"Long flare",
-               "Condition":"1",
-               "Type":1,
-               "Tolerance":8000,
-				"LiveMonitorTolerance":9000,
-               "Description":""
+               "Name": "Long flare",
+               "Condition": "1",
+               "Type": 1,
+               "Tolerance": 8000,
+               "LiveMonitorTolerance": 9000,
+               "Description": ""
             },
             {
-               "Name":"Long flare",
-               "Condition":"1",
-               "Type":2,
-               "Tolerance":11000,
-               "LiveMonitorTolerance":9000,
-               "Description":""
-            }				
-         ],
-         "MonitoringConditions":{
-            "MONITOR_BEGIN":"[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 50 && [C:DURATION AIRBORNE|double] > 10 && [C:DURATION DESCENDING|double] > 5",
-            "MONITOR_END":"[S:SIM ON GROUND|Bool] != 0 || [C:DURATION CLIMBING|double] > 2",
-            "SECONDARY":"1",
-            "MARKER_SECONDARY":"1"
-         },
-         "EventParameters":[
-           {
-               "Name":"KIAS",
-               "Type":"MINMAX",
-               "Parameter":"[S:AIRSPEED INDICATED|knots]"
+               "Name": "Long flare",
+               "Condition": "1",
+               "Type": 2,
+               "Tolerance": 11000,
+               "LiveMonitorTolerance": 9000,
+               "Description": ""
             }
          ],
-         "Description":"",
-         "InstantEvents":false,
-         "CombineTolerance":20000,
-         "ResetParameterOnEvent":true
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 50 && [C:DURATION AIRBORNE|double] > 10 && [C:DURATION DESCENDING|double] > 5",
+            "MONITOR_END": "[S:SIM ON GROUND|Bool] != 0 || [C:DURATION CLIMBING|double] > 2",
+            "SECONDARY": "1",
+            "MARKER_SECONDARY": "1"
+         },
+         "EventParameters": [
+            {
+               "Name": "KIAS",
+               "Type": "MINMAX",
+               "Parameter": "[S:AIRSPEED INDICATED|knots]"
+            }
+         ],
+         "Description": "",
+         "InstantEvents": false,
+         "CombineTolerance": 20000,
+         "ResetParameterOnEvent": true
       }
-	  ]
+   ]
 }
