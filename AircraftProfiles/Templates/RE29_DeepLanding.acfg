@@ -31,38 +31,9 @@
             "SECONDARY": "1",
             "MARKER_SECONDARY": "1"
          },
-         "EventParameters": [
-            {
-               "Name": "ArrAirport",
-               "Type": "str",
-               "Parameter": "[C:OnRwyAptIdent|string]"
-            },
-            {
-               "Name": "ArrRunway",
-               "Type": "str",
-               "Parameter": "[C:OnRwyName|string]"
-            },
-            {
-               "Name": "AlongTrackDistance",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyATD|double]"
-            },
-            {
-               "Name": "CrossTrackError",
-               "Type": "max",
-               "Parameter": "[C:OnRwyCTE|double]"
-            },
-            {
-               "Name": "Runway remaining",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
-            },
-            {
-               "Name": "Threshold distance",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
-            }
-         ],
+         "EventParameterTemplates": [
+				"OnRwy"
+			 ],               
          "Description": "Touchdown should be within touchdown zone",
          "InstantEvents": false,
          "CombineTolerance": 0,
@@ -86,18 +57,9 @@
             "MARKER_SECONDARY": "1",
             "LIVEMONITOR_BEGIN": "0"
          },
-         "EventParameters": [
-            {
-               "Name": "ArrAirport",
-               "Type": "str",
-               "Parameter": "[C:OnRwyAptIdent|string]"
-            },
-            {
-               "Name": "ArrRunway",
-               "Type": "str",
-               "Parameter": "[C:OnRwyName|string]"
-            }
-         ],
+         "EventParameterTemplates": [
+				"OnRwy"
+			 ],
          "Description": "Lower nosegear immediately after touchdown",
          "InstantEvents": false,
          "CombineTolerance": 0,

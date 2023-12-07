@@ -11,13 +11,9 @@
                "Description": ""
             }
          ],
-         "EventParameters": [
-            {
-               "Name": "GS",
-               "Type": "MAX",
-               "Parameter": "[S:SURFACE RELATIVE GROUND SPEED|knots]"
-            }
-         ],
+         "EventParameterTemplates": [
+				"OnRwy"
+			 ],
          "Description": "Tire speed limit exceeded",
          "InstantEvents": false,
          "CombineTolerance": 1000,

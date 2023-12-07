@@ -25,12 +25,10 @@
             "MARKER_SECONDARY": "1",
             "LIVEMONITOR_BEGIN": "0"
          },
+         "EventParameterTemplates": [
+				"OnRwy"
+			 ],
          "EventParameters": [
-            {
-               "Name": "KIAS",
-               "Type": "MINMAX",
-               "Parameter": "[S:AIRSPEED INDICATED|knots]"
-            },
             {
                "Name": "ACCEL",
                "Type": "MINMAX",

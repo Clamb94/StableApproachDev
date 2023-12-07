@@ -17,6 +17,9 @@
             "SECONDARY": "1",
             "MARKER_SECONDARY": "1"
          },
+         "EventParameterTemplates": [
+            "OnRwy"
+         ],
          "EventParameters": [],
          "Description": "Nose gear should not touch down first",
          "InstantEvents": false,

@@ -32,17 +32,10 @@
             "MARKER_SECONDARY": "1",
             "LIVEMONITOR_BEGIN": "0"
          },
+         "EventParameterTemplates": [
+				"OnRwy"
+			 ],
          "EventParameters": [
-            {
-               "Name": "KIAS",
-               "Type": "MINMAX",
-               "Parameter": "[S:AIRSPEED INDICATED|knots]"
-            },
-            {
-               "Name": "Height",
-               "Type": "minmax",
-               "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
-            },
             {
                "Name": "RWY remaining",
                "Type": "MINMAX",

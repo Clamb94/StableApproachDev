@@ -25,12 +25,10 @@
 				"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0",
 				"APP_MONITOR": "1"
 			},
+			"EventParameterTemplates": [
+				"OnApp"
+			 ],
 			"EventParameters": [
-				{
-					"Name": "Alt above runway",
-					"Type": "MINMAX",
-					"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-				},
 				{
 					"Name": "Speedbrake ARMED light",
 					"Type": "MINMAX",
@@ -66,6 +64,9 @@
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
 			},
+			"EventParameterTemplates": [
+				"OnApp"
+			 ],
 			"EventParameters": [
 				{
 					"Name": "L IGN",
@@ -76,11 +77,6 @@
 					"Name": "R IGN",
 					"Type": "MINMAX",
 					"Parameter": "[L:switch_121_73X|double]"
-				},
-				{
-					"Name": "Alt above runway",
-					"Type": "MINMAX",
-					"Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
 				}
 			],
 			"Description": "ENG start switches not in AUTO/CONT",

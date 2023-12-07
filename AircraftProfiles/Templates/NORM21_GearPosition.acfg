@@ -4,14 +4,14 @@
          "Name": "NORM21 - Gear",
          "Events": [
             {
-               "Name": "UP",
+               "Name": "Gear UP",
                "Condition": "[S:GEAR TOTAL PCT EXTENDED|percent] < 0.1",
                "Tolerance": 1000,
                "Type": 0,
                "Description": ""
             },
             {
-               "Name": "DOWN",
+               "Name": "Gear DOWN",
                "Condition": "[S:GEAR TOTAL PCT EXTENDED|percent] > 0.9",
                "Tolerance": 1000,
                "Type": 0,
@@ -20,58 +20,6 @@
          ],
          "Description": "",
          "InstantEvents": true,
-         "EventParameters": [
-            {
-               "Name": "KIAS",
-               "Type": "instant",
-               "Parameter": "[S:AIRSPEED INDICATED|knots]"
-            },
-            {
-               "Name": "ALT ABOVE RWY",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-            },
-            {
-               "Name": "APP APT",
-               "Type": "str",
-               "Parameter": "[C:OnAppAptIdent|string]"
-            },
-            {
-               "Name": "APP RWY",
-               "Type": "str",
-               "Parameter": "[C:OnAppRwyName|string]"
-            },
-            {
-               "Name": "APP RWY ELEV",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppRwyElevation|double]"
-            },
-            {
-               "Name": "APP DETECTED",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppDetected|double]"
-            },
-            {
-               "Name": "CHECK ALT",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppRwyCheckAlt|double]"
-            },
-            {
-               "Name": "PLANE ALTITUDE",
-               "Type": "MINMAX",
-               "Parameter": "[S:PLANE ALTITUDE|feet]"
-            },
-            {
-               "Name": "INDICATED ALTITUDE",
-               "Type": "MINMAX",
-               "Parameter": "[S:INDICATED ALTITUDE|feet]"
-            },
-            {
-               "Name": "ALT AGL",
-               "Type": "instant",
-               "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
-            }
-         ],
          "MonitoringConditions": {
             "MONITOR_BEGIN": "1",
             "MONITOR_END": "0",

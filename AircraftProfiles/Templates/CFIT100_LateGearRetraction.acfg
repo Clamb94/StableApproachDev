@@ -18,18 +18,6 @@
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1"
             },
-            "EventParameters": [
-                {
-                    "Name": "KIAS",
-                    "Type": "MINMAX",
-                    "Parameter": "[S:AIRSPEED INDICATED|knots]"
-                },
-                {
-                    "Name": "Height",
-                    "Type": "MINMAX",
-                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
-                }
-            ],
             "Description": "Retract gear immediatly after take-off/go-around",
             "InstantEvents": false
         }

@@ -39,6 +39,9 @@
                "Description": ""
             }
          ],
+         "EventParameterTemplates": [
+            "OnRwy"
+         ],
          "EventParameters": [
             {
                "Name": "Pitch",
@@ -54,11 +57,6 @@
                "Name": "Crab",
                "Type": "instant",
                "Parameter": "[#S:INCIDENCE BETA|degree]"
-            },
-            {
-               "Name": "KIAS",
-               "Type": "instant",
-               "Parameter": "[#S:AIRSPEED INDICATED|knots]"
             },
             {
                "Name": "TouchdownVS",
@@ -81,44 +79,6 @@
                "Name": "Flaps (Index)",
                "Type": "instant",
                "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
-            },
-            {
-               "Name": "Runway detected",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnRwyDetected|double]"
-            },
-            {
-               "Name": "ArrAirport",
-               "Type": "str",
-               "Parameter": "[C:OnRwyAptIdent|string]",
-               "AddToReport": true
-            },
-            {
-               "Name": "ArrRunway",
-               "Type": "str",
-               "Parameter": "[C:OnRwyName|string]",
-               "AddToReport": true
-            },
-            {
-               "Name": "AlongTrackDistance",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyATD|double]",
-               "AddToReport": true
-            },
-            {
-               "Name": "CrossTrackError",
-               "Type": "max",
-               "Parameter": "[C:OnRwyCTE|double]"
-            },
-            {
-               "Name": "Runway remaining",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
-            },
-            {
-               "Name": "Threshold distance",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]"
             }
          ],
          "MonitoringConditions": {

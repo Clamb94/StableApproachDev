@@ -39,11 +39,6 @@
                "Name": "Crab",
                "Type": "MAX",
                "Parameter": "[#S:INCIDENCE BETA|degree]"
-            },
-            {
-               "Name": "KIAS",
-               "Type": "MINMAX",
-               "Parameter": "[#S:AIRSPEED INDICATED|knots]"
             }
          ],
          "Description": "Nose gear should not touch down first",
@@ -90,11 +85,6 @@
                "Name": "Crab",
                "Type": "MAX",
                "Parameter": "[#S:INCIDENCE BETA|degree]"
-            },
-            {
-               "Name": "KIAS",
-               "Type": "MINMAX",
-               "Parameter": "[#S:AIRSPEED INDICATED|knots]"
             }
          ],
          "Description": "Bank angle on ground",
@@ -129,7 +119,7 @@
          "EventParameters": [
             {
                "Name": "TailClearDeg",
-               "Type": "MIN",
+               "Type": "MINMAX",
                "Parameter": "[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree])"
             },
             {
@@ -146,16 +136,6 @@
                "Name": "Bank",
                "Type": "MAX",
                "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
-            },
-            {
-               "Name": "Runway detected",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnRwyDetected|double]"
-            },
-            {
-               "Name": "ArrAirport",
-               "Type": "str",
-               "Parameter": "[C:OnRwyAptIdent|string]"
             }
          ],
          "Description": "Tail clearance",

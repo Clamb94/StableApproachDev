@@ -201,14 +201,14 @@
          ],
          "EventParameters": [
             {
-               "Name": "PLANE ALTITUDE",
-               "Type": "MIN",
-               "Parameter": "[S:PLANE ALTITUDE|feet]"
+               "Name": "MAX N1",
+               "Type": "MAX",
+               "Parameter": "[S:GENERAL ENG THROTTLE LEVER POSITION:1|percent]"
             },
             {
-               "Name": "ALT AGL",
-               "Type": "MIN",
-               "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
+               "Name": "Spoiler position",
+               "Type": "MAX",
+               "Parameter": "[S:SPOILERS HANDLE POSITION|percent]"
             }
          ],
          "Description": "Speed brake deployed with thrust above idle",

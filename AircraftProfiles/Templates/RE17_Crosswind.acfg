@@ -5,16 +5,16 @@
          "Events": [
             {
                "Name": "Crosswind - Takeoff",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double]",
+               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double] + 5",
                "Type": 1,
-               "Tolerance": 3000,
+               "Tolerance": 5000,
                "Description": ""
             },
             {
                "Name": "Crosswind - Takeoff",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double] + 5",
+               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double] + 10",
                "Type": 2,
-               "Tolerance": 3000,
+               "Tolerance": 5000,
                "Description": ""
             }
          ],
@@ -41,16 +41,16 @@
          "Events": [
             {
                "Name": "Crosswind - Landing",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double]",
+               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double] + 5",
                "Type": 1,
-               "Tolerance": 3000,
+               "Tolerance": 5000,
                "Description": ""
             },
             {
                "Name": "Crosswind - Landing",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double] + 5",
+               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double] + 10",
                "Type": 2,
-               "Tolerance": 3000,
+               "Tolerance": 5000,
                "Description": ""
             }
          ],

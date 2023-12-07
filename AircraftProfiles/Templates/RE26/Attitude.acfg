@@ -38,16 +38,14 @@
             "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
             "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
          },
+         "EventParameterTemplates": [
+            "OnApp"
+         ],
          "EventParameters": [
             {
                "Name": "PITCH",
                "Type": "MINMAX",
                "Parameter": "-1*[S:PLANE PITCH DEGREES|degree]"
-            },
-            {
-               "Name": "Alt above runway",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
             }
          ],
          "Description": "High/low pitch attitude",
@@ -78,21 +76,14 @@
             "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
             "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0"
          },
+         "EventParameterTemplates": [
+            "OnApp"
+         ],
          "EventParameters": [
             {
                "Name": "BANK",
                "Type": "MINMAX",
                "Parameter": "[S:PLANE BANK DEGREES|degree]"
-            },
-            {
-               "Name": "Alt above runway",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-            },
-            {
-               "Name": "Plane altitude",
-               "Type": "MINMAX",
-               "Parameter": "[S:PLANE ALTITUDE|feet]"
             }
          ],
          "Description": "High/low pitch attitude",

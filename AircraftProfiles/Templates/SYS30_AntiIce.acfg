@@ -4,10 +4,10 @@
             "Name": "SYS30 - Ice and rain protection###toowarm",
             "Events": [
                 {
-                    "Name": "ENG ANTI-ICE ON above 10°C",
+                    "Name": "ENG ANTI-ICE ON above 10°C TAT",
                     "Condition": "[S:TOTAL AIR TEMPERATURE|celsius] > 15 && ([S:ENG ANTI ICE:1|Bool] != 0 || [S:ENG ANTI ICE:2|Bool] != 0)",
                     "Type": 1,
-                    "Tolerance": 60000,
+                    "Tolerance": 120000,
                     "LiveMonitorTolerance": 30000,
                     "Description": ""
                 }
@@ -30,7 +30,7 @@
                     "Name": "ENG ANTI-ICE OFF",
                     "Condition": "([S:AMBIENT TEMPERATURE|celsius] > -40 || [C:DURATION DESCENDING|double] > 0) && [S:TOTAL AIR TEMPERATURE|celsius] < 8 && ([S:ENG ANTI ICE:1|Bool] == 0 || [S:ENG ANTI ICE:2|Bool] == 0) && ([S:AMBIENT IN CLOUD|Bool] != 0 || ([S:AMBIENT PRECIP STATE|number] >= 4 && [S:AMBIENT PRECIP RATE|millimeters of water] > 2))",
                     "Type": 1,
-                    "Tolerance": 60000,
+                    "Tolerance": 120000,
                     "LiveMonitorTolerance": 30000,
                     "Description": ""
                 }

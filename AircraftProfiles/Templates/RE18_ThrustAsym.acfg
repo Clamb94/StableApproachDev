@@ -5,14 +5,14 @@
          "Events": [
             {
                "Name": "Thrust asymmetry",
-               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 5",
+               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 10",
                "Type": 1,
                "Tolerance": 5000,
                "Description": ""
             },
             {
                "Name": "Thrust asymmetry",
-               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 10",
+               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 20",
                "Type": 2,
                "Tolerance": 5000,
                "Description": ""

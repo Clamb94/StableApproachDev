@@ -18,6 +18,9 @@
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
 			},
+			"EventParameterTemplates": [
+				"OnApp"
+			 ],
 			"EventParameters": [
 				{
 					"Name": "Dots",
@@ -52,6 +55,9 @@
 				"MARKER_SECONDARY": "1",
 				"APP_MONITOR": "1"
 			},
+			"EventParameterTemplates": [
+				"OnApp"
+			 ],
 			"EventParameters": [
 				{
 					"Name": "Dots",

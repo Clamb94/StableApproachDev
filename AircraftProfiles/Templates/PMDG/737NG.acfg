@@ -122,19 +122,7 @@
 			],
 			"Name": "NORM20 - Flaps",
 			"Description": "",
-			"InstantEvents": true,
-			"EventParameters": [
-				{
-					"Name": "KIAS",
-					"Type": "instant",
-					"Parameter": "[S:AIRSPEED INDICATED|knots]"
-				},
-				{
-					"Name": "ALT AGL",
-					"Type": "instant",
-					"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
-				}
-			]
+			"InstantEvents": true
 		}
 	],
 	"CustomParameters": {

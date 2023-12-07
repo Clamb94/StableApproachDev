@@ -39,16 +39,9 @@
          "Name": "LOC12 - Envelope protection systems",
          "Events": [
             {
-               "Name": "Stick shaker ON",
+               "Name": "Stick shaker",
                "Condition": "[L:ShakerLeft|double] != 0",
                "Type": 3,
-               "Tolerance": 1000,
-               "Description": ""
-            },
-            {
-               "Name": "Stick shaker ON",
-               "Condition": "[L:ShakerLeft|double] != 0",
-               "Type": 2,
                "Tolerance": 1000,
                "Description": ""
             }

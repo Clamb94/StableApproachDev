@@ -8,15 +8,15 @@
                "Condition": "1",
                "Type": 1,
                "Tolerance": 8000,
-               "LiveMonitorTolerance": 9000,
+               "LiveMonitorTolerance": 8000,
                "Description": ""
             },
             {
                "Name": "Long flare",
                "Condition": "1",
                "Type": 2,
-               "Tolerance": 11000,
-               "LiveMonitorTolerance": 9000,
+               "Tolerance": 12000,
+               "LiveMonitorTolerance": 10000,
                "Description": ""
             }
          ],
@@ -26,6 +26,9 @@
             "SECONDARY": "1",
             "MARKER_SECONDARY": "1"
          },
+         "EventParameterTemplates": [
+				"OnApp"
+			 ],
          "EventParameters": [
             {
                "Name": "KIAS",

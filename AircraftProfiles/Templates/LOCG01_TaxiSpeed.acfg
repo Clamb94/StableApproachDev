@@ -24,13 +24,6 @@
             "SECONDARY": "1",
             "MARKER_SECONDARY": "1"
          },
-         "EventParameters": [
-            {
-               "Name": "GS",
-               "Type": "MAX",
-               "Parameter": "[S:SURFACE RELATIVE GROUND SPEED|knots]"
-            }
-         ],
          "Description": "Taxi speed during turns",
          "InstantEvents": false,
          "CombineTolerance": 2000
@@ -94,13 +87,6 @@
             "SECONDARY": "1",
             "MARKER_SECONDARY": "1"
          },
-         "EventParameters": [
-            {
-               "Name": "GS",
-               "Type": "MAX",
-               "Parameter": "[S:SURFACE RELATIVE GROUND SPEED|knots]"
-            }
-         ],
          "Description": "Max taxi speed in straight line on runway is [C:TaxiSpeedRunway|double]kn GS",
          "InstantEvents": false,
          "CombineTolerance": 5000

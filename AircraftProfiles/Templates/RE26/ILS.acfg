@@ -25,6 +25,9 @@
 				"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0",
 				"APP_MONITOR": "1"
 			},
+			"EventParameterTemplates": [
+				"OnApp"
+			 ],
 			"EventParameters": [
 				{
 					"Name": "Dots",
@@ -66,6 +69,9 @@
 				"MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0",
 				"APP_MONITOR": "1"
 			},
+			"EventParameterTemplates": [
+				"OnApp"
+			 ],
 			"EventParameters": [
 				{
 					"Name": "Dots",

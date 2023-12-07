@@ -25,6 +25,9 @@
             "MARKER_SECONDARY": "1",
             "LIVEMONITOR_BEGIN": "0"
          },
+         "EventParameterTemplates": [
+				"OnApp"
+			 ],
          "EventParameters": [
             {
                "Name": "KIAS Unstick",

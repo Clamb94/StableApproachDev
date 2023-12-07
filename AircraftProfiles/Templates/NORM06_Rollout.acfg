@@ -11,16 +11,14 @@
                "Description": ""
             }
          ],
+         "EventParameterTemplates": [
+            "OnRwy"
+         ],
          "EventParameters": [
             {
                "Name": "Pitch",
                "Type": "max",
                "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
-            },
-            {
-               "Name": "Runway detected",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnRwyDetected|double]"
             },
             {
                "Name": "ArrAirport",
@@ -35,24 +33,9 @@
                "AddToReport": true
             },
             {
-               "Name": "AlongTrackDistance",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnRwyATD|double]"
-            },
-            {
-               "Name": "CrossTrackError",
-               "Type": "max",
-               "Parameter": "Abs([C:OnRwyCTE|double])"
-            },
-            {
                "Name": "Runway remaining",
                "Type": "min",
                "Parameter": "[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
-            },
-            {
-               "Name": "Runway width",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyWidth|double]"
             }
          ],
          "MonitoringConditions": {

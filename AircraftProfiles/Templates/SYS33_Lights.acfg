@@ -6,7 +6,7 @@
 				{
 					"Name": "Beacon OFF with engine running",
 					"Condition": "[S:LIGHT BEACON|Bool] == 0 && [C:AnyEngineRunning|double] != 0",
-					"Type": 2,
+					"Type": 1,
 					"Tolerance": 10000,
 					"LiveMonitorTolerance": 1000,
 					"Description": ""

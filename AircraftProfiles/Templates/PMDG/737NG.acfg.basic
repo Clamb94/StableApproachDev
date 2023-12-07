@@ -1,0 +1,41 @@
+{
+	"Name": "PMDG 737",
+	"Enabled": true,
+	"Templates": [
+		"Templates/LOC14_InadequateAcftAttitude.acfg"
+	],
+	"CustomParameters": {
+		"C:NoLandingFlapsCondition|string": "[S:FLAPS HANDLE INDEX:1|number] < 7",
+		"C:TaxiSpeed|double": "30",
+		"C:Flaps0PositionName|string": "UP",
+		"C:Flaps1PositionName|string": "1",
+		"C:Flaps2PositionName|string": "2",
+		"C:Flaps3PositionName|string": "5",
+		"C:Flaps4PositionName|string": "10",
+		"C:Flaps5PositionName|string": "15",
+		"C:Flaps6PositionName|string": "25",
+		"C:Flaps7PositionName|string": "30",
+		"C:Flaps8PositionName|string": "40",
+		"C:Flaps0MaxKIAS|double": "999",
+		"C:Flaps1MaxKIAS|double": "250",
+		"C:Flaps2MaxKIAS|double": "250",
+		"C:Flaps3MaxKIAS|double": "250",
+		"C:Flaps4MaxKIAS|double": "210",
+		"C:Flaps5MaxKIAS|double": "200",
+		"C:Flaps6MaxKIAS|double": "190",
+		"C:Flaps7MaxKIAS|double": "175",
+		"C:Flaps8MaxKIAS|double": "162",
+		"C:MaxFlapExtensionAlt|double": "20000",
+		"C:VMO|string": "340",
+		"C:MMO|string": "0.82",
+		"C:VappVar|string": "[L:ngx_SPDwindow|double]",
+		"C:GroundPitchLimit|double": "8",
+		"C:GroundBankLimit|double": "9",
+		"C:GearMaxSpdExtension|double":"270",
+        "C:GearMaxSpdExtended|double":"320",
+        "C:GearMaxSpdRetraction|double":"235",
+	    "C:MaxTireSpeed|double":"195",
+		"C:FlightEndCondition|string":"[S:LIGHT BEACON|Bool] == 0",
+		"C:FlightStartCondition|string":"[S:LIGHT BEACON|Bool] != 0"
+	}
+}

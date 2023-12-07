@@ -31,22 +31,10 @@
             "SECONDARY": "1",
             "MARKER_SECONDARY": "1"
          },
+         "EventParameterTemplates": [
+            "OnRwy"
+         ],
          "EventParameters": [
-            {
-               "Name": "KIAS",
-               "Type": "instant",
-               "Parameter": "[S:AIRSPEED INDICATED|knots]"
-            },
-            {
-               "Name": "GS",
-               "Type": "instant",
-               "Parameter": "[S:SURFACE RELATIVE GROUND SPEED|knots]"
-            },
-            {
-               "Name": "RWY remaining",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyRemaining|double]"
-            },
             {
                "Name": "DECEL required",
                "Type": "instant",

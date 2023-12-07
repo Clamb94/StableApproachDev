@@ -12,8 +12,8 @@
             },
             {
                "Name": "Brake application during take-off",
-               "Condition": "[S:BRAKE LEFT POSITION|percent] > 40 || [S:BRAKE RIGHT POSITION|percent] > 40",
-               "Type": 1,
+               "Condition": "[S:BRAKE LEFT POSITION|percent] > 60 || [S:BRAKE RIGHT POSITION|percent] > 60",
+               "Type": 2,
                "Tolerance": 500,
                "Description": ""
             }
@@ -25,6 +25,9 @@
             "MARKER_SECONDARY": "1",
             "LIVEMONITOR_BEGIN": "0"
          },
+         "EventParameterTemplates": [
+				"OnRwy"
+			 ],
          "EventParameters": [
             {
                "Name": "Brake left",
@@ -35,11 +38,6 @@
                "Name": "Brake right",
                "Type": "MAX",
                "Parameter": "[S:BRAKE RIGHT POSITION|percent]"
-            },
-            {
-               "Name": "KIAS",
-               "Type": "MINMAX",
-               "Parameter": "[S:AIRSPEED INDICATED|knots]"
             }
          ],
          "Description": "Brake application during take-off",

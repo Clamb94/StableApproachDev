@@ -7,9 +7,12 @@
                "Name": "Approach Info",
                "Condition": "1",
                "Type": 0,
-               "Tolerance": 500,
+               "Tolerance": 5000,
                "Description": ""
             }
+         ],
+         "EventParameterTemplates": [
+            "OnApp"
          ],
          "EventParameters": [
             {
@@ -28,11 +31,6 @@
                "Parameter": "[S:INCIDENCE BETA|degree]"
             },
             {
-               "Name": "KIAS",
-               "Type": "MINMAX",
-               "Parameter": "[S:AIRSPEED INDICATED|knots]"
-            },
-            {
                "Name": "Vapp",
                "Type": "MINMAX",
                "Parameter": "[C:VappVar|string]"
@@ -43,30 +41,9 @@
                "Parameter": "[S:AIRSPEED INDICATED|knots] - [C:VappVar|string]"
             },
             {
-               "Name": "Height above rwy",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]"
-            },
-            {
                "Name": "Flaps (Index)",
                "Type": "MINMAX",
                "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
-            },
-            {
-               "Name": "Runway detected",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppDetected|double]"
-            },
-            {
-               "Name": "AlongTrackDistance",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppATD|double]",
-               "AddToReport": true
-            },
-            {
-               "Name": "CrossTrackError",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnAppCTE|double]"
             }
          ],
          "MonitoringConditions": {

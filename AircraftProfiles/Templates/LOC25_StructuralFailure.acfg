@@ -73,12 +73,12 @@
                "Parameter": "[S:G FORCE|GForce]"
             },
             {
-               "Name": "GFORCE LIMIT POS",
+               "Name": "GFORCE LIMIT (+)",
                "Type": "MAX",
                "Parameter": "[C:GLimitFlapsUpPos|double]"
             },
             {
-               "Name": "GFORCE LIMIT NEG",
+               "Name": "GFORCE LIMIT (-)",
                "Type": "MIN",
                "Parameter": "[C:GLimitFlapsUpNeg|double]"
             }

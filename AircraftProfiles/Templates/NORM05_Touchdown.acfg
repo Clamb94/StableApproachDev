@@ -11,6 +11,9 @@
                "Description": ""
             }
          ],
+         "EventParameterTemplates": [
+            "OnRwy"
+         ],
          "EventParameters": [
             {
                "Name": "Pitch",
@@ -26,11 +29,6 @@
                "Name": "Crab",
                "Type": "instant",
                "Parameter": "[#S:INCIDENCE BETA|degree]"
-            },
-            {
-               "Name": "KIAS",
-               "Type": "instant",
-               "Parameter": "[#S:AIRSPEED INDICATED|knots]"
             },
             {
                "Name": "TouchdownVS",
@@ -55,11 +53,6 @@
                "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
             },
             {
-               "Name": "Runway detected",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnRwyDetected|double]"
-            },
-            {
                "Name": "ArrAirport",
                "Type": "str",
                "Parameter": "[C:OnRwyAptIdent|string]",
@@ -70,17 +63,6 @@
                "Type": "str",
                "Parameter": "[C:OnRwyName|string]",
                "AddToReport": true
-            },
-            {
-               "Name": "AlongTrackDistance",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyATD|double]",
-               "AddToReport": true
-            },
-            {
-               "Name": "CrossTrackError",
-               "Type": "max",
-               "Parameter": "[C:OnRwyCTE|double]"
             },
             {
                "Name": "Runway remaining",

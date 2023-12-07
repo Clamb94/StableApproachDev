@@ -7,20 +7,18 @@
                "Name": "Takeoff Info",
                "Condition": "1",
                "Type": 0,
-               "Tolerance": 500,
+               "Tolerance": 5000,
                "Description": ""
             }
+         ],
+         "EventParameterTemplates": [
+            "OnRwy"
          ],
          "EventParameters": [
             {
                "Name": "Flaps (Index)",
                "Type": "instant",
                "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
-            },
-            {
-               "Name": "Runway detected",
-               "Type": "MINMAX",
-               "Parameter": "[C:OnRwyDetected|double]"
             },
             {
                "Name": "DepAirport",
@@ -33,21 +31,6 @@
                "Type": "str",
                "Parameter": "[C:OnRwyName|string]",
                "AddToReport": true
-            },
-            {
-               "Name": "AlongTrackDistance",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyATD|double]"
-            },
-            {
-               "Name": "CrossTrackError",
-               "Type": "max",
-               "Parameter": "[C:OnRwyCTE|double]"
-            },
-            {
-               "Name": "Runway remaining",
-               "Type": "min",
-               "Parameter": "[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]"
             }
          ],
          "MonitoringConditions": {
