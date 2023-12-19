@@ -7,7 +7,7 @@
                "Name": "Stick shaker ON",
                "Condition": "[L:ShakerLeft|double] != 0",
                "Type": 3,
-               "Tolerance": 1000,
+               "Tolerance": 3000,
                "Description": ""
             },
             {
