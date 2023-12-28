@@ -5,7 +5,7 @@
             "Events": [
                 {
                     "Name": "Late gear retraction",
-                    "Condition": "[S:SIM ON GROUND|Bool] != 0",
+                    "Condition": "1",
                     "Type": 1,
                     "Tolerance": 10000,
                     "LiveMonitorTolerance": 5000,
@@ -14,7 +14,7 @@
             ],
             "MonitoringConditions": {
                 "MONITOR_BEGIN": "[S:GEAR TOTAL PCT EXTENDED|percent] > 0.95 && [C:DURATION CLIMBING|double] > 4 && [S:PLANE ALT ABOVE GROUND|feet] < 500 && [S:IS GEAR RETRACTABLE|Bool] != 0",
-                "MONITOR_END": "[S:GEAR TOTAL PCT EXTENDED|percent] < 0.9",
+                "MONITOR_END": "[S:GEAR TOTAL PCT EXTENDED|percent] < 0.9 || [C:DURATION CLIMBING|double] < 1",
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1"
             },
