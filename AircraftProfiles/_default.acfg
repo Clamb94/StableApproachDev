@@ -1,0 +1,25 @@
+{
+	"Name": "Default",
+	"Enabled": true,
+	"Templates": [
+		"Templates/CFIT02_AltimeterSetting.acfg",
+		"Templates/CFIT100_LateGearRetraction.acfg",
+		"Templates/LOC14_InadequateAcftAttitude.acfg",
+		"Templates/LOC25_StructuralFailure.acfg",
+		"Templates/LOCG01_TaxiSpeed.acfg",
+		"Templates/NORM02_Takeoff.acfg",
+		"Templates/NORM04_Approach.acfg",
+		"Templates/NORM05_Touchdown.acfg",
+		"Templates/NORM06_Rollout.acfg",
+		"Templates/NORM10_ILS.acfg",
+		"Templates/NORM20_FlapPosition.acfg",
+		"Templates/NORM21_GearPosition.acfg",
+		"Templates/RE01_PowerChangeTakeoff.acfg",
+		"Templates/RE08_SlowRotation.acfg",
+		"Templates/RE13_InsuffDecel.acfg",
+		"Templates/RE15_RunwayRemainLiftoff.acfg",
+		"Templates/RE16_AircraftHandling.acfg",
+		"Templates/RE20_LateralDeviation.acfg",
+		"Templates/RE29_DeepLanding.acfg"
+	]
+}
