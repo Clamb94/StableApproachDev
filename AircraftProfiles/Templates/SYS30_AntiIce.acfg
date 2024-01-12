@@ -44,6 +44,21 @@
                     "Name": "TAT",
                     "Type": "MAX",
                     "Parameter": "[S:TOTAL AIR TEMPERATURE|celsius]"
+                },
+                {
+                    "Name": "IN CLOUD",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:AMBIENT IN CLOUD|Bool]"
+                },
+                {
+                    "Name": "PRECIP STATE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:AMBIENT PRECIP STATE|number]"
+                },
+                {
+                    "Name": "PRECIP RATE",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:AMBIENT PRECIP RATE|millimeters of water]"
                 }
             ],
             "Description": "Engine anti-ice should be ON below 10°C and visible moisture",
