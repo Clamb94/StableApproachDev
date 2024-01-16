@@ -36,11 +36,6 @@
                "Parameter": "[C:VappVar|string]"
             },
             {
-               "Name": "Speed delta",
-               "Type": "MINMAX",
-               "Parameter": "[S:AIRSPEED INDICATED|knots] - [C:VappVar|string]"
-            },
-            {
                "Name": "Flaps (Index)",
                "Type": "MINMAX",
                "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
