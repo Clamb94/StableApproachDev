@@ -53,6 +53,6 @@
       }
    ],
 	"CustomParameters": {
-		"C:VappVar|string": "0",
+		"C:VappVar|string": "0"
 	}
 }
