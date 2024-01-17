@@ -51,5 +51,8 @@
          "InstantEvents": false,
          "CombineTolerance": 500
       }
-   ]
+   ],
+	"CustomParameters": {
+		"C:VappVar|string": "0",
+	}
 }
