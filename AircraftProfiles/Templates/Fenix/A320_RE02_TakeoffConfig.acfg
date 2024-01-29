@@ -36,6 +36,29 @@
             "Description": "",
             "InstantEvents": false,
             "CombineTolerance": 5000
+        },
+        {
+            "Name": "RE02 - Takeoff config###spoilers",
+            "Events": [
+                {
+                    "Name": "Spoilers not ARMED",
+                    "Condition": "[L:A_FC_SPEEDBRAKE|double] != 0",
+                    "Type": 1,
+                    "Tolerance": 2000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 1 && [L:A_FC_THROTTLE_LEFT_INPUT|double] > 3",
+                "MONITOR_END": "[S:SIM ON GROUND|Bool] == 0 || [L:A_FC_THROTTLE_LEFT_INPUT|double] < 3",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "LIVEMONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 1 && [L:A_FC_THROTTLE_LEFT_INPUT|double] > 2.5",
+                "LIVEMONITOR_END": "[S:SIM ON GROUND|Bool] == 0 || [L:A_FC_THROTTLE_LEFT_INPUT|double] < 2.4"
+            },
+            "Description": "",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
         }
     ]
 }
