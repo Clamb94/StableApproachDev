@@ -35,8 +35,8 @@
                 }
             ],
             "MonitoringConditions": {
-                "MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 1 && [S:AIRSPEED INDICATED|knots] > 60 && [L:AutoIgnitionOption|double] == 0",
-                "MONITOR_END": "[S:SIM ON GROUND|Bool] == 0 || [S:AIRSPEED INDICATED|knots] < 50 || [L:AutoIgnitionOption|double] == 1",
+                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
+                "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0",
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1"
             },

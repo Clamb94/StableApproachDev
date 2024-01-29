@@ -145,6 +145,7 @@
 		"C:GearMaxSpdExtension|double": "250",
 		"C:GearMaxSpdExtended|double": "280",
 		"C:GearMaxSpdRetraction|double": "220",
-		"C:MaxTireSpeed|double": "195"
+		"C:MaxTireSpeed|double": "195",
+		"C:TakeoffCondition|string": "[L:A_FC_THROTTLE_LEFT_INPUT|double] > 3 && [C:OnRwyAligned|double] != 0"
 	}
 }
