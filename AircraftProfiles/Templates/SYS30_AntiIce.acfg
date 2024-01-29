@@ -42,7 +42,7 @@
             "EventParameters": [
                 {
                     "Name": "TAT",
-                    "Type": "MAX",
+                    "Type": "MINMAX",
                     "Parameter": "[S:TOTAL AIR TEMPERATURE|celsius]"
                 },
                 {
@@ -59,6 +59,11 @@
                     "Name": "PRECIP RATE",
                     "Type": "MINMAX",
                     "Parameter": "[S:AMBIENT PRECIP RATE|millimeters of water]"
+                },
+                {
+                    "Name": "OAT",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:AMBIENT TEMPERATURE|celsius]"
                 }
             ],
             "Description": "Engine anti-ice should be ON below 10°C and visible moisture",
