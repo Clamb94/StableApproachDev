@@ -18,9 +18,16 @@
                "Description": ""
             },
             {
+               "Name": "Hard landing (FPM)",
+               "Condition": "[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1 && [#S:VERTICAL SPEED|ft/min] < -1300",
+               "Type": 3,
+               "Tolerance": 0,
+               "Description": ""
+            },
+            {
                "Name": "Hard landing (G)",
                "Condition": "[C:MaxGForceOnGround|double] > 1.8",
-               "Type": 2,
+               "Type": 1,
                "Tolerance": 0,
                "Description": ""
             },
