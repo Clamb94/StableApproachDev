@@ -1,7 +1,7 @@
 {
    "FlightEventDefinitionGroups": [
       {
-         "Name": "LOC-G - Taxi###turnSpeed",
+         "Name": "LOC-G01 - Taxi###turnSpeed",
          "Events": [
             {
                "Name": "High speed in turn",
@@ -26,7 +26,7 @@
          },
          "Description": "Taxi speed during turns",
          "InstantEvents": false,
-         "CombineTolerance": 2000
+         "CombineTolerance": 20000
       },
       {
          "Name": "LOC-G - Taxi###taxispeed",
@@ -61,7 +61,7 @@
          ],
          "Description": "Max taxi speed in straight line is [C:TaxiSpeed|double]kn GS",
          "InstantEvents": false,
-         "CombineTolerance": 5000
+         "CombineTolerance": 20000
       },
       {
          "Name": "LOC-G - Taxi###taxispeedrwy",
@@ -89,7 +89,7 @@
          },
          "Description": "Max taxi speed in straight line on runway is [C:TaxiSpeedRunway|double]kn GS",
          "InstantEvents": false,
-         "CombineTolerance": 5000
+         "CombineTolerance": 20000
       }
    ],
    "CustomParameters": {
