@@ -64,6 +64,20 @@
                "Type": 2,
                "Tolerance": 1000,
                "Description": ""
+            },
+            {
+               "Name": "Excessive positive G force",
+               "Condition": "[S:G FORCE|GForce] > [C:GLimitFlapsUpPos|double] + 3",
+               "Type": 3,
+               "Tolerance": 500,
+               "Description": ""
+            },
+            {
+               "Name": "Excessive negative G force",
+               "Condition": "[S:G FORCE|GForce] < [C:GLimitFlapsUpNeg|double] - 3",
+               "Type": 3,
+               "Tolerance": 500,
+               "Description": ""
             }
          ],
          "EventParameters": [
@@ -108,6 +122,20 @@
                "Condition": "[S:G FORCE|GForce] < [C:GLimitFlapsDnNeg|double]",
                "Type": 2,
                "Tolerance": 1000,
+               "Description": ""
+            },
+            {
+               "Name": "Excessive positive G force",
+               "Condition": "[S:G FORCE|GForce] > [C:GLimitFlapsDnPos|double] + 3",
+               "Type": 3,
+               "Tolerance": 500,
+               "Description": ""
+            },
+            {
+               "Name": "Excessive negative G force",
+               "Condition": "[S:G FORCE|GForce] < [C:GLimitFlapsDnNeg|double] + 3",
+               "Type": 3,
+               "Tolerance": 500,
                "Description": ""
             }
          ],
