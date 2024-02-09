@@ -35,8 +35,8 @@
                 }
             ],
             "MonitoringConditions": {
-                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
-                "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0",
+                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0 && [L:AutoIgnitionOption|double] == 0",
+                "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0 || [L:AutoIgnitionOption|double] == 1",
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1"
             },
