@@ -5,70 +5,70 @@
          "Events": [
             {
                "Name": "Flaps [C:Flaps0PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0 && [S:AIRSPEED INDICATED|knots] > [C:Flaps0MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0 && [S:AIRSPEED INDICATED|knots] > [C:Flaps0MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps1PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1 && [S:AIRSPEED INDICATED|knots] > [C:Flaps1MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1 && [S:AIRSPEED INDICATED|knots] > [C:Flaps1MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps2PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2 && [S:AIRSPEED INDICATED|knots] > [C:Flaps2MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2 && [S:AIRSPEED INDICATED|knots] > [C:Flaps2MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps3PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3 && [S:AIRSPEED INDICATED|knots] > [C:Flaps3MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3 && [S:AIRSPEED INDICATED|knots] > [C:Flaps3MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps4PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4 && [S:AIRSPEED INDICATED|knots] > [C:Flaps4MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4 && [S:AIRSPEED INDICATED|knots] > [C:Flaps4MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps5PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5 && [S:AIRSPEED INDICATED|knots] > [C:Flaps5MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5 && [S:AIRSPEED INDICATED|knots] > [C:Flaps5MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps6PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6 && [S:AIRSPEED INDICATED|knots] > [C:Flaps6MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6 && [S:AIRSPEED INDICATED|knots] > [C:Flaps6MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps7PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7 && [S:AIRSPEED INDICATED|knots] > [C:Flaps7MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7 && [S:AIRSPEED INDICATED|knots] > [C:Flaps7MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps8PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8 && [S:AIRSPEED INDICATED|knots] > [C:Flaps8MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8 && [S:AIRSPEED INDICATED|knots] > [C:Flaps8MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
             },
             {
                "Name": "Flaps [C:Flaps9PositionName|string] speed exceeded",
-               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9 && [S:AIRSPEED INDICATED|knots] > [C:Flaps9MaxKIAS|double]",
+               "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9 && [S:AIRSPEED INDICATED|knots] > [C:Flaps9MaxKIAS|double] + 3",
                "Tolerance": 1000,
                "Type": 2,
                "Description": ""
@@ -108,21 +108,21 @@
          "Events": [
             {
                "Name": "Gear speed limit exceeded (Extension)",
-               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtension|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] < [S:GEAR TOTAL PCT EXTENDED|percent]",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtension|double] + 3 && [#S:GEAR TOTAL PCT EXTENDED|percent] < [S:GEAR TOTAL PCT EXTENDED|percent]",
                "Type": 2,
                "Tolerance": 3000,
                "Description": ""
             },
             {
                "Name": "Gear speed limit exceeded  (Retraction)",
-               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdRetraction|double] && [#S:GEAR TOTAL PCT EXTENDED|percent] > [S:GEAR TOTAL PCT EXTENDED|percent]",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdRetraction|double] + 3 && [#S:GEAR TOTAL PCT EXTENDED|percent] > [S:GEAR TOTAL PCT EXTENDED|percent]",
                "Type": 2,
                "Tolerance": 3000,
                "Description": ""
             },
             {
                "Name": "Gear speed limit exceeded",
-               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtended|double] && [S:GEAR TOTAL PCT EXTENDED|percent] > 0.95",
+               "Condition": "[S:AIRSPEED INDICATED|knots] > [C:GearMaxSpdExtended|double] + 3 && [S:GEAR TOTAL PCT EXTENDED|percent] > 0.95",
                "Type": 2,
                "Tolerance": 3000,
                "Description": ""
@@ -193,7 +193,7 @@
          "Events": [
             {
                "Name": "Speed brake deployed with high thrust",
-               "Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.3 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 40",
+               "Condition": "[S:SPOILERS HANDLE POSITION|percent] > 0.5 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 50",
                "Type": 1,
                "Tolerance": 20000,
                "Description": ""
@@ -201,7 +201,7 @@
          ],
          "EventParameters": [
             {
-               "Name": "MAX N1",
+               "Name": "MAX THROTTLE POS",
                "Type": "MAX",
                "Parameter": "[S:GENERAL ENG THROTTLE LEVER POSITION:1|percent]"
             },

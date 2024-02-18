@@ -7,14 +7,14 @@
                "Name": "Slow rotation",
                "Condition": "1",
                "Type": 1,
-               "Tolerance": 9000,
+               "Tolerance": 12000,
                "Description": ""
             },
             {
                "Name": "Slow rotation",
                "Condition": "1",
                "Type": 2,
-               "Tolerance": 12000,
+               "Tolerance": 15000,
                "Description": ""
             }
          ],
