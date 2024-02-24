@@ -1,50 +1,57 @@
 {
-   "FlightEventDefinitionGroups": [
-      {
-         "Name": "RE09 - No lift-off###ASDA",
-         "Events": [
-            {
-               "Name": "ASDA short",
-               "Condition": "[C:OnRwyReqDecel|double] > 3.7",
-               "Type": 1,
-               "Tolerance": 0,
-               "Description": ""
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "RE09 - No lift-off###ASDA",
+            "Events": [
+                {
+                    "Name": "ASDA short",
+                    "Condition": "[C:OnRwyReqDecel|double] > 3.7",
+                    "Type": 1,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "ASDA short",
+                    "Condition": "[C:OnRwyReqDecel|double] > 4.0",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "ASDA short",
+                    "Condition": "[C:OnRwyReqDecel|double] > 4.3",
+                    "Type": 3,
+                    "Tolerance": 0,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[#C:SubPhase_Takeoff0|double] != 0 && ([L:CO_V1|double] != [#L:CO_V1|double] || [L:egpws_v1|double] != [#L:egpws_v1|double])",
+                "MONITOR_END": "1",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             },
-            {
-               "Name": "ASDA short",
-               "Condition": "[C:OnRwyReqDecel|double] > 4.0",
-               "Type": 2,
-               "Tolerance": 0,
-               "Description": ""
-            },
-            {
-               "Name": "ASDA short",
-               "Condition": "[C:OnRwyReqDecel|double] > 4.3",
-               "Type": 3,
-               "Tolerance": 0,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[#C:SubPhase_Takeoff0|double] != 0 && ([L:CO_V1|double] != [#L:CO_V1|double] || [L:egpws_v1|double] != [#L:egpws_v1|double])",
-            "MONITOR_END": "1",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         },
-         "EventParameterTemplates": [
-            "OnRwy"
-         ],
-         "EventParameters": [
-            {
-               "Name": "DECEL required",
-               "Type": "instant",
-               "Parameter": "[C:OnRwyReqDecel|double]"
-            }
-         ],
-         "Description": "Insufficient stopping distance at V1 (needs V1 callout)",
-         "InstantEvents": false,
-         "CombineTolerance": 0,
-         "ResetParameterOnEvent": true
-      }
-   ]
+            "EventParameterTemplates": [
+                "OnRwy"
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Rwy remaining",
+                    "Type": "instant",
+                    "Parameter": "[C:OnRwyRemaining|double]",
+                    "Unit": "m"
+                },
+                {
+                    "Name": "DECEL required",
+                    "Type": "instant",
+                    "Parameter": "[C:OnRwyReqDecel|double]",
+                    "Unit": "m/s²"
+                }
+            ],
+            "Description": "Insufficient stopping distance at V1",
+            "InstantEvents": false,
+            "CombineTolerance": 0,
+            "ResetParameterOnEvent": true
+        }
+    ]
 }

@@ -18,6 +18,14 @@
                 "MARKER_SECONDARY": "1",
                 "APP_MONITOR": "1"
             },
+            "EventParameters": [
+                {
+                    "Name": "Height above runway",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]",
+                    "Unit": "ft"
+                }
+            ],
             "Description": "Do not use speedbrake with Flaps FULL",
             "InstantEvents": false
         },
@@ -26,7 +34,7 @@
             "Events": [
                 {
                     "Name": "Speedbrake used below 1000ft RA",
-                    "Condition": "[L:A_FC_SPEEDBRAKE|double] > 1.1",
+                    "Condition": "[L:A_FC_SPEEDBRAKE|double] > 1.1 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 900",
                     "Type": 1,
                     "Tolerance": 1000,
                     "Description": "Do not deploy speedbrakes in flight at radio altitude less than 1000ft"
@@ -43,7 +51,8 @@
                 {
                     "Name": "RA",
                     "Type": "MIN",
-                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
+                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]",
+                    "Unit": "ft"
                 }
             ],
             "Description": "Do not use speedbrakes below 1000ft RA",

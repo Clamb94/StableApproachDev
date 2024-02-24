@@ -1,110 +1,117 @@
 {
-	"FlightEventDefinitionGroups": [
-		{
-			"Name": "CFIT00 - EGPWS",
-			"Events": [
-				{
-					"Name": "PULL UP",
-					"Condition": "[L:A320_Audio:Pullup|double] != [#L:egpws_wwpup|double]",
-					"Type": 3,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "TERRAIN - PULL UP",
-					"Condition": "[L:A320_Audio:Terrain_ahead_pullup|double] != 0 || [L:A320_Audio:Obstacle_ahead_pullup|double] != 0",
-					"Type": 3,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "STALL",
-					"Condition": "[L:A320_Audio:Stall|double] != 0",
-					"Type": 2,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "TERRAIN AHEAD",
-					"Condition": "[L:A320_Audio:Terrain_ahead|double] != 0",
-					"Type": 1,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "DON'T SINK",
-					"Condition": "[L:A320_Audio:Dontt_sink|double] != 0",
-					"Type": 1,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "GLIDELSOPE",
-					"Condition": "[L:A320_Audio:Glideslope|double] != 0",
-					"Type": 2,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "WINDSHEAR",
-					"Condition": "[L:A320_Audio:Windshear|double] != 0 || [L:A320_Audio:Pred_windshear_Windshear|double] != 0 || [L:A320_Audio:Go_around_windshear|double] != 0",
-					"Type": 1,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "SINK RATE",
-					"Condition": "[L:A320_Audio:Sinkrate|double] != 0",
-					"Type": 1,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "TOO LOW FLAPS",
-					"Condition": "[L:A320_Audio:Too_low_flap|double] != 0",
-					"Type": 2,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "TOO LOW GEAR",
-					"Condition": "[L:A320_Audio:Too_low_gear|double] != 0",
-					"Type": 2,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "TOO LOW TERRAIN",
-					"Condition": "[L:A320_Audio:Too_low_terrain|double] != 0",
-					"Type": 2,
-					"Tolerance": 0,
-					"Description": ""
-				},
-				{
-					"Name": "TERRAIN",
-					"Condition": "[L:A320_Audio:Terrain|double] != 0",
-					"Type": 2,
-					"Tolerance": 0,
-					"Description": ""
-				}
-			],
-			"MonitoringConditions": {
-				"MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
-				"MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
-				"SECONDARY": "1",
-				"MARKER_SECONDARY": "1",
-				"APP_MONITOR": "1"
-			},
-			"EventParameters": [
-				{
-					"Name": "RA",
-					"Type": "MIN",
-					"Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
-				}
-			],
-			"Description": "EGPWS",
-			"InstantEvents": false,
-			"CombineTolerance": 30000
-		}
-	]
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "CFIT00 - EGPWS",
+            "Events": [
+                {
+                    "Name": "PULL UP",
+                    "Condition": "[L:A320_Audio:Pullup|double] != [#L:egpws_wwpup|double]",
+                    "Type": 3,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "TERRAIN - PULL UP",
+                    "Condition": "[L:A320_Audio:Terrain_ahead_pullup|double] != 0 || [L:A320_Audio:Obstacle_ahead_pullup|double] != 0",
+                    "Type": 3,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "STALL",
+                    "Condition": "[L:A320_Audio:Stall|double] != 0",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "TERRAIN AHEAD",
+                    "Condition": "[L:A320_Audio:Terrain_ahead|double] != 0",
+                    "Type": 1,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "DON'T SINK",
+                    "Condition": "[L:A320_Audio:Dontt_sink|double] != 0",
+                    "Type": 1,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "GLIDELSOPE",
+                    "Condition": "[L:A320_Audio:Glideslope|double] != 0",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "WINDSHEAR",
+                    "Condition": "[L:A320_Audio:Windshear|double] != 0 || [L:A320_Audio:Pred_windshear_Windshear|double] != 0 || [L:A320_Audio:Go_around_windshear|double] != 0",
+                    "Type": 1,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "SINK RATE",
+                    "Condition": "[L:A320_Audio:Sinkrate|double] != 0",
+                    "Type": 1,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "TOO LOW FLAPS",
+                    "Condition": "[L:A320_Audio:Too_low_flap|double] != 0",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "TOO LOW GEAR",
+                    "Condition": "[L:A320_Audio:Too_low_gear|double] != 0",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "TOO LOW TERRAIN",
+                    "Condition": "[L:A320_Audio:Too_low_terrain|double] != 0",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "TERRAIN",
+                    "Condition": "[L:A320_Audio:Terrain|double] != 0",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 0",
+                "MONITOR_END": "[S:SIM ON GROUND|Bool] != 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
+            },
+            "EventParameters": [
+                {
+                    "Name": "Height",
+                    "Type": "MIN",
+                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]",
+                    "Unit": "ft"
+                },
+                {
+                    "Name": "Speed",
+                    "Type": "MIN",
+                    "Parameter": "[S:AIRSPEED INDICATED|knots]",
+                    "Unit": "kias"
+                }
+            ],
+            "Description": "EGPWS",
+            "InstantEvents": false,
+            "CombineTolerance": 30000
+        }
+    ]
 }

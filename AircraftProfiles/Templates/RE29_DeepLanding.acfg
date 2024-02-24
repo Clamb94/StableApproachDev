@@ -1,69 +1,89 @@
 {
-   "FlightEventDefinitionGroups": [
-      {
-         "Name": "RE29 - Deep landing###longlanding",
-         "Events": [
-            {
-               "Name": "Long landing",
-               "Condition": "[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double] * 1.5)",
-               "Type": 2,
-               "Tolerance": 500,
-               "Description": ""
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "RE29 - Deep landing###longlanding",
+            "Events": [
+                {
+                    "Name": "Long landing",
+                    "Condition": "[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double] * 1.5)",
+                    "Type": 2,
+                    "Tolerance": 500,
+                    "Description": ""
+                },
+                {
+                    "Name": "Long landing",
+                    "Condition": "[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double] * 1.1)",
+                    "Type": 1,
+                    "Tolerance": 500,
+                    "Description": ""
+                },
+                {
+                    "Name": "Short landing",
+                    "Condition": "[C:OnRwyATD|double] < [C:OnRwyDispThreshold|double] - 10",
+                    "Type": 2,
+                    "Tolerance": 0,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
+                "MONITOR_END": "[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             },
-            {
-               "Name": "Long landing",
-               "Condition": "[C:OnRwyATD|double] > [C:OnRwyDispThreshold|double] + ([C:OnRwyTdzLength|double] * 1.1)",
-               "Type": 1,
-               "Tolerance": 500,
-               "Description": ""
+            "FdrOptions": {
+                "MarkerPosition": "end"
             },
-            {
-               "Name": "Short landing",
-               "Condition": "[C:OnRwyATD|double] < [C:OnRwyDispThreshold|double] - 10",
-               "Type": 2,
-               "Tolerance": 0,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
-            "MONITOR_END": "[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         },
-         "EventParameterTemplates": [
-				"OnRwy"
-			 ],               
-         "Description": "Touchdown should be within touchdown zone",
-         "InstantEvents": false,
-         "CombineTolerance": 0,
-         "ResetParameterOnEvent": true
-      },
-      {
-         "Name": "RE29 - Deep landing###derotation",
-         "Events": [
-            {
-               "Name": "High time to de-rotation",
-               "Condition": "1",
-               "Type": 1,
-               "Tolerance": 9000,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:GEAR IS ON GROUND:1|Bool] != 0 && [S:GEAR IS ON GROUND:2|Bool] != 0",
-            "MONITOR_END": "[S:GEAR IS ON GROUND:0|Bool] != 0",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1",
-            "LIVEMONITOR_BEGIN": "0"
-         },
-         "EventParameterTemplates": [
-				"OnRwy"
-			 ],
-         "Description": "Lower nosegear immediately after touchdown",
-         "InstantEvents": false,
-         "CombineTolerance": 0,
-         "ResetParameterOnEvent": true
-      }
-   ]
+            "EventParameters": [
+                {
+                    "Name": "Threshold distance",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]",
+                    "Unit": "m"
+                },
+                {
+                    "Name": "TDZ length",
+                    "Type": "instant",
+                    "Parameter": "[C:OnRwyTdzLength|double]",
+                    "Unit": "m"
+                }
+            ],
+            "EventParameterTemplates": [
+                "OnRwy"
+            ],
+            "Description": "Touchdown should be within touchdown zone",
+            "InstantEvents": false,
+            "CombineTolerance": 0,
+            "ResetParameterOnEvent": true
+        },
+        {
+            "Name": "RE29 - Deep landing###derotation",
+            "Events": [
+                {
+                    "Name": "High time to de-rotation",
+                    "Condition": "1",
+                    "Type": 1,
+                    "Tolerance": 9000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:GEAR IS ON GROUND:1|Bool] != 0 && [S:GEAR IS ON GROUND:2|Bool] != 0",
+                "MONITOR_END": "[S:GEAR IS ON GROUND:0|Bool] != 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "LIVEMONITOR_BEGIN": "0"
+            },
+            "FdrOptions": {
+                "MarkerPosition": "end"
+            },
+            "EventParameterTemplates": [
+                "OnRwy"
+            ],
+            "Description": "Lower nosegear immediately after touchdown",
+            "InstantEvents": false,
+            "CombineTolerance": 0,
+            "ResetParameterOnEvent": true
+        }
+    ]
 }

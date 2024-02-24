@@ -1,47 +1,54 @@
 {
-   "FlightEventDefinitionGroups": [
-      {
-         "Name": "NORM02 - Takeoff",
-         "Events": [
-            {
-               "Name": "Takeoff Info",
-               "Condition": "1",
-               "Type": 0,
-               "Tolerance": 5000,
-               "Description": ""
-            }
-         ],
-         "EventParameterTemplates": [
-            "OnRwy"
-         ],
-         "EventParameters": [
-            {
-               "Name": "Flaps (Index)",
-               "Type": "instant",
-               "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "NORM02 - Takeoff",
+            "Events": [
+                {
+                    "Name": "Takeoff Info",
+                    "Condition": "1",
+                    "Type": 0,
+                    "Tolerance": 5000,
+                    "Description": ""
+                }
+            ],
+            "EventParameterTemplates": [
+                "OnRwy"
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Flaps (Index)",
+                    "Type": "instant",
+                    "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
+                },
+                {
+                    "Name": "DepAirport",
+                    "Type": "str",
+                    "Parameter": "[C:OnRwyAptIdent|string]",
+                    "AddToReport": true
+                },
+                {
+                    "Name": "DepRunway",
+                    "Type": "str",
+                    "Parameter": "[C:OnRwyName|string]",
+                    "AddToReport": true
+                },
+                {
+                    "Name": "Rotation speed",
+                    "Type": "instant",
+                    "Parameter": "[#S:AIRSPEED INDICATED|knots]",
+                    "RecordingCondition": "[S:GEAR IS ON GROUND:0|Bool] == 0",
+                    "Unit": "kias"
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
+                "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             },
-            {
-               "Name": "DepAirport",
-               "Type": "str",
-               "Parameter": "[C:OnRwyAptIdent|string]",
-               "AddToReport": true
-            },
-            {
-               "Name": "DepRunway",
-               "Type": "str",
-               "Parameter": "[C:OnRwyName|string]",
-               "AddToReport": true
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
-            "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         },
-         "Description": "Takeoff",
-         "InstantEvents": false,
-         "CombineTolerance": 5000
-      }
-   ]
+            "Description": "Takeoff",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
+        }
+    ]
 }

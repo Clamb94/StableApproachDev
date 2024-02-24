@@ -26,19 +26,22 @@
          },
          "EventParameters": [
             {
-               "Name": "Pitch",
-               "Type": "MAX",
-               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
+                "Name": "Pitch",
+                "Type": "MAX",
+                "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]",
+                "Unit": "°"
             },
             {
-               "Name": "Bank",
-               "Type": "MAX",
-               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
+                "Name": "Bank",
+                "Type": "MINMAX",
+                "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]",
+                "Unit": "°"
             },
             {
-               "Name": "Crab",
-               "Type": "MAX",
-               "Parameter": "[#S:INCIDENCE BETA|degree]"
+                "Name": "Crab",
+                "Type": "MINMAX",
+                "Parameter": "[#S:INCIDENCE BETA|degree]",
+                "Unit": "°"
             }
          ],
          "Description": "Nose gear should not touch down first",
@@ -72,18 +75,20 @@
          },
          "EventParameters": [
             {
-               "Name": "Pitch",
-               "Type": "MAX",
-               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
+                "Name": "Pitch",
+                "Type": "MINMAX",
+                "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]",
+                "Unit": "°"
             },
             {
-               "Name": "Bank",
-               "Type": "MAX",
-               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
+                "Name": "Bank",
+                "Type": "MINMAX",
+                "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]",
+                "Unit": "°"
             },
             {
                "Name": "Crab",
-               "Type": "MAX",
+               "Type": "MINMAX",
                "Parameter": "[#S:INCIDENCE BETA|degree]"
             }
          ],
@@ -118,24 +123,28 @@
          },
          "EventParameters": [
             {
-               "Name": "TailClearDeg",
-               "Type": "MINMAX",
-               "Parameter": "[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree])"
+                "Name": "Tail clearance",
+                "Type": "MIN",
+                "Parameter": "[C:CurrentTailstrikeLimit|string] - (-1*[S:PLANE PITCH DEGREES|degree])",
+                "Unit": "°"
             },
             {
-               "Name": "TailstrikeLimit",
-               "Type": "MINMAX",
-               "Parameter": "[C:CurrentTailstrikeLimit|string]"
+                "Name": "TailstrikeLimit",
+                "Type": "MINMAX",
+                "Parameter": "[C:CurrentTailstrikeLimit|string]",
+                "Unit": "°"
             },
             {
-               "Name": "Pitch",
-               "Type": "MAX",
-               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
+                "Name": "Pitch",
+                "Type": "MAX",
+                "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]",
+                "Unit": "°"
             },
             {
-               "Name": "Bank",
-               "Type": "MAX",
-               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
+                "Name": "Bank",
+                "Type": "MINMAX",
+                "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]",
+                "Unit": "°"
             }
          ],
          "Description": "Tail clearance",

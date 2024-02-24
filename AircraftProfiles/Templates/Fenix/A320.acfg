@@ -1,152 +1,166 @@
 {
-	"Name": "PMDG 737",
-	"Enabled": true,
-	"Templates": [
-		"Templates/CFIT02_AltimeterSetting.acfg",
-		"Templates/CFIT100_LateGearRetraction.acfg",
-		"Templates/LOC14_InadequateAcftAttitude.acfg",
-		"Templates/LOC25_StructuralFailure.acfg",
-		"Templates/LOC32_IncorrectAcftConfig.acfg",
-		"Templates/LOC101_PitchRate.acfg",		
-		"Templates/LOCG01_TaxiSpeed.acfg",
-		"Templates/NORM02_Takeoff.acfg",
-		"Templates/NORM04_Approach.acfg",
-		"Templates/NORM05_Touchdown.acfg",
-		"Templates/NORM06_Rollout.acfg",
-		"Templates/NORM10_ILS.acfg",
-		"Templates/NORM20_FlapPosition.acfg",
-		"Templates/NORM21_GearPosition.acfg",
-		"Templates/RE01_PowerChangeTakeoff.acfg",
-		"Templates/RE08_SlowRotation.acfg",
-		"Templates/RE13_InsuffDecel.acfg",
-		"Templates/RE15_RunwayRemainLiftoff.acfg",
-		"Templates/RE16_AircraftHandling.acfg",
-		"Templates/RE17_Crosswind.acfg",
-		"Templates/RE18_ThrustAsym.acfg",
-		"Templates/RE20_LateralDeviation.acfg",
-		"Templates/RE24_Tailwind.acfg",
-		"Templates/RE26_UnstableApproach.acfg",
-		"Templates/RE28_LongFlare.acfg",
-		"Templates/RE29_DeepLanding.acfg",
-		"Templates/RE30_AbnormalRwyContact.acfg",
-		"Templates/SYS00_General.acfg",
-		"Templates/SYS30_AntiIce.acfg",
-		"Templates/SYS32_Gear.acfg",
-		"Templates/SYS33_Lights.acfg",
-		"Templates/Fenix/A320_RE02_TakeoffConfig.acfg",
-		"Templates/Fenix/A320_RE21_RevAsym.acfg",
-		"Templates/Fenix/A320_RE26_UnstableApproach.acfg",
-		"Templates/Fenix/A320_SYS23_Communications.acfg",
-		"Templates/Fenix/A320_SYS27_FlightControls.acfg",
-		"Templates/Fenix/A320_SYS49_APU.acfg",
-		"Templates/Fenix/A320_CFIT00_EGPWS.acfg"
-	],
-	"FlightEventDefinitionGroups": [
-		{
-			"Events": [
-				{
-					"Name": "Flaps [C:Flaps0PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps1PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps2PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2  && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps3PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps4PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps5PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps6PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps7PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps8PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				},
-				{
-					"Name": "Flaps [C:Flaps9PositionName|string]",
-					"Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9 && [L:FlapMovement|double] == 0",
-					"Tolerance": 1000,
-					"Type": 0,
-					"Description": ""
-				}
-			],
-			"Name": "NORM20 - Flaps",
-			"Description": "",
-			"InstantEvents": true
-		}
-	],
-	"CustomParameters": {
-		"C:NoLandingFlapsCondition|string": "[S:FLAPS HANDLE INDEX:1|number] < 4",
-		"C:Flaps0PositionName|string": "0",
-		"C:Flaps1PositionName|string": "1",
-		"C:Flaps2PositionName|string": "1+F",
-		"C:Flaps3PositionName|string": "2",
-		"C:Flaps4PositionName|string": "3",
-		"C:Flaps5PositionName|string": "FULL",
-		"C:Flaps0MaxKIAS|double": "999",
-		"C:Flaps1MaxKIAS|double": "250",
-		"C:Flaps2MaxKIAS|double": "250",
-		"C:Flaps3MaxKIAS|double": "250",
-		"C:Flaps4MaxKIAS|double": "210",
-		"C:Flaps5MaxKIAS|double": "200",
-		"C:Flaps6MaxKIAS|double": "190",
-		"C:Flaps7MaxKIAS|double": "175",
-		"C:Flaps8MaxKIAS|double": "162",
-		"C:MaxFlapExtensionAlt|double": "20000",
-		"C:VMO|string": "350",
-		"C:MMO|string": "0.82",
-		"C:VappVar|string": "[S:AIRSPEED INDICATED|knots]",
-		"C:GroundPitchLimit|double": "8",
-		"C:GroundBankLimit|double": "9",
-		"C:GearMaxSpdExtension|double": "250",
-		"C:GearMaxSpdExtended|double": "280",
-		"C:GearMaxSpdRetraction|double": "220",
-		"C:MaxTireSpeed|double": "195",
-		"C:TakeoffCondition|string": "[L:A_FC_THROTTLE_LEFT_INPUT|double] > 3 && [C:OnRwyAligned|double] != 0"
-	}
+    "Name": "PMDG 737",
+    "Enabled": true,
+    "Templates": [
+        "Templates/CFIT02_AltimeterSetting.acfg",
+        "Templates/CFIT100_LateGearRetraction.acfg",
+        "Templates/LOC14_InadequateAcftAttitude.acfg",
+        "Templates/LOC25_StructuralFailure.acfg",
+        "Templates/LOC32_IncorrectAcftConfig.acfg",
+        "Templates/LOC101_PitchRate.acfg",
+        "Templates/LOCG01_TaxiSpeed.acfg",
+        "Templates/NORM02_Takeoff.acfg",
+        "Templates/NORM04_Approach.acfg",
+        "Templates/NORM05_Touchdown.acfg",
+        "Templates/NORM06_Rollout.acfg",
+        "Templates/NORM10_ILS.acfg",
+        "Templates/NORM20_FlapPosition.acfg",
+        "Templates/NORM21_GearPosition.acfg",
+        "Templates/RE01_PowerChangeTakeoff.acfg",
+        "Templates/RE08_SlowRotation.acfg",
+        "Templates/RE13_InsuffDecel.acfg",
+        "Templates/RE15_RunwayRemainLiftoff.acfg",
+        "Templates/RE16_AircraftHandling.acfg",
+        "Templates/RE17_Crosswind.acfg",
+        "Templates/RE18_ThrustAsym.acfg",
+        "Templates/RE20_LateralDeviation.acfg",
+        "Templates/RE24_Tailwind.acfg",
+        "Templates/RE26_UnstableApproach.acfg",
+        "Templates/RE28_LongFlare.acfg",
+        "Templates/RE29_DeepLanding.acfg",
+        "Templates/RE30_AbnormalRwyContact.acfg",
+        "Templates/SYS00_General.acfg",
+        "Templates/SYS30_AntiIce.acfg",
+        "Templates/SYS32_Gear.acfg",
+        "Templates/SYS33_Lights.acfg",
+        "Templates/Fenix/A320_RE02_TakeoffConfig.acfg",
+        "Templates/Fenix/A320_RE21_RevAsym.acfg",
+        "Templates/Fenix/A320_RE26_UnstableApproach.acfg",
+        "Templates/Fenix/A320_SYS23_Communications.acfg",
+        "Templates/Fenix/A320_SYS27_FlightControls.acfg",
+        "Templates/Fenix/A320_SYS49_APU.acfg",
+        "Templates/Fenix/A320_CFIT00_EGPWS.acfg"
+    ],
+    "FlightEventDefinitionGroups": [
+        {
+            "Events": [
+                {
+                    "Name": "Flaps [C:Flaps0PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 0 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps1PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 1 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps2PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 2  && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps3PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 3 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps4PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 4 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps5PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 5 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps6PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 6 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps7PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 7 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps8PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 8 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Flaps [C:Flaps9PositionName|string]",
+                    "Condition": "[S:FLAPS HANDLE INDEX:1|number] == 9 && [L:FlapMovement|double] == 0",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                }
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Altitude",
+                    "Type": "instant",
+                    "Parameter": "[S:INDICATED ALTITUDE|feet]",
+                    "Unit": "ft"
+                },
+                {
+                    "Name": "Speed",
+                    "Type": "instant",
+                    "Parameter": "[S:AIRSPEED INDICATED|knots]",
+                    "Unit": "kias"
+                }
+            ],
+            "Name": "NORM20 - Flaps",
+            "Description": "",
+            "InstantEvents": true
+        }
+    ],
+    "CustomParameters": {
+        "C:NoLandingFlapsCondition|string": "[S:FLAPS HANDLE INDEX:1|number] < 4",
+        "C:Flaps0PositionName|string": "0",
+        "C:Flaps1PositionName|string": "1",
+        "C:Flaps2PositionName|string": "1+F",
+        "C:Flaps3PositionName|string": "2",
+        "C:Flaps4PositionName|string": "3",
+        "C:Flaps5PositionName|string": "FULL",
+        "C:Flaps0MaxKIAS|double": "999",
+        "C:Flaps1MaxKIAS|double": "250",
+        "C:Flaps2MaxKIAS|double": "250",
+        "C:Flaps3MaxKIAS|double": "250",
+        "C:Flaps4MaxKIAS|double": "210",
+        "C:Flaps5MaxKIAS|double": "200",
+        "C:Flaps6MaxKIAS|double": "190",
+        "C:Flaps7MaxKIAS|double": "175",
+        "C:Flaps8MaxKIAS|double": "162",
+        "C:MaxFlapExtensionAlt|double": "20000",
+        "C:VMO|string": "350",
+        "C:MMO|string": "0.82",
+        "C:VappVar|string": "[S:AIRSPEED INDICATED|knots]",
+        "C:GroundPitchLimit|double": "8",
+        "C:GroundBankLimit|double": "9",
+        "C:GearMaxSpdExtension|double": "250",
+        "C:GearMaxSpdExtended|double": "280",
+        "C:GearMaxSpdRetraction|double": "220",
+        "C:MaxTireSpeed|double": "195",
+        "C:TakeoffCondition|string": "[L:A_FC_THROTTLE_LEFT_INPUT|double] > 3 && [C:OnRwyAligned|double] != 0"
+    }
 }

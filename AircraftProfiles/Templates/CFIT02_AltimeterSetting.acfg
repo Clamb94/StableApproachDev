@@ -26,9 +26,10 @@
             },
             "EventParameters": [
                 {
-                    "Name": "QNHError",
+                    "Name": "QNH difference",
                     "Type": "MAX",
-                    "Parameter": "Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars])"
+                    "Parameter": "Abs([S:KOHLSMAN SETTING MB|millibars] - [S:SEA LEVEL PRESSURE|millibars])",
+                    "Unit": "hPa"
                 }
             ],
             "Description": "",

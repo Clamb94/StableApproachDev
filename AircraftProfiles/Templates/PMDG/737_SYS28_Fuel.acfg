@@ -29,9 +29,10 @@
             },
             "EventParameters": [
                 {
-                    "Name": "CTR FUEL (kg)",
-                    "Type": "MINMAX",
-                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
+                    "Name": "CTR FUEL",
+                    "Type": "MAX",
+                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24",
+                    "Unit": "kg"
                 }
             ],
             "Description": "Center pumps muste be ON with fuel in center tank",
@@ -59,9 +60,10 @@
             },
             "EventParameters": [
                 {
-                    "Name": "CTR FUEL (kg)",
-                    "Type": "MINMAX",
-                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
+                    "Name": "CTR FUEL",
+                    "Type": "MIN",
+                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24",
+                    "Unit": "kg"
                 }
             ],
             "Description": "Center pumps must be OFF when tank is empty",
@@ -120,19 +122,28 @@
             },
             "EventParameters": [
                 {
-                    "Name": "CTR FUEL (kg)",
-                    "Type": "MINMAX",
-                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24"
+                    "Name": "L/R Delta",
+                    "Type": "MAX",
+                    "Parameter": "Abs([S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24 - [S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24)",
+                    "Unit": "kg"
                 },
                 {
-                    "Name": "L FUEL (kg)",
+                    "Name": "CTR FUEL",
                     "Type": "MINMAX",
-                    "Parameter": "[S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24"
+                    "Parameter": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24",
+                    "Unit": "kg"
                 },
                 {
-                    "Name": "R FUEL (kg)",
+                    "Name": "L FUEL",
                     "Type": "MINMAX",
-                    "Parameter": "[S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24"
+                    "Parameter": "[S:FUEL TANK LEFT MAIN QUANTITY|liter]/1.24",
+                    "Unit": "kg"
+                },
+                {
+                    "Name": "R FUEL",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:FUEL TANK RIGHT MAIN QUANTITY|liter]/1.24",
+                    "Unit": "kg"
                 }
             ],
             "Description": "Fuel must be balanced",

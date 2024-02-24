@@ -1,96 +1,98 @@
 {
-   "FlightEventDefinitionGroups": [
-      {
-         "Name": "RE20 - Lateral deviation###takeoff",
-         "Events": [
-            {
-               "Name": "Centerline deviation",
-               "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.8",
-               "Type": 1,
-               "Tolerance": 1000,
-               "Description": ""
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "RE20 - Lateral deviation###takeoff",
+            "Events": [
+                {
+                    "Name": "Centerline deviation",
+                    "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.8",
+                    "Type": 1,
+                    "Tolerance": 1000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Centerline deviation",
+                    "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.5",
+                    "Type": 2,
+                    "Tolerance": 1000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Centerline deviation",
+                    "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2",
+                    "Type": 3,
+                    "Tolerance": 1000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
+                "MONITOR_END": "[C:DURATION AIRBORNE|double] > 1 || [C:SubPhase_Takeoff0|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             },
-            {
-               "Name": "Centerline deviation",
-               "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.5",
-               "Type": 2,
-               "Tolerance": 1000,
-               "Description": ""
+            "EventParameterTemplates": [
+                "OnRwy"
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Centerline deviation",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnRwyCTE|double]",
+                    "Unit":  "m"
+                }
+            ],
+            "Description": "Stay on centerline during takeoff",
+            "InstantEvents": false,
+            "CombineTolerance": 20000,
+            "ResetParameterOnEvent": true
+        },
+        {
+            "Name": "RE20 - Lateral deviation###landing",
+            "Events": [
+                {
+                    "Name": "Centerline deviation",
+                    "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.8",
+                    "Type": 1,
+                    "Tolerance": 1000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Centerline deviation",
+                    "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.5",
+                    "Type": 2,
+                    "Tolerance": 1000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Centerline deviation",
+                    "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2",
+                    "Type": 3,
+                    "Tolerance": 1000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:SubPhase_Rollout|double] != 0 && [S:SURFACE RELATIVE GROUND SPEED|knots] > [C:RolloutHighspeedLimit|double] + 5",
+                "MONITOR_END": "[C:SubPhase_Rollout|double] == 0 || [S:SURFACE RELATIVE GROUND SPEED|knots] < [C:RolloutHighspeedLimit|double]",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             },
-            {
-               "Name": "Centerline deviation",
-               "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2",
-               "Type": 3,
-               "Tolerance": 1000,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
-            "MONITOR_END": "[C:DURATION AIRBORNE|double] > 1 || [C:SubPhase_Takeoff0|double] == 0",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         },
-         "EventParameterTemplates": [
-				"OnRwy"
-			 ],
-         "EventParameters": [
-            {
-               "Name": "Centerline deviation",
-               "Type": "max",
-               "Parameter": "[C:OnRwyCTE|double]"
-            }
-         ],
-         "Description": "Stay on centerline during takeoff",
-         "InstantEvents": false,
-         "CombineTolerance": 20000,
-         "ResetParameterOnEvent": true
-      },
-      {
-         "Name": "RE20 - Lateral deviation###landing",
-         "Events": [
-            {
-               "Name": "Centerline deviation",
-               "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.8",
-               "Type": 1,
-               "Tolerance": 1000,
-               "Description": ""
-            },
-            {
-               "Name": "Centerline deviation",
-               "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2.5",
-               "Type": 2,
-               "Tolerance": 1000,
-               "Description": ""
-            },
-            {
-               "Name": "Centerline deviation",
-               "Condition": "Abs([C:OnRwyCTE|double]) > [C:OnRwyWidth|double] / 2",
-               "Type": 3,
-               "Tolerance": 1000,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[C:SubPhase_Rollout|double] != 0 && [S:SURFACE RELATIVE GROUND SPEED|knots] > [C:RolloutHighspeedLimit|double] + 5",
-            "MONITOR_END": "[C:SubPhase_Rollout|double] == 0 || [S:SURFACE RELATIVE GROUND SPEED|knots] < [C:RolloutHighspeedLimit|double]",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         },
-         "EventParameterTemplates": [
-				"OnRwy"
-			 ],
-         "EventParameters": [
-            {
-               "Name": "Centerline deviation",
-               "Type": "max",
-               "Parameter": "[C:OnRwyCTE|double]"
-            }
-         ],
-         "Description": "Stay on centerline during landing",
-         "InstantEvents": false,
-         "CombineTolerance": 20000,
-         "ResetParameterOnEvent": true
-      }
-   ]
+            "EventParameterTemplates": [
+                "OnRwy"
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Centerline deviation",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnRwyCTE|double]",
+                    "Unit": "m"
+                }
+            ],
+            "Description": "Stay on centerline during landing",
+            "InstantEvents": false,
+            "CombineTolerance": 20000,
+            "ResetParameterOnEvent": true
+        }
+    ]
 }

@@ -25,7 +25,8 @@
 				{
 					"Name": "Dots",
 					"Type": "MINMAX",
-					"Parameter": "[S:NAV GSI:1|number]/50"
+					"Parameter": "[S:NAV GSI:1|number]/50",
+					"Precision": 2
 				},
 				{
 					"Name": "Ident",
@@ -33,7 +34,7 @@
 					"Parameter": "[S:NAV IDENT:1|string]"
 				}
 			],
-			"Description": "Excessive Glideslope deviation",
+			"Description": "",
 			"InstantEvents": false,
 			"CombineTolerance": 2000
 		},
@@ -62,7 +63,8 @@
 				{
 					"Name": "Dots",
 					"Type": "MINMAX",
-					"Parameter": "[S:NAV RADIAL ERROR:1|degree]/12*10"
+					"Parameter": "[S:NAV RADIAL ERROR:1|degree]/12*10",
+					"Precision": 2
 				},
 				{
 					"Name": "Ident",
@@ -70,7 +72,7 @@
 					"Parameter": "[S:NAV IDENT:1|string]"
 				}
 			],
-			"Description": "Excessive Localizer deviation",
+			"Description": "",
 			"InstantEvents": false,
 			"CombineTolerance": 2000
 		}

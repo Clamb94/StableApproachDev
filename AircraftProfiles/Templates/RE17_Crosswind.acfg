@@ -1,80 +1,82 @@
 {
-   "FlightEventDefinitionGroups": [
-      {
-         "Name": "RE17 - Crosswind###Takeoff",
-         "Events": [
-            {
-               "Name": "Crosswind - Takeoff",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double] + 5",
-               "Type": 1,
-               "Tolerance": 5000,
-               "Description": ""
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "RE17 - Crosswind###Takeoff",
+            "Events": [
+                {
+                    "Name": "Crosswind - Takeoff",
+                    "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double] + 5",
+                    "Type": 1,
+                    "Tolerance": 5000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Crosswind - Takeoff",
+                    "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double] + 10",
+                    "Type": 2,
+                    "Tolerance": 5000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
+                "MONITOR_END": "[C:DURATION AIRBORNE|double] > 1 || [C:SubPhase_Takeoff0|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             },
-            {
-               "Name": "Crosswind - Takeoff",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitTakeoff|double] + 10",
-               "Type": 2,
-               "Tolerance": 5000,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
-            "MONITOR_END": "[C:DURATION AIRBORNE|double] > 1 || [C:SubPhase_Takeoff0|double] == 0",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         },
-         "EventParameters": [
-            {
-               "Name": "Crosswind",
-               "Type": "MAX",
-               "Parameter": "Abs([C:CWC|double])"
-            }
-         ],
-         "Description": "",
-         "InstantEvents": false,
-         "CombineTolerance": 20000,
-         "ResetParameterOnEvent": true
-      },
-      {
-         "Name": "RE17 - Crosswind###Landing",
-         "Events": [
-            {
-               "Name": "Crosswind - Landing",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double] + 5",
-               "Type": 1,
-               "Tolerance": 5000,
-               "Description": ""
+            "EventParameters": [
+                {
+                    "Name": "Crosswind",
+                    "Type": "MAX",
+                    "Parameter": "Abs([C:CWC|double])",
+                    "Unit": "kn"
+                }
+            ],
+            "Description": "",
+            "InstantEvents": false,
+            "CombineTolerance": 20000,
+            "ResetParameterOnEvent": true
+        },
+        {
+            "Name": "RE17 - Crosswind###Landing",
+            "Events": [
+                {
+                    "Name": "Crosswind - Landing",
+                    "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double] + 5",
+                    "Type": 1,
+                    "Tolerance": 5000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Crosswind - Landing",
+                    "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double] + 10",
+                    "Type": 2,
+                    "Tolerance": 5000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
+                "MONITOR_END": "[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             },
-            {
-               "Name": "Crosswind - Landing",
-               "Condition": "Abs([C:CWC|double]) > [C:CWCLimitLanding|double] + 10",
-               "Type": 2,
-               "Tolerance": 5000,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[#C:DURATION AIRBORNE|double] > 1 && [S:SIM ON GROUND|Bool] == 1",
-            "MONITOR_END": "[C:DURATION ON GROUND|double] > 2 || [C:DURATION AIRBORNE|double] > 1",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         },
-         "EventParameters": [
-            {
-               "Name": "Crosswind",
-               "Type": "MAX",
-               "Parameter": "Abs([C:CWC|double])"
-            }
-         ],
-         "Description": "",
-         "InstantEvents": false,
-         "CombineTolerance": 10000,
-         "ResetParameterOnEvent": true
-      }
-   ],
-   "CustomParameters": {
-      "C:CWCLimitTakeoff|double": "35",
-      "C:CWCLimitLanding|double": "35"
-   }
+            "EventParameters": [
+                {
+                    "Name": "Crosswind",
+                    "Type": "MAX",
+                    "Parameter": "Abs([C:CWC|double])",
+                    "Unit": "kn"
+                }
+            ],
+            "Description": "",
+            "InstantEvents": false,
+            "CombineTolerance": 10000,
+            "ResetParameterOnEvent": true
+        }
+    ],
+    "CustomParameters": {
+        "C:CWCLimitTakeoff|double": "35",
+        "C:CWCLimitLanding|double": "35"
+    }
 }

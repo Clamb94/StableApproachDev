@@ -1,31 +1,45 @@
 {
-   "FlightEventDefinitionGroups": [
-      {
-         "Name": "NORM21 - Gear",
-         "Events": [
-            {
-               "Name": "Gear UP",
-               "Condition": "[S:GEAR TOTAL PCT EXTENDED|percent] < 0.1",
-               "Tolerance": 1000,
-               "Type": 0,
-               "Description": ""
-            },
-            {
-               "Name": "Gear DOWN",
-               "Condition": "[S:GEAR TOTAL PCT EXTENDED|percent] > 0.9",
-               "Tolerance": 1000,
-               "Type": 0,
-               "Description": ""
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "NORM21 - Gear",
+            "Events": [
+                {
+                    "Name": "Gear UP",
+                    "Condition": "[S:GEAR TOTAL PCT EXTENDED|percent] < 0.1",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                },
+                {
+                    "Name": "Gear DOWN",
+                    "Condition": "[S:GEAR TOTAL PCT EXTENDED|percent] > 0.9",
+                    "Tolerance": 1000,
+                    "Type": 0,
+                    "Description": ""
+                }
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Altitude",
+                    "Type": "instant",
+                    "Parameter": "[S:INDICATED ALTITUDE|feet]",
+                    "Unit": "ft"
+                },
+                {
+                    "Name": "Speed",
+                    "Type": "instant",
+                    "Parameter": "[S:AIRSPEED INDICATED|knots]",
+                    "Unit": "kias"
+                }
+            ],
+            "Description": "",
+            "InstantEvents": true,
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "1",
+                "MONITOR_END": "0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
             }
-         ],
-         "Description": "",
-         "InstantEvents": true,
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "1",
-            "MONITOR_END": "0",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1"
-         }
-      }
-   ]
+        }
+    ]
 }

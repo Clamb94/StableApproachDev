@@ -5,14 +5,14 @@
          "Events": [
             {
                "Name": "Reverser asymmetry",
-               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 20",
+               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 15",
                "Type": 1,
                "Tolerance": 5000,
                "Description": ""
             },
             {
                "Name": "Reverser asymmetry",
-               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 40",
+               "Condition": "Abs([S:ENG N1 RPM:1|percent] - [S:ENG N1 RPM:2|percent]) > 30",
                "Type": 2,
                "Tolerance": 5000,
                "Description": ""

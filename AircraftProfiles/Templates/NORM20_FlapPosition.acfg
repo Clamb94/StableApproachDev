@@ -73,6 +73,20 @@
                     "Description": ""
                 }
             ],
+            "EventParameters": [
+                {
+                    "Name": "Altitude",
+                    "Type": "instant",
+                    "Parameter": "[S:INDICATED ALTITUDE|feet]",
+                    "Unit": "ft"
+                },
+                {
+                    "Name": "Speed",
+                    "Type": "instant",
+                    "Parameter": "[S:AIRSPEED INDICATED|knots]",
+                    "Unit": "kias"
+                }
+            ],
             "Name": "NORM20 - Flaps",
             "Description": "",
             "InstantEvents": true

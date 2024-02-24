@@ -16,7 +16,8 @@
                 {
                     "Name": "TAT",
                     "Type": "MAX",
-                    "Parameter": "[S:TOTAL AIR TEMPERATURE|celsius]"
+                    "Parameter": "[S:TOTAL AIR TEMPERATURE|celsius]",
+                    "Unit": "°C"
                 }
             ],
             "Description": "Engine anti-ice should not be ON above +10°C TAT",
@@ -42,8 +43,9 @@
             "EventParameters": [
                 {
                     "Name": "TAT",
-                    "Type": "MINMAX",
-                    "Parameter": "[S:TOTAL AIR TEMPERATURE|celsius]"
+                    "Type": "MIN",
+                    "Parameter": "[S:TOTAL AIR TEMPERATURE|celsius]",
+                    "Unit": "°C"
                 },
                 {
                     "Name": "IN CLOUD",
@@ -58,17 +60,19 @@
                 {
                     "Name": "PRECIP RATE",
                     "Type": "MINMAX",
-                    "Parameter": "[S:AMBIENT PRECIP RATE|millimeters of water]"
+                    "Parameter": "[S:AMBIENT PRECIP RATE|millimeters of water]",
+                    "Unit": "mm/h"
                 },
                 {
                     "Name": "OAT",
-                    "Type": "MINMAX",
-                    "Parameter": "[S:AMBIENT TEMPERATURE|celsius]"
+                    "Type": "MIN",
+                    "Parameter": "[S:AMBIENT TEMPERATURE|celsius]",
+                    "Unit": "°C"
                 }
             ],
-            "Description": "Engine anti-ice should be ON below 10°C and visible moisture",
+            "Description": "Engine anti-ice should be ON below 10°C TAT and visible moisture",
             "InstantEvents": false,
-            "CombineTolerance": 30000
+            "CombineTolerance": 60000
         }
     ]
 }

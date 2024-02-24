@@ -1,49 +1,51 @@
 {
-   "FlightEventDefinitionGroups": [
-      {
-         "Name": "RE16 - Aircraft handling",
-         "Events": [
-            {
-               "Name": "Brake application during take-off",
-               "Condition": "[S:BRAKE LEFT POSITION|percent] > 10 || [S:BRAKE RIGHT POSITION|percent] > 10",
-               "Type": 1,
-               "Tolerance": 2000,
-               "Description": ""
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "RE16 - Aircraft handling",
+            "Events": [
+                {
+                    "Name": "Brake application during take-off",
+                    "Condition": "[S:BRAKE LEFT POSITION|percent] > 10 || [S:BRAKE RIGHT POSITION|percent] > 10",
+                    "Type": 1,
+                    "Tolerance": 2000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Brake application during take-off",
+                    "Condition": "[S:BRAKE LEFT POSITION|percent] > 60 || [S:BRAKE RIGHT POSITION|percent] > 60",
+                    "Type": 2,
+                    "Tolerance": 500,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[#C:SubPhase_Takeoff0|double] != 0",
+                "MONITOR_END": "[C:DURATION AIRBORNE|double] > 1 || [#C:SubPhase_Takeoff0|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "LIVEMONITOR_BEGIN": "0"
             },
-            {
-               "Name": "Brake application during take-off",
-               "Condition": "[S:BRAKE LEFT POSITION|percent] > 60 || [S:BRAKE RIGHT POSITION|percent] > 60",
-               "Type": 2,
-               "Tolerance": 500,
-               "Description": ""
-            }
-         ],
-         "MonitoringConditions": {
-            "MONITOR_BEGIN": "[#C:SubPhase_Takeoff0|double] != 0",
-            "MONITOR_END": "[C:DURATION AIRBORNE|double] > 1 || [#C:SubPhase_Takeoff0|double] == 0",
-            "SECONDARY": "1",
-            "MARKER_SECONDARY": "1",
-            "LIVEMONITOR_BEGIN": "0"
-         },
-         "EventParameterTemplates": [
-				"OnRwy"
-			 ],
-         "EventParameters": [
-            {
-               "Name": "Brake left",
-               "Type": "MAX",
-               "Parameter": "[S:BRAKE LEFT POSITION|percent]"
-            },
-            {
-               "Name": "Brake right",
-               "Type": "MAX",
-               "Parameter": "[S:BRAKE RIGHT POSITION|percent]"
-            }
-         ],
-         "Description": "Brake application during take-off",
-         "InstantEvents": false,
-         "CombineTolerance": 20000,
-         "ResetParameterOnEvent": true
-      }
-   ]
+            "EventParameterTemplates": [
+                "OnRwy"
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Brake left",
+                    "Type": "MAX",
+                    "Parameter": "[S:BRAKE LEFT POSITION|percent]",
+                    "Unit": "%"
+                },
+                {
+                    "Name": "Brake right",
+                    "Type": "MAX",
+                    "Parameter": "[S:BRAKE RIGHT POSITION|percent]",
+                    "Unit": "%"
+                }
+            ],
+            "Description": "Brake application during take-off",
+            "InstantEvents": false,
+            "CombineTolerance": 20000,
+            "ResetParameterOnEvent": true
+        }
+    ]
 }

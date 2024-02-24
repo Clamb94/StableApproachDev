@@ -51,36 +51,43 @@
          ],
          "EventParameters": [
             {
-               "Name": "Pitch",
-               "Type": "instant",
-               "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]"
+                "Name": "Pitch",
+                "Type": "instant",
+                "Parameter": "-1*[#S:PLANE PITCH DEGREES|degree]",
+                "Unit": "°"
             },
             {
-               "Name": "Bank",
-               "Type": "instant",
-               "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]"
+                "Name": "Bank",
+                "Type": "instant",
+                "Parameter": "-1*[#S:PLANE BANK DEGREES|degree]",
+                "Unit": "°"
             },
             {
-               "Name": "Crab",
-               "Type": "instant",
-               "Parameter": "[#S:INCIDENCE BETA|degree]"
+                "Name": "Crab",
+                "Type": "instant",
+                "Parameter": "[#S:INCIDENCE BETA|degree]",
+                "Unit": "°"
             },
             {
-               "Name": "TouchdownVS",
-               "Type": "instant",
-               "Parameter": "[#S:VERTICAL SPEED|ft/min]",
-               "AddToReport": true
+                "Name": "TouchdownVS",
+                "Type": "instant",
+                "Parameter": "[#S:VERTICAL SPEED|ft/min]",
+                "Unit": "ft/min",
+                "AddToReport": true
             },
             {
-               "Name": "TouchdownG",
-               "Type": "max",
-               "Parameter": "[C:MaxGForceOnGround|double]",
-               "AddToReport": true
+                "Name": "TouchdownG",
+                "Type": "max",
+                "Parameter": "[C:MaxGForceOnGround|double]",
+                "Unit": "G",
+                "AddToReport": true,
+                "Precision": 3
             },
             {
-               "Name": "Delta G-Force",
-               "Type": "max",
-               "Parameter": "[C:MaxGForceOnGround|double] - [C:LastGForceInFlight|double]"
+                "Name": "Delta G",
+                "Type": "max",
+                "Parameter": "[C:MaxGForceOnGround|double] - [C:LastGForceInFlight|double]",
+                "Unit": "G"
             },
             {
                "Name": "Flaps (Index)",

@@ -18,6 +18,17 @@
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1"
             },
+            "EventParameters": [
+                {
+                    "Name": "Height",
+                    "Type": "MAX",
+                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]",
+                    "Unit": "ft"
+                }
+            ],
+            "FdrOptions": {
+                "MarkerPosition": "end"
+            },
             "Description": "Retract gear immediatly after take-off/go-around",
             "InstantEvents": false
         }

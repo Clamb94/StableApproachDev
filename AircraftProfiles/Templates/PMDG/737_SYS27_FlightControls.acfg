@@ -18,7 +18,15 @@
                 "MARKER_SECONDARY": "1",
                 "APP_MONITOR": "1"
             },
-            "Description": "Do not use speedbrakes with thrust levers above idle",
+            "EventParameters": [
+                {
+                    "Name": "Height above runway",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]",
+                    "Unit": "ft"
+                }
+            ],
+            "Description": "Do not use speedbrake when flaps are beyond 15",
             "InstantEvents": false
         },
         {
@@ -43,7 +51,8 @@
                 {
                     "Name": "RA",
                     "Type": "MIN",
-                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]"
+                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]",
+                    "Unit": "ft"
                 }
             ],
             "Description": "Do not use speedbrakes below 1000ft RA",
