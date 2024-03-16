@@ -1,7 +1,7 @@
 {
     "FlightEventDefinitionGroups": [
         {
-            "Name": "RE30 - Abnormal runway contact###RotationRate",
+            "Name": "LOC101 - Abnormal runway contact###RotationRate",
             "Events": [
                 {
                     "Name": "High rotation pitch rate",
@@ -40,6 +40,6 @@
         }
     ],
     "CustomParameters": {
-        "C:TakeoffMaxPitchRate|double": "3.6"
+        "C:TakeoffMaxPitchRate|double": "3.8"
     }
 }
