@@ -1,7 +1,7 @@
 {
     "FlightEventDefinitionGroups": [
         {
-            "Name": "RE02 - Takeoff config###flaps",
+            "Name": "RE02 - Takeoff config###multiple",
             "Events": [
                 {
                     "Name": "Flaps not in takeoff config",
@@ -26,8 +26,8 @@
                 }
             ],
             "MonitoringConditions": {
-                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
-                "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0",
+                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0 && [S:SIM ON GROUND|Bool] != 0",
+                "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0 || [S:SIM ON GROUND|Bool] == 0",
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1",
                 "LIVEMONITOR_BEGIN": "[S:SIM ON GROUND|Bool] == 1 && [L:A_FC_THROTTLE_LEFT_INPUT|double] > 2.5",
