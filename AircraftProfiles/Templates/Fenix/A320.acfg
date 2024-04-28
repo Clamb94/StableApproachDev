@@ -154,7 +154,7 @@
         "C:MaxFlapExtensionAlt|double": "20000",
         "C:VMO|string": "350",
         "C:MMO|string": "0.82",
-        "C:VappVar|string": "[S:AIRSPEED INDICATED|knots]",
+        "C:VappVar|string": "[L:N_FCU_SPEED|double]",
         "C:GroundPitchLimit|double": "8",
         "C:GroundBankLimit|double": "9",
         "C:GearMaxSpdExtension|double": "250",

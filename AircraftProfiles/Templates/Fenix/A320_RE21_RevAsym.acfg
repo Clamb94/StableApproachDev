@@ -19,8 +19,8 @@
                 }
             ],
             "MonitoringConditions": {
-                "MONITOR_BEGIN": "[L:A_FC_THROTTLE_LEFT_INPUT|double] < 2 || [L:A_FC_THROTTLE_RIGHT_INPUT|double] < 2",
-                "MONITOR_END": "[L:A_FC_THROTTLE_LEFT_INPUT|double] >= 2 && [L:A_FC_THROTTLE_RIGHT_INPUT|double] >= 2",
+                "MONITOR_BEGIN": "[L:A_FC_THROTTLE_LEFT_INPUT|double] < 1 || [L:A_FC_THROTTLE_RIGHT_INPUT|double] < 1",
+                "MONITOR_END": "[L:A_FC_THROTTLE_LEFT_INPUT|double] >= 1 && [L:A_FC_THROTTLE_RIGHT_INPUT|double] >= 1",
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1"
             },
