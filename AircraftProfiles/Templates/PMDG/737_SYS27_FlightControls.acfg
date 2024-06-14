@@ -12,8 +12,8 @@
                 }
             ],
             "MonitoringConditions": {
-                "MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 5 && [S:FLAPS HANDLE INDEX:1|number] > 5",
-                "MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 5 || [S:FLAPS HANDLE INDEX:1|number] <= 5",
+                "MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 30 && [S:FLAPS HANDLE INDEX:1|number] > 5",
+                "MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 29 || [S:FLAPS HANDLE INDEX:1|number] <= 5",
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1",
                 "APP_MONITOR": "1"
@@ -41,8 +41,8 @@
                 }
             ],
             "MonitoringConditions": {
-                "MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 20 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 900",
-                "MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 950",
+                "MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 30 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 900",
+                "MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 29 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 950",
                 "SECONDARY": "1",
                 "MARKER_SECONDARY": "1",
                 "APP_MONITOR": "1"
