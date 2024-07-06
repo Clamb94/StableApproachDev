@@ -5,18 +5,18 @@
             "Events": [
                 {
                     "Name": "CTR PUMPS OFF",
-                    "Condition": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 1300 && ([L:switch_45_73X|double] != 100 || [L:switch_46_73X|double] != 100)",
+                    "Condition": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 2000 && [L:switch_109_a|double] != 100 && [L:switch_110_a|double] != 100",
                     "Type": 1,
                     "Tolerance": 120000,
-                    "LiveMonitorTolerance": 30000,
+                    "LiveMonitorTolerance": 20000,
                     "Description": ""
                 },
                 {
-                    "Name": "CTR PUMP(S) OFF",
-                    "Condition": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 200 && ([L:switch_45_73X|double] != 100 || [L:switch_45_73X|double] != 100) && [S:PRESSURE ALTITUDE|feet] > 20000",
+                    "Name": "FUEL IN CENTER",
+                    "Condition": "[S:FUEL TANK CENTER QUANTITY|liter]/1.24 > 400 && [L:switch_109_a|double] != 100 && [L:switch_110_a|double] != 100 && [S:PRESSURE ALTITUDE|feet] > 20000",
                     "Type": 1,
                     "Tolerance": 120000,
-                    "LiveMonitorTolerance": 30000,
+                    "LiveMonitorTolerance": 20000,
                     "Description": ""
                 }
             ],
@@ -44,7 +44,7 @@
             "Events": [
                 {
                     "Name": "CTR PUMPS LOW PRESSURE",
-                    "Condition": "([L:switch_45_73X|double] == 100 && [L:switch_47_73X|double] > 0) || ([L:switch_46_73X|double] == 100 && [L:switch_48_73X|double] > 0)",
+                    "Condition": "([L:switch_109_a|double] == 100 && [L:switch_109_c|double] > 0) || ([L:switch_110_a|double] == 100 && [L:switch_110_c|double] > 0)",
                     "Type": 1,
                     "Tolerance": 60000,
                     "LiveMonitorTolerance": 30000,
@@ -75,7 +75,7 @@
             "Events": [
                 {
                     "Name": "LEFT PUMPS OFF",
-                    "Condition": "([L:switch_37_73X|double] == 0 || [L:switch_38_73X|double] == 0) && [L:switch_49_73X|double] == 100",
+                    "Condition": "([L:switch_103_a|double] == 0 || [L:switch_105_a|double] == 0) && [L:switch_107_a|double] == 0 && [L:switch_107_a|double] == 0",
                     "Type": 2,
                     "Tolerance": 30000,
                     "LiveMonitorTolerance": 15000,
@@ -83,7 +83,7 @@
                 },
                 {
                     "Name": "RIGHT PUMPS OFF",
-                    "Condition": "([L:switch_39_73X|double] == 0 || [L:switch_40_73X|double] == 0) && [L:switch_49_73X|double] == 100",
+                    "Condition": "([L:switch_104_a|double] == 0 || [L:switch_106_a|double] == 0) && [L:switch_107_a|double] == 0 && [L:switch_107_a|double] == 0",
                     "Type": 1,
                     "Tolerance": 30000,
                     "LiveMonitorTolerance": 15000,

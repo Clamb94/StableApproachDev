@@ -4,15 +4,15 @@
             "Name": "RE26 - Unstable Approach###Sinkrate",
             "Events": [
                 {
-                    "Name": "Fast descend (vertical speed)",
-                    "Condition": "[S:VERTICAL SPEED|ft/min] < -1200",
+                    "Name": "Sink rate",
+                    "Condition": "[S:VERTICAL SPEED|ft/min] < (([C:OnAppVasiAngle|double] / 3) * -1200)",
                     "Tolerance": 3000,
                     "Type": 1,
                     "Description": ""
                 },
                 {
-                    "Name": "Fast descend (vertical speed)",
-                    "Condition": "[S:VERTICAL SPEED|ft/min] < -1500",
+                    "Name": "Sink rate",
+                    "Condition": "[S:VERTICAL SPEED|ft/min] < (([C:OnAppVasiAngle|double] / 3) * -1600)",
                     "Tolerance": 3000,
                     "Type": 2,
                     "Description": ""
@@ -39,6 +39,18 @@
                     "Type": "MIN",
                     "Parameter": "[S:VERTICAL SPEED|ft/min]",
                     "Unit": "ft/min"
+                },
+                {
+                    "Name": "PAPI angle",
+                    "Type": "instant",
+                    "Parameter": "[C:OnAppVasiAngle|double]",
+                    "Unit": "°"
+                },
+				{
+                    "Name": "Allowed V/S",
+                    "Type": "instant",
+                    "Parameter": "([C:OnAppVasiAngle|double] / 3) * -1200",
+                    "Unit": "°"
                 }
             ],
             "Description": "Fast descend (vertical speed)",

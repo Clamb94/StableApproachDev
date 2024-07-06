@@ -1,0 +1,39 @@
+{
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "LOC32 - Incorrect aicraft configuration###SpeedbrakeThrust",
+            "Events": [
+                {
+                    "Name": "Speed brake deployed with high thrust",
+                    "Condition": "[L:switch_498_a|double] > 250 && [S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 50",
+                    "Type": 1,
+                    "Tolerance": 20000,
+                    "Description": ""
+                }
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Throttle",
+                    "Type": "MAX",
+                    "Parameter": "[S:GENERAL ENG THROTTLE LEVER POSITION:1|percent]",
+                    "Unit": "%"
+                },
+                {
+                    "Name": "Spoiler position",
+                    "Type": "MAX",
+                    "Parameter": "[S:SPOILERS HANDLE POSITION|percent]",
+                    "Unit": "%"
+                }
+            ],
+            "Description": "Speed brake deployed with thrust above idle",
+            "InstantEvents": false,
+            "CombineTolerance": 10000,
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "1",
+                "MONITOR_END": "0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
+            }
+        }
+    ]
+}

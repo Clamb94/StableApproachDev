@@ -1,0 +1,63 @@
+{
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "SYS27 - Flight controls###speedbrakesFlaps",
+            "Events": [
+                {
+                    "Name": "Speedbrake used with Flaps > 20",
+                    "Condition": "[L:switch_498_a|double] > 250",
+                    "Type": 1,
+                    "Tolerance": 1000,
+                    "Description": "Do not use speedbrake when flaps are beyond 20"
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 30 && [S:FLAPS HANDLE INDEX:1|number] > 4",
+                "MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 29 || [S:FLAPS HANDLE INDEX:1|number] <= 4",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
+            },
+            "EventParameters": [
+                {
+                    "Name": "Height above runway",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]",
+                    "Unit": "ft"
+                }
+            ],
+            "Description": "Do not use speedbrake when flaps are beyond 15",
+            "InstantEvents": false
+        },
+        {
+            "Name": "SYS27 - Flight controls###speedbrakesRA",
+            "Events": [
+                {
+                    "Name": "Speedbrake used below 1000ft RA",
+                    "Condition": "[L:switch_498_a|double] > 250",
+                    "Type": 1,
+                    "Tolerance": 1000,
+                    "Description": "Do not deploy speedbrakes in flight at radio altitude less than 1000ft"
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 30 && [S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 900",
+                "MONITOR_END": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 29 || [S:PLANE ALT ABOVE GROUND MINUS CG|feet] > 950",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1",
+                "APP_MONITOR": "1"
+            },
+            "EventParameters": [
+                {
+                    "Name": "RA",
+                    "Type": "MIN",
+                    "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]",
+                    "Unit": "ft"
+                }
+            ],
+            "Description": "Do not use speedbrakes below 1000ft RA",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
+        }
+    ]
+}

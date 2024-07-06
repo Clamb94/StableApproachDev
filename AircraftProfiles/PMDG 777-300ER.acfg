@@ -1,0 +1,11 @@
+{
+	"Name": "PMDG 737-300ER",
+	"Enabled": true,
+	"Templates": [
+		"Templates/PMDG/777.acfg"
+	],
+	"CustomParameters": {
+		"C:TailstrikeLimitCompressed|double": "10.0",
+		"C:TailstrikeLimitExtended|double": "11.0"
+	}
+}

@@ -51,6 +51,24 @@
                     "Type": "MINMAX",
                     "Parameter": "[S:AIRSPEED INDICATED|knots]",
                     "Unit": "kias"
+                },
+				{
+                    "Name": "PAPI angle",
+                    "Type": "instant",
+                    "Parameter": "[C:OnAppVasiAngle|double]",
+                    "Unit": "°"
+                },
+				{
+                    "Name": "Allowed V/S",
+                    "Type": "instant",
+                    "Parameter": "([C:OnAppVasiAngle|double] / 3) * -1200",
+                    "Unit": "°"
+                },
+				{
+                    "Name": "Max V/S",
+                    "Type": "MIN",
+                    "Parameter": "[S:VERTICAL SPEED|ft/min]",
+                    "Unit": "ft/min"
                 }
             ],
             "MonitoringConditions": {

@@ -1,0 +1,49 @@
+{
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "RE26 - Unstable Approach###Speedbrake",
+            "Events": [
+                {
+                    "Name": "Speedbrake not ARMED",
+                    "Condition": "[L:SpoilerArmed|double] != 1",
+                    "Type": 1,
+                    "Tolerance": 3000,
+                    "Description": ""
+                },
+                {
+                    "Name": "Speedbrake not ARMED",
+                    "Condition": "[L:SpoilerArmed|double] != 1 && [C:OnAppHeightAboveRwyThrElev|double] < 500",
+                    "Type": 2,
+                    "Tolerance": 3000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:BelowCheckHeight|double] != 0 && [C:SubPhase_FApp|double] != 0",
+                "MONITOR_END": "[C:BelowCheckHeight|double] == 0 || [C:SubPhase_FApp|double] == 0",
+                "SECONDARY": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet] < 10",
+                "MARKER_SECONDARY": "[C:SubPhase_FApp|double] == 0",
+                "APP_MONITOR": "1"
+            },
+            "EventParameterTemplates": [
+                "OnApp"
+            ],
+            "EventParameters": [
+                {
+                    "Name": "Height above runway",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnAppHeightAboveRwyThrElev|double]",
+                    "Unit": "ft"
+                },
+                {
+                    "Name": "Speedbrake ARMED",
+                    "Type": "MIN",
+                    "Parameter": "[L:switch_343_73X|double]"
+                }
+            ],
+            "Description": "Speedbrake not armed",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
+        }
+    ]
+}
