@@ -1,5 +1,5 @@
 {
-	"Name": "PMDG 737-300ER",
+	"Name": "PMDG 777-300ER",
 	"Enabled": true,
 	"Templates": [
 		"Templates/PMDG/777.acfg"
