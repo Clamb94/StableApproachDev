@@ -176,7 +176,7 @@
         "C:GearMaxSpdExtension|double": "270",
         "C:GearMaxSpdExtended|double": "270",
         "C:GearMaxSpdRetraction|double": "270",
-        "C:MaxTireSpeed|double": "195",
+        "C:MaxTireSpeed|double": "205",
 		"C:TakeoffCondition|string": "[S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 60 && [C:OnRwyAligned|double] != 0"
     }
 }
