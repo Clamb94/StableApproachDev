@@ -4,91 +4,91 @@
             "Name": "CFIT00 - EGPWS",
             "Events": [
                 {
-                    "Name": "PULL UP",
+                    "Name": "EGPWS PULL UP",
                     "Condition": "[L:egpws_wwpup|double] != [#L:egpws_wwpup|double]",
                     "Type": 3,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TERRAIN - PULL UP",
+                    "Name": "EGPWS TERRAIN - PULL UP",
                     "Condition": "[L:egpws_trntrnpup|double] != [#L:egpws_trntrnpup|double]",
                     "Type": 3,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "Airspeed LOW",
+                    "Name": "EGPWS Airspeed LOW",
                     "Condition": "[L:egpws_asl|double] != [#L:egpws_asl|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "Bank angle",
+                    "Name": "EGPWS Bank angle",
                     "Condition": "[L:egpws_baba|double] != [#L:egpws_baba|double]",
                     "Type": 1,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "CAUTION TERRAIN",
+                    "Name": "EGPWS CAUTION TERRAIN",
                     "Condition": "[L:egpws_ctntrn|double] != [#L:egpws_ctntrn|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "DON'T SINK",
+                    "Name": "EGPWS DON'T SINK",
                     "Condition": "[L:egpws_dspds|double] != [#L:egpws_dspds|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "GLIDELSOPE",
+                    "Name": "EGPWS GLIDELSOPE",
                     "Condition": "[L:egpws_hardgs|double] != [#L:egpws_hardgs|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "WINDSHEAR",
+                    "Name": "EGPWS WINDSHEAR",
                     "Condition": "[L:egpws_sirwsh|double] != [#L:egpws_sirwsh|double]",
-                    "Type": 2,
+                    "Type": 1,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "SINK RATE",
+                    "Name": "EGPWS SINK RATE",
                     "Condition": "[L:egpws_snk|double] != [#L:egpws_snk|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TOO LOW FLAPS",
+                    "Name": "EGPWS TOO LOW FLAPS",
                     "Condition": "[L:egpws_tlflap|double] != [#L:egpws_tlflap|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TOO LOW GEAR",
+                    "Name": "EGPWS TOO LOW GEAR",
                     "Condition": "[L:egpws_tlgear|double] != [#L:egpws_tlgear|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TOO LOW TERRAIN",
+                    "Name": "EGPWS TOO LOW TERRAIN",
                     "Condition": "[L:egpws_tltrn|double] != [#L:egpws_tltrn|double]",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TERRAIN",
+                    "Name": "EGPWS TERRAIN",
                     "Condition": "[L:egpws_trn|double] != [#L:egpws_trn|double]",
                     "Type": 2,
                     "Tolerance": 0,

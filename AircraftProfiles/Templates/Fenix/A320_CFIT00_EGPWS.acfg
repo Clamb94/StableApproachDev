@@ -4,14 +4,14 @@
             "Name": "CFIT00 - EGPWS",
             "Events": [
                 {
-                    "Name": "PULL UP",
+                    "Name": "EGPWS PULL UP",
                     "Condition": "[L:A320_Audio:Pullup|double] != [#L:egpws_wwpup|double]",
                     "Type": 3,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TERRAIN - PULL UP",
+                    "Name": "EGPWS TERRAIN - PULL UP",
                     "Condition": "[L:A320_Audio:Terrain_ahead_pullup|double] != 0 || [L:A320_Audio:Obstacle_ahead_pullup|double] != 0",
                     "Type": 3,
                     "Tolerance": 0,
@@ -25,63 +25,63 @@
                     "Description": ""
                 },
                 {
-                    "Name": "TERRAIN AHEAD",
+                    "Name": "EGPWS TERRAIN AHEAD",
                     "Condition": "[L:A320_Audio:Terrain_ahead|double] != 0",
                     "Type": 1,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "DON'T SINK",
+                    "Name": "EGPWS DON'T SINK",
                     "Condition": "[L:A320_Audio:Dontt_sink|double] != 0",
                     "Type": 1,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "GLIDELSOPE",
+                    "Name": "EGPWS GLIDELSOPE",
                     "Condition": "[L:A320_Audio:Glideslope|double] != 0",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "WINDSHEAR",
+                    "Name": "EGPWS WINDSHEAR",
                     "Condition": "[L:A320_Audio:Windshear|double] != 0 || [L:A320_Audio:Pred_windshear_Windshear|double] != 0 || [L:A320_Audio:Go_around_windshear|double] != 0",
                     "Type": 1,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "SINK RATE",
+                    "Name": "EGPWS SINK RATE",
                     "Condition": "[L:A320_Audio:Sinkrate|double] != 0",
                     "Type": 1,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TOO LOW FLAPS",
+                    "Name": "EGPWS TOO LOW FLAPS",
                     "Condition": "[L:A320_Audio:Too_low_flap|double] != 0",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TOO LOW GEAR",
+                    "Name": "EGPWS TOO LOW GEAR",
                     "Condition": "[L:A320_Audio:Too_low_gear|double] != 0",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TOO LOW TERRAIN",
+                    "Name": "EGPWS TOO LOW TERRAIN",
                     "Condition": "[L:A320_Audio:Too_low_terrain|double] != 0",
                     "Type": 2,
                     "Tolerance": 0,
                     "Description": ""
                 },
                 {
-                    "Name": "TERRAIN",
+                    "Name": "EGPWS TERRAIN",
                     "Condition": "[L:A320_Audio:Terrain|double] != 0",
                     "Type": 2,
                     "Tolerance": 0,
