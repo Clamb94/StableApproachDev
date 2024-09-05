@@ -104,13 +104,13 @@
             },
             "EventParameters": [
                 {
-                    "Name": "Min. height",
+                    "Name": "Height",
                     "Type": "MIN",
                     "Parameter": "[S:PLANE ALT ABOVE GROUND MINUS CG|feet]",
                     "Unit": "ft"
                 },
                 {
-                    "Name": "Min. speed",
+                    "Name": "Speed",
                     "Type": "MIN",
                     "Parameter": "[S:AIRSPEED INDICATED|knots]",
                     "Unit": "kias"
