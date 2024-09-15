@@ -38,6 +38,13 @@
                     "Parameter": "[#S:AIRSPEED INDICATED|knots]",
                     "RecordingCondition": "[S:GEAR IS ON GROUND:0|Bool] == 0",
                     "Unit": "kias"
+                },
+				{
+                    "Name": "Centerline deviation",
+                    "Type": "MINMAX",
+                    "Parameter": "[C:OnRwyCTE|double]",
+                    "Unit":  "m",
+					"FDR": {}
                 }
             ],
             "MonitoringConditions": {

@@ -76,13 +76,15 @@
                     "Name": "Runway remaining",
                     "Type": "instant",
                     "Parameter": "[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]",
-                    "Unit": "m"
+                    "Unit": "m",
+					"FDR": {}
                 },
                 {
                     "Name": "Threshold distance",
                     "Type": "instant",
                     "Parameter": "[C:OnRwyATD|double] - [C:OnRwyDispThreshold|double]",
-                    "Unit": "m"
+                    "Unit": "m",
+					"FDR": {}
                 },
                 {
                     "Name": "Threshold crossing height",

@@ -30,6 +30,13 @@
                     "Type": "instant",
                     "Parameter": "[S:AIRSPEED INDICATED|knots]",
                     "Unit": "kias"
+                },
+                {
+                    "Name": "Gear",
+                    "Type": "MINMAX",
+                    "Parameter": "[S:GEAR TOTAL PCT EXTENDED|percent] * 100",
+                    "Unit": "%",
+					"FDR": {}
                 }
             ],
             "Description": "",

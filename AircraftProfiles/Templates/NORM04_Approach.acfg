@@ -18,27 +18,33 @@
                 {
                     "Name": "Pitch",
                     "Type": "MINMAX",
-                    "Parameter": "-1*[S:PLANE PITCH DEGREES|degree]"
+                    "Parameter": "-1*[S:PLANE PITCH DEGREES|degree]",
+                    "Unit":  "°",
+
                 },
                 {
                     "Name": "Bank",
                     "Type": "MINMAX",
-                    "Parameter": "-1*[S:PLANE BANK DEGREES|degree]"
+                    "Parameter": "-1*[S:PLANE BANK DEGREES|degree]",
+                    "Unit":  "°",
                 },
                 {
                     "Name": "Crab",
                     "Type": "MINMAX",
-                    "Parameter": "[S:INCIDENCE BETA|degree]"
+                    "Parameter": "[S:INCIDENCE BETA|degree]",
+                    "Unit":  "°",
                 },
                 {
                     "Name": "Vapp",
                     "Type": "MINMAX",
-                    "Parameter": "[C:VappVar|string]"
+                    "Parameter": "[C:VappVar|string]",
+                    "Unit":  "kn",
                 },
                 {
                     "Name": "Flaps (Index)",
                     "Type": "MINMAX",
-                    "Parameter": "[S:FLAPS HANDLE INDEX:1|number]"
+                    "Parameter": "[S:FLAPS HANDLE INDEX:1|number]",
+					"FDR": {}
                 },
                 {
                     "Name": "Altitude",
@@ -65,10 +71,11 @@
                     "Unit": "°"
                 },
 				{
-                    "Name": "Max V/S",
+                    "Name": "V/S",
                     "Type": "MIN",
                     "Parameter": "[S:VERTICAL SPEED|ft/min]",
-                    "Unit": "ft/min"
+                    "Unit": "fpm",
+					"FDR": {}
                 }
             ],
             "MonitoringConditions": {
