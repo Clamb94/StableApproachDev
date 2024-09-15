@@ -43,6 +43,7 @@
                     "Name": "Centerline deviation",
                     "Type": "MINMAX",
                     "Parameter": "[C:OnRwyCTE|double]",
+					"Precision": 1,
                     "Unit":  "m",
 					"FDR": {}
                 }

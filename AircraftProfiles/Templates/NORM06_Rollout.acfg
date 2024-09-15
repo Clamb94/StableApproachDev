@@ -36,6 +36,7 @@
                     "Name": "Runway remaining",
                     "Type": "MIN",
                     "Parameter": "[C:OnRwyTotalLength|double] - [C:OnRwyATD|double]",
+					"Precision": 1,
                     "Unit": "m",
 					"FDR": {}
                 },
@@ -43,10 +44,10 @@
                     "Name": "Centerline deviation",
                     "Type": "MINMAX",
                     "Parameter": "[C:OnRwyCTE|double]",
+					"Precision": 1,
                     "Unit": "m",
 					"FDR": {}
-                },
-					
+                }			
             ],
             "MonitoringConditions": {
                 "MONITOR_BEGIN": "[C:SubPhase_Rollout|double] != 0",

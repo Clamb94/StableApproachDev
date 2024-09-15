@@ -35,6 +35,7 @@
                     "Name": "Gear",
                     "Type": "MINMAX",
                     "Parameter": "[S:GEAR TOTAL PCT EXTENDED|percent] * 100",
+					"Precision": 0,
                     "Unit": "%",
 					"FDR": {}
                 }

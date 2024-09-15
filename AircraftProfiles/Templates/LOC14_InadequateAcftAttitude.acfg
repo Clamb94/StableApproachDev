@@ -51,13 +51,17 @@
                     "Name": "BANK",
                     "Type": "MINMAX",
                     "Parameter": "[S:PLANE BANK DEGREES|degree]",
-                    "Unit": "°"
+					"Precision": 2,
+                    "Unit": "°",
+					"FDR": {}
                 },
                 {
                     "Name": "PITCH",
                     "Type": "MINMAX",
                     "Parameter": "-1*[S:PLANE PITCH DEGREES|degree]",
-                    "Unit": "°"
+					"Precision": 2,
+                    "Unit": "°",
+					"FDR": {}
                 }
             ],
             "Description": "Unusual attitude",
