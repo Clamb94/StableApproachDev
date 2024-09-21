@@ -20,15 +20,17 @@
 			},
 			"EventParameterTemplates": [
 				"OnApp"
-			 ],
+			],
 			"EventParameters": [
 				{
 					"Name": "Deviation",
 					"Type": "MINMAX",
 					"Parameter": "[S:NAV GSI:1|number]/50",
 					"Precision": 2,
-                    "Unit": "dots",
-					"FDR": {}
+					"Unit": "dots",
+					"FDR": {
+						"PreRecord": 120
+					}
 				},
 				{
 					"Name": "Ident",
@@ -60,15 +62,17 @@
 			},
 			"EventParameterTemplates": [
 				"OnApp"
-			 ],
+			],
 			"EventParameters": [
 				{
 					"Name": "Dots",
 					"Type": "MINMAX",
 					"Parameter": "[S:NAV RADIAL ERROR:1|degree]/12*10",
 					"Precision": 2,
-                    "Unit": "dots",
-					"FDR": {}
+					"Unit": "dots",
+					"FDR": {
+						"PreRecord": 120
+					}
 				},
 				{
 					"Name": "Ident",
