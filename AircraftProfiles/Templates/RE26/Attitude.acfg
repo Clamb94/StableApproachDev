@@ -49,7 +49,7 @@
                     "Unit": "ft"
                 },
                 {
-                    "Name": "PITCH",
+                    "Name": "Pitch",
                     "Type": "MINMAX",
                     "Parameter": "-1*[S:PLANE PITCH DEGREES|degree]",
                     "Unit": "°"
@@ -94,7 +94,7 @@
                     "Unit": "ft"
                 },
                 {
-                    "Name": "BANK",
+                    "Name": "Bank",
                     "Type": "MINMAX",
                     "Parameter": "[S:PLANE BANK DEGREES|degree]",
                     "Unit": "°"
