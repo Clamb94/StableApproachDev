@@ -48,7 +48,7 @@
             ],
             "EventParameters": [
                 {
-                    "Name": "Pitch",
+                    "Name": "Bank",
                     "Type": "MINMAX",
                     "Parameter": "[S:PLANE BANK DEGREES|degree]",
 					"Precision": 2,
