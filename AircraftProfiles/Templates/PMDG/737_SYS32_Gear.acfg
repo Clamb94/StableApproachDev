@@ -5,7 +5,7 @@
             "Events": [
                {
                   "Name": "Autobrake RTO on landing",
-                  "Condition": "[L:switch_460_73X|double] == 0",
+                  "Condition": "[C:AutobrakeSwitch|string] == 0",
                   "Type": 1,
                   "Tolerance": 0,
                   "Description": ""
