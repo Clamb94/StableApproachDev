@@ -1,0 +1,34 @@
+{
+   "FlightEventDefinitionGroups": [
+      {
+         "Name": "RE101 - No Reverse",
+         "Events": [
+            {
+               "Name": "No Reverse",
+               "Condition": "[S:TURB ENG REVERSE NOZZLE PERCENT:1|percent] + [S:TURB ENG REVERSE NOZZLE PERCENT:2|percent] + [S:TURB ENG REVERSE NOZZLE PERCENT:3|percent] + [S:TURB ENG REVERSE NOZZLE PERCENT:4|percent] < 5",
+               "Type": 1,
+               "Tolerance": 0,
+               "Description": "",
+               "LiveMonitorTolerance": 3000
+            }
+         ],
+         "MonitoringConditions": {
+            "MONITOR_BEGIN": "[C:SubPhase_Rollout|double] != 0 && [C:DURATION ON GROUND|double] > 2 && [S:SURFACE RELATIVE GROUND SPEED|knots] > [C:RolloutHighspeedLimit|double] + 10",
+            "MONITOR_END": "[S:SURFACE RELATIVE GROUND SPEED|knots] < [C:RolloutHighspeedLimit|double] || [C:SubPhase_Rollout|double] == 0",
+            "SECONDARY": "[S:SIM ON GROUND|Bool] != 0",
+            "MARKER_SECONDARY": "[S:SURFACE RELATIVE GROUND SPEED|knots] < [C:RolloutHighspeedLimit|double] || [C:DURATION AIRBORNE|double] > 2"
+         },
+         "EventParameters": [
+            {
+               "Name": "TotalRevPct",
+               "Type": "MAX",
+               "Parameter": "[S:TURB ENG REVERSE NOZZLE PERCENT:1|percent] + [S:TURB ENG REVERSE NOZZLE PERCENT:2|percent] + [S:TURB ENG REVERSE NOZZLE PERCENT:3|percent] + [S:TURB ENG REVERSE NOZZLE PERCENT:4|percent]"
+            }
+         ],
+         "Description": "(Idle) Reverse thrust should always be used after touchdown",
+         "InstantEvents": false,
+         "CombineTolerance": 20000,
+         "ResetParameterOnEvent": true
+      }
+   ]
+}

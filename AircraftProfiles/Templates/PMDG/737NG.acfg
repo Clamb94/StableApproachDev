@@ -29,6 +29,8 @@
         "Templates/RE28_LongFlare.acfg",
         "Templates/RE29_DeepLanding.acfg",
         "Templates/RE30_AbnormalRwyContact.acfg",
+        "Templates/RE101_NoRev.acfg",
+        "Templates/RE102_NoSpeedbrake.acfg",
         "Templates/SYS00_General.acfg",
         "Templates/SYS30_AntiIce.acfg",
         "Templates/SYS32_Gear.acfg",
@@ -43,6 +45,7 @@
         "Templates/PMDG/737_SYS23_Communications.acfg",
         "Templates/PMDG/737_SYS27_FlightControls.acfg",
         "Templates/PMDG/737_SYS28_Fuel.acfg",
+        "Templates/PMDG/737_SYS32_Gear.acfg",
         "Templates/PMDG/737_SYS33_Lights.acfg",
         "Templates/PMDG/737_SYS49_APU.acfg",
         "Templates/PMDG/737_SYS72_Engine.acfg"
@@ -169,6 +172,7 @@
         "C:GearMaxSpdExtension|double": "270",
         "C:GearMaxSpdExtended|double": "320",
         "C:GearMaxSpdRetraction|double": "235",
-        "C:MaxTireSpeed|double": "195"
+        "C:MaxTireSpeed|double": "195",
+        "C:AutobrakeSwitch|string": "[L:switch_460_73X|double]"
     }
 }

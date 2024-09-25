@@ -10,6 +10,7 @@
         "Templates/PMDG/777_SYS23_Communications.acfg",
         "Templates/PMDG/777_SYS27_FlightControls.acfg",
         "Templates/PMDG/777_SYS28_Fuel.acfg",
+        "Templates/PMDG/737_SYS32_Gear.acfg",
         "Templates/PMDG/777_SYS33_Lights.acfg",
         "Templates/CFIT02_AltimeterSetting.acfg",
         "Templates/CFIT100_LateGearRetraction.acfg",
@@ -38,6 +39,8 @@
         "Templates/RE28_LongFlare.acfg",
         "Templates/RE29_DeepLanding.acfg",
         "Templates/RE30_AbnormalRwyContact.acfg",
+        "Templates/RE101_NoRev.acfg",
+        "Templates/RE102_NoSpeedbrake.acfg",
         "Templates/SYS00_General.acfg",
         "Templates/SYS32_Gear.acfg",
         "Templates/SYS33_Lights.acfg"
@@ -177,6 +180,7 @@
         "C:GearMaxSpdExtended|double": "270",
         "C:GearMaxSpdRetraction|double": "270",
         "C:MaxTireSpeed|double": "205",
-		"C:TakeoffCondition|string": "[S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 60 && [C:OnRwyAligned|double] != 0"
+		"C:TakeoffCondition|string": "[S:GENERAL ENG THROTTLE LEVER POSITION:1|percent] > 60 && [C:OnRwyAligned|double] != 0",
+        "C:AutobrakeSwitch|string": "[L:switch_292_a|double]"
     }
 }

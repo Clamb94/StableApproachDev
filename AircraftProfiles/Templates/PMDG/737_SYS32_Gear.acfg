@@ -1,0 +1,25 @@
+{
+    "FlightEventDefinitionGroups": [
+        {
+            "Name": "SYS32 - Autobrakes###rtoLanding",
+            "Events": [
+               {
+                  "Name": "Autobrake RTO on landing",
+                  "Condition": "[L:switch_460_73X|double] == 0",
+                  "Type": 1,
+                  "Tolerance": 0,
+                  "Description": ""
+               }
+            ],
+            "MonitoringConditions": {
+               "MONITOR_BEGIN": "[C:SubPhase_Rollout|double] != 0",
+               "MONITOR_END": "[C:SubPhase_Rollout|double] == 0",
+               "LIVEMONITOR_BEGIN": "0"
+            },
+            "Description": "Do not use autobrake RTO on landing",
+            "InstantEvents": false,
+            "CombineTolerance": 20000,
+            "ResetParameterOnEvent": true
+         }
+    ]
+}

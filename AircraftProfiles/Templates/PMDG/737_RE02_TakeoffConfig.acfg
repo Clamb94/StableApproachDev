@@ -43,6 +43,27 @@
             "Description": "",
             "InstantEvents": false,
             "CombineTolerance": 5000
+        },
+        {
+            "Name": "RE02 - Takeoff config###autobrake",
+            "Events": [
+                {
+                    "Name": "Autobrake not RTO",
+                    "Condition": "[L:switch_460_73X|double] != 0",
+                    "Type": 1,
+                    "Tolerance": 2000,
+                    "Description": ""
+                }
+            ],
+            "MonitoringConditions": {
+                "MONITOR_BEGIN": "[C:SubPhase_Takeoff0|double] != 0",
+                "MONITOR_END": "[C:SubPhase_Takeoff0|double] == 0",
+                "SECONDARY": "1",
+                "MARKER_SECONDARY": "1"
+            },
+            "Description": "",
+            "InstantEvents": false,
+            "CombineTolerance": 5000
         }
     ]
 }
